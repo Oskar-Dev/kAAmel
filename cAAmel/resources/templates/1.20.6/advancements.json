@@ -1,0 +1,914 @@
+{
+  "minecraft:story/root": {
+    "name": "Minecraft",
+    "displayName": "Minecraft",
+    "icon": "items/grass_block.png",
+    "rootName": "minecraft:story/root",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/mine_stone": {
+    "name": "Stone Age",
+    "displayName": "Stone Age",
+    "icon": "items/wooden_pickaxe.png",
+    "rootName": "minecraft:story/mine_stone",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "name": "Getting an Upgrade",
+    "displayName": "Stone Pick",
+    "icon": "items/stone_pickaxe.png",
+    "rootName": "minecraft:story/upgrade_tools",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/smelt_iron": {
+    "name": "Acquire Hardware",
+    "displayName": "Hardware",
+    "icon": "items/iron_ingot.png",
+    "rootName": "minecraft:story/smelt_iron",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/obtain_armor": {
+    "name": "Suit Up",
+    "displayName": "Suit Up",
+    "icon": "items/iron_chestplate.png",
+    "rootName": "minecraft:story/obtain_armor",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/lava_bucket": {
+    "name": "Hot Stuff",
+    "displayName": "Hot Stuff",
+    "icon": "items/lava_bucket.png",
+    "rootName": "minecraft:story/lava_bucket",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/iron_tools": {
+    "name": "Isn't it Iron Pick",
+    "displayName": "Iron Pick",
+    "icon": "items/iron_pickaxe.png",
+    "rootName": "minecraft:story/iron_tools",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/deflect_arrow": {
+    "name": "Not Today, Thank You",
+    "displayName": "Shield",
+    "icon": "items/shield.png",
+    "rootName": "minecraft:story/deflect_arrow",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/form_obsidian": {
+    "name": "Ice Bucket Challenge",
+    "displayName": "Obsidian",
+    "icon": "items/obsidian.png",
+    "rootName": "minecraft:story/form_obsidian",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/mine_diamond": {
+    "name": "Diamonds!",
+    "displayName": "Diamonds!",
+    "icon": "items/diamond.png",
+    "rootName": "minecraft:story/mine_diamond",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/enter_the_nether": {
+    "name": "We Need to Go Deeper",
+    "displayName": "E. Nether",
+    "icon": "items/flint_and_steel.png",
+    "rootName": "minecraft:story/enter_the_nether",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/shiny_gear": {
+    "name": "Cover Me with Diamonds",
+    "displayName": "Dia. Armour",
+    "icon": "items/diamond_chestplate.png",
+    "rootName": "minecraft:story/shiny_gear",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/enchant_item": {
+    "name": "Enchanter",
+    "displayName": "Enchanter",
+    "icon": "items/enchanted_book.gif",
+    "rootName": "minecraft:story/enchant_item",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/cure_zombie_villager": {
+    "name": "Zombie Doctor",
+    "displayName": "Zombie Doc.",
+    "icon": "items/golden_apple.png",
+    "rootName": "minecraft:story/cure_zombie_villager",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:story/follow_ender_eye": {
+    "name": "Eye Spy",
+    "displayName": "Eye Spy",
+    "icon": "items/eye_of_ender.png",
+    "rootName": "minecraft:story/follow_ender_eye",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:story/enter_the_end": {
+    "name": "The End?",
+    "displayName": "The End?",
+    "icon": "items/end_stone.png",
+    "rootName": "minecraft:story/enter_the_end",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/root": {
+    "name": "Nether",
+    "displayName": "Nether",
+    "icon": "items/red_nether_brick.png",
+    "rootName": "minecraft:nether/root",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/return_to_sender": {
+    "name": "Return to Sender",
+    "displayName": "Sender",
+    "icon": "items/fire_charge.png",
+    "rootName": "minecraft:nether/return_to_sender",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/find_bastion": {
+    "name": "Those Were the Days",
+    "displayName": "Bastion",
+    "icon": "items/polished_blackstone_bricks.png",
+    "rootName": "minecraft:nether/find_bastion",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/obtain_ancient_debris": {
+    "name": "Hidden in the Depths",
+    "displayName": "Debris",
+    "icon": "items/ancient_debris.png",
+    "rootName": "minecraft:nether/obtain_ancient_debris",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/fast_travel": {
+    "name": "Subspace Bubble",
+    "displayName": "Subspace",
+    "icon": "items/empty_map.png",
+    "rootName": "minecraft:nether/fast_travel",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/find_fortress": {
+    "name": "A Terrible Fortress",
+    "displayName": "Fortress",
+    "icon": "items/nether_brick.png",
+    "rootName": "minecraft:nether/find_fortress",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/obtain_crying_obsidian": {
+    "name": "Who is Cutting Onions?",
+    "displayName": "Crying",
+    "icon": "items/crying_obsidian.png",
+    "rootName": "minecraft:nether/obtain_crying_obsidian",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/distract_piglin": {
+    "name": "Oh Shiny",
+    "displayName": "Shiny",
+    "icon": "items/gold_ingot.png",
+    "rootName": "minecraft:nether/distract_piglin",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/ride_strider": {
+    "name": "This Boat Has Legs",
+    "displayName": "Strider",
+    "icon": "items/warped_fungus_on_a_stick.png",
+    "rootName": "minecraft:nether/ride_strider",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/uneasy_alliance": {
+    "name": "Uneasy Alliance",
+    "displayName": "Uneasy",
+    "icon": "items/ghast_tear.png",
+    "rootName": "minecraft:nether/uneasy_alliance",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/loot_bastion": {
+    "name": "War Pigs",
+    "displayName": "War Pigs",
+    "icon": "items/chest.png",
+    "rootName": "minecraft:nether/loot_bastion",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/use_lodestone": {
+    "name": "Country Lode, Take Me Home",
+    "displayName": "Lodestone",
+    "icon": "items/lodestone.png",
+    "rootName": "minecraft:nether/use_lodestone",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/netherite_armor": {
+    "name": "Cover Me in Debris",
+    "displayName": "N. Armour",
+    "icon": "items/netherite_chestplate.png",
+    "rootName": "minecraft:nether/netherite_armor",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/get_wither_skull": {
+    "name": "Spooky Scary Skeleton",
+    "displayName": "Skull",
+    "icon": "items/wither_skeleton_skull.png",
+    "rootName": "minecraft:nether/get_wither_skull",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "name": "Into Fire",
+    "displayName": "Into Fire",
+    "icon": "items/blaze_rod.png",
+    "rootName": "minecraft:nether/obtain_blaze_rod",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/charge_respawn_anchor": {
+    "name": "Not Quite \"Nine\" Lives",
+    "displayName": "Anchor",
+    "icon": "items/respawn_anchor.png",
+    "rootName": "minecraft:nether/charge_respawn_anchor",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/ride_strider_in_overworld_lava": {
+    "name": "Feels Like Home",
+    "displayName": "Home",
+    "icon": "items/warped_fungus_on_a_stick.png",
+    "rootName": "minecraft:nether/ride_strider_in_overworld_lava",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/explore_nether": {
+    "name": "Hot Tourist Destinations",
+    "displayName": "Tourist",
+    "icon": "items/netherite_boots.png",
+    "rootName": "minecraft:nether/explore_nether",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/summon_wither": {
+    "name": "Withering Heights",
+    "displayName": "Wither",
+    "icon": "items/nether_star.gif",
+    "rootName": "minecraft:nether/summon_wither",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/brew_potion": {
+    "name": "Local Brewery",
+    "displayName": "Brewery",
+    "icon": "items/potion.png",
+    "rootName": "minecraft:nether/brew_potion",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/create_beacon": {
+    "name": "Bring Home the Beacon",
+    "displayName": "Beacon",
+    "icon": "items/beacon.png",
+    "rootName": "minecraft:nether/create_beacon",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/all_potions": {
+    "name": "A Furious Cocktail",
+    "displayName": "Cocktail",
+    "icon": "items/milk_bucket.png",
+    "rootName": "minecraft:nether/all_potions",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:nether/create_full_beacon": {
+    "name": "Beaconator",
+    "displayName": "Full Beacon",
+    "icon": "items/beacon.png",
+    "rootName": "minecraft:nether/create_full_beacon",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:nether/all_effects": {
+    "name": "How Did We Get Here?",
+    "displayName": "HDWGH",
+    "icon": "items/bucket.png",
+    "rootName": "minecraft:nether/all_effects",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/root": {
+    "name": "The End",
+    "displayName": "The End",
+    "icon": "items/end_stone.png",
+    "rootName": "minecraft:end/root",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:end/kill_dragon": {
+    "name": "Free the End",
+    "displayName": "Free End",
+    "icon": "items/dragon_head.png",
+    "rootName": "minecraft:end/kill_dragon",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/dragon_egg": {
+    "name": "The Next Generation",
+    "displayName": "Dragon Egg",
+    "icon": "items/dragon_egg.png",
+    "rootName": "minecraft:end/dragon_egg",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/enter_end_gateway": {
+    "name": "Remote Gateway",
+    "displayName": "Gateway",
+    "icon": "items/ender_pearl.png",
+    "rootName": "minecraft:end/enter_end_gateway",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/respawn_dragon": {
+    "name": "The End... Again...",
+    "displayName": "Respawn",
+    "icon": "items/end_crystal.gif",
+    "rootName": "minecraft:end/respawn_dragon",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/dragon_breath": {
+    "name": "You Need a Mint",
+    "displayName": "Breath",
+    "icon": "items/breath.png",
+    "rootName": "minecraft:end/dragon_breath",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:end/find_end_city": {
+    "name": "The City at the End of the Game",
+    "displayName": "End City",
+    "icon": "items/purpur_block.png",
+    "rootName": "minecraft:end/find_end_city",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:end/elytra": {
+    "name": "Sky's the Limit",
+    "displayName": "Elytra",
+    "icon": "items/elytra.png",
+    "rootName": "minecraft:end/elytra",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:end/levitate": {
+    "name": "Great View From Up Here",
+    "displayName": "Great View",
+    "icon": "items/shulker_shell.png",
+    "rootName": "minecraft:end/levitate",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/root": {
+    "name": "Adventure",
+    "displayName": "Adventure",
+    "icon": "items/empty_map.png",
+    "rootName": "minecraft:adventure/root",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "name": "Voluntary Exile",
+    "displayName": "Exile",
+    "icon": "items/ominous_banner.png",
+    "rootName": "minecraft:adventure/voluntary_exile",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/spyglass_at_parrot": {
+    "name": "Is It a Bird?",
+    "displayName": "Bird?",
+    "icon": "items/spyglass.png",
+    "rootName": "minecraft:adventure/spyglass_at_parrot",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "name": "Monster Hunter",
+    "displayName": "Kill a Mob",
+    "icon": "items/iron_sword.png",
+    "rootName": "minecraft:adventure/kill_a_mob",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/read_power_of_chiseled_bookshelf": {
+    "name": "The Power of Books",
+    "displayName": "Book Power",
+    "icon": "items/chiseled_bookshelf.png",
+    "rootName": "minecraft:adventure/read_power_of_chiseled_bookshelf",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/trade": {
+    "name": "What a Deal!",
+    "displayName": "Trade",
+    "icon": "items/emerald.png",
+    "rootName": "minecraft:adventure/trade",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/trim_with_any_armor_pattern": {
+    "name": "Crafting a New Look",
+    "displayName": "New Look",
+    "icon": "items/dune_trim.png",
+    "rootName": "minecraft:adventure/trim_with_any_armor_pattern",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/honey_block_slide": {
+    "name": "Sticky Situation",
+    "displayName": "Sticky",
+    "icon": "items/honey_block.png",
+    "rootName": "minecraft:adventure/honey_block_slide",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/ol_betsy": {
+    "name": "Ol' Betsy",
+    "displayName": "Ol' Betsy",
+    "icon": "items/crossbow.png",
+    "rootName": "minecraft:adventure/ol_betsy",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/lightning_rod_with_villager_no_fire": {
+    "name": "Surge Protector",
+    "displayName": "Protector",
+    "icon": "items/lightning_rod.png",
+    "rootName": "minecraft:adventure/lightning_rod_with_villager_no_fire",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/fall_from_world_height": {
+    "name": "Caves & Cliffs",
+    "displayName": "Cliffs",
+    "icon": "items/water_bucket.png",
+    "rootName": "minecraft:adventure/fall_from_world_height",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/salvage_sherd": {
+    "name": "Respecting the Remmants",
+    "displayName": "Sherd",
+    "icon": "items/brush.png",
+    "rootName": "minecraft:adventure/salvage_sherd",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/avoid_vibration": {
+    "name": "Sneak 100",
+    "displayName": "Sneak 100",
+    "icon": "items/sculk_sensor.gif",
+    "rootName": "minecraft:adventure/avoid_vibration",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/sleep_in_bed": {
+    "name": "Sweet Dreams",
+    "displayName": "Dreams",
+    "icon": "items/red_bed.png",
+    "rootName": "minecraft:adventure/sleep_in_bed",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/hero_of_the_village": {
+    "name": "Hero of the Village",
+    "displayName": "Raid",
+    "icon": "items/ominous_banner.png",
+    "rootName": "minecraft:adventure/hero_of_the_village",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:adventure/spyglass_at_ghast": {
+    "name": "Is It a Balloon?",
+    "displayName": "Balloon?",
+    "icon": "items/spyglass.png",
+    "rootName": "minecraft:adventure/spyglass_at_ghast",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/throw_trident": {
+    "name": "A Throwaway Joke",
+    "displayName": "Throw",
+    "icon": "items/trident.png",
+    "rootName": "minecraft:adventure/throw_trident",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/kill_mob_near_sculk_catalyst": {
+    "name": "It Spreads",
+    "displayName": "It Spreads",
+    "icon": "items/sculk_catalyst.png",
+    "rootName": "minecraft:adventure/kill_mob_near_sculk_catalyst",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "name": "Take Aim",
+    "displayName": "Take Aim",
+    "icon": "items/bow.png",
+    "rootName": "minecraft:adventure/shoot_arrow",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "name": "Monsters Hunted",
+    "displayName": "Hunted",
+    "icon": "items/diamond_sword.png",
+    "rootName": "minecraft:adventure/kill_all_mobs",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/totem_of_undying": {
+    "name": "Postmortal",
+    "displayName": "Postmortal",
+    "icon": "items/totem_of_undying.png",
+    "rootName": "minecraft:adventure/totem_of_undying",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/summon_iron_golem": {
+    "name": "Hired Help",
+    "displayName": "Hired Help",
+    "icon": "items/carved_pumpkin.png",
+    "rootName": "minecraft:adventure/summon_iron_golem",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/trade_at_world_height": {
+    "name": "Star Trader",
+    "displayName": "Sky Trade",
+    "icon": "items/emerald.png",
+    "rootName": "minecraft:adventure/trade_at_world_height",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
+    "name": "Smithing with Style",
+    "displayName": "Style",
+    "icon": "items/silence_trim.png",
+    "rootName": "minecraft:adventure/trim_with_all_exclusive_armor_patterns",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/two_birds_one_arrow": {
+    "name": "Two Birds, One Arrow",
+    "displayName": "Birds",
+    "icon": "items/crossbow.png",
+    "rootName": "minecraft:adventure/two_birds_one_arrow",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/whos_the_pillager_now": {
+    "name": "Who's the Pillager Now?",
+    "displayName": "Pillager",
+    "icon": "items/crossbow.png",
+    "rootName": "minecraft:adventure/whos_the_pillager_now",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/arbalistic": {
+    "name": "Arbalistic",
+    "displayName": "Arbalistic",
+    "icon": "items/crossbow.png",
+    "rootName": "minecraft:adventure/arbalistic",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/craft_decorated_pot_using_only_sherds": {
+    "name": "Careful Restoration",
+    "displayName": "Restoration",
+    "icon": "items/decorated_pot.png",
+    "rootName": "minecraft:adventure/craft_decorated_pot_using_only_sherds",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "name": "Adventuring Time",
+    "displayName": "Biomes",
+    "icon": "items/diamond_boots.png",
+    "rootName": "minecraft:adventure/adventuring_time",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/play_jukebox_in_meadows": {
+    "name": "Sound of Music",
+    "displayName": "Music",
+    "icon": "items/jukebox.png",
+    "rootName": "minecraft:adventure/play_jukebox_in_meadows",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/walk_on_powder_snow_with_leather_boots": {
+    "name": "Light as a Rabbit",
+    "displayName": "Snow",
+    "icon": "items/leather_boots.png",
+    "rootName": "minecraft:adventure/walk_on_powder_snow_with_leather_boots",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/spyglass_at_dragon": {
+    "name": "Is It a Plane?",
+    "displayName": "Plane?",
+    "icon": "items/spyglass.png",
+    "rootName": "minecraft:adventure/spyglass_at_dragon",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/very_very_frightening": {
+    "name": "Very Very Frightening",
+    "displayName": "VVF",
+    "icon": "items/trident.png",
+    "rootName": "minecraft:adventure/very_very_frightening",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/sniper_duel": {
+    "name": "Sniper Duel",
+    "displayName": "Sniper Duel",
+    "icon": "items/arrow.png",
+    "rootName": "minecraft:adventure/sniper_duel",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/bullseye": {
+    "name": "Bullseye",
+    "displayName": "Bullseye",
+    "icon": "items/target_block.png",
+    "rootName": "minecraft:adventure/bullseye",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/root": {
+    "name": "Husbandry",
+    "displayName": "Husbandry",
+    "icon": "items/hay_bale.png",
+    "rootName": "minecraft:husbandry/root",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:husbandry/safely_harvest_honey": {
+    "name": "Bee Our Guest",
+    "displayName": "Safe Honey",
+    "icon": "items/honey_bottle.png",
+    "rootName": "minecraft:husbandry/safely_harvest_honey",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/breed_an_animal": {
+    "name": "The Parrots and the Bats",
+    "displayName": "Breed",
+    "icon": "items/wheat.png",
+    "rootName": "minecraft:husbandry/breed_an_animal",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:husbandry/allay_deliver_item_to_player": {
+    "name": "You've Got a Friend in Me",
+    "displayName": "Allay",
+    "icon": "items/cookie.png",
+    "rootName": "minecraft:husbandry/allay_deliver_item_to_player",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/ride_a_boat_with_a_goat": {
+    "name": "Whatever Floats Your Goat!",
+    "displayName": "Goat",
+    "icon": "items/boat.png",
+    "rootName": "minecraft:husbandry/ride_a_boat_with_a_goat",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "name": "Best Friends Forever",
+    "displayName": "Friends",
+    "icon": "items/lead.png",
+    "rootName": "minecraft:husbandry/tame_an_animal",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/make_a_sign_glow": {
+    "name": "Glow and Behold!",
+    "displayName": "Sign",
+    "icon": "items/glow_ink_sac.png",
+    "rootName": "minecraft:husbandry/make_a_sign_glow",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/fishy_business": {
+    "name": "Fishy Business",
+    "displayName": "Business",
+    "icon": "items/fishing_rod.png",
+    "rootName": "minecraft:husbandry/fishy_business",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/silk_touch_nest": {
+    "name": "Total Beelocation",
+    "displayName": "Beelocation",
+    "icon": "items/bee_nest.png",
+    "rootName": "minecraft:husbandry/silk_touch_nest",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/tadpole_in_a_bucket": {
+    "name": "Bukkit Bukkit",
+    "displayName": "Tadpole",
+    "icon": "items/bucket_of_tadpole.png",
+    "rootName": "minecraft:husbandry/tadpole_in_a_bucket",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:husbandry/obtain_sniffer_egg": {
+    "name": "Smells Interesting",
+    "displayName": "Sniffer Egg",
+    "icon": "items/sniffer_egg.png",
+    "rootName": "minecraft:husbandry/obtain_sniffer_egg",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/plant_seed": {
+    "name": "A Seedy Place",
+    "displayName": "Seed",
+    "icon": "items/wheat.png",
+    "rootName": "minecraft:husbandry/plant_seed",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:husbandry/wax_on": {
+    "name": "Wax On",
+    "displayName": "Wax On",
+    "icon": "items/honeycomb.png",
+    "rootName": "minecraft:husbandry/wax_on",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/bred_all_animals": {
+    "name": "Two by Two",
+    "displayName": "2 by 2",
+    "icon": "items/golden_carrot.png",
+    "rootName": "minecraft:husbandry/bred_all_animals",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/allay_deliver_cake_to_note_block": {
+    "name": "Birthday Song",
+    "displayName": "Birthday",
+    "icon": "items/note_block.png",
+    "rootName": "minecraft:husbandry/allay_deliver_cake_to_note_block",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/complete_catalogue": {
+    "name": "A Complete Catalogue",
+    "displayName": "All Cats",
+    "icon": "items/raw_cod.png",
+    "rootName": "minecraft:husbandry/complete_catalogue",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/tactical_fishing": {
+    "name": "Tactical Fishing",
+    "displayName": "Tactical",
+    "icon": "items/bucket_of_pufferfish.png",
+    "rootName": "minecraft:husbandry/tactical_fishing",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/leash_all_frog_variants": {
+    "name": "When the Squad Hops into Town",
+    "displayName": "The Squad",
+    "icon": "items/lead.png",
+    "rootName": "minecraft:husbandry/leash_all_frog_variants",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/feed_snifflet": {
+    "name": "Little Sniffs",
+    "displayName": "Sniffs",
+    "icon": "items/torchflower_seed.png",
+    "rootName": "minecraft:husbandry/feed_snifflet",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "name": "A Balanced Diet",
+    "displayName": "Diet",
+    "icon": "items/apple.png",
+    "rootName": "minecraft:husbandry/balanced_diet",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/obtain_netherite_hoe": {
+    "name": "Serious Dedication",
+    "displayName": "Dedication",
+    "icon": "items/netherite_hoe.png",
+    "rootName": "minecraft:husbandry/obtain_netherite_hoe",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/wax_off": {
+    "name": "Wax Off",
+    "displayName": "Wax Off",
+    "icon": "items/stone_axe.png",
+    "rootName": "minecraft:husbandry/wax_off",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/axolotl_in_a_bucket": {
+    "name": "The Cutest Predator",
+    "displayName": "Axolotl",
+    "icon": "items/bucket_of_axolotl.png",
+    "rootName": "minecraft:husbandry/axolotl_in_a_bucket",
+    "done": false,
+    "optimized": false
+  },
+  "minecraft:husbandry/froglights": {
+    "name": "With Our Powers Combined",
+    "displayName": "Froglights",
+    "icon": "items/verdant_froglight.png",
+    "rootName": "minecraft:husbandry/froglights",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/plant_any_sniffer_seed": {
+    "name": "Planting the Past",
+    "displayName": "The Past",
+    "icon": "items/pitcher_pod.png",
+    "rootName": "minecraft:husbandry/plant_any_sniffer_seed",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/kill_axolotl_target": {
+    "name": "The Healing Power of Friendship",
+    "displayName": "Friendship",
+    "icon": "items/bucket_of_tropical_fish.png",
+    "rootName": "minecraft:husbandry/kill_axolotl_target",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/repair_wolf_armor": {
+    "name": "Good as New",
+    "displayName": "Armour",
+    "icon": "items/wolf_armour.png",
+    "rootName": "minecraft:husbandry/repair_wolf_armor",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/whole_pack": {
+    "name": "The Whole Pack",
+    "displayName": "The Pack",
+    "icon": "items/bone.png",
+    "rootName": "minecraft:husbandry/whole_pack",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:husbandry/remove_wolf_armor": {
+    "name": "Shear Brillance",
+    "displayName": "Shear",
+    "icon": "items/shears.png",
+    "rootName": "minecraft:husbandry/remove_wolf_armor",
+    "done": false,
+    "optimized": true
+  },
+  "minecraft:adventure/brush_armadillo": {
+    "name": "Isn't It Scute?",
+    "displayName": "Scute?",
+    "icon": "items/scute.png",
+    "rootName": "minecraft:adventure/brush_armadillo",
+    "done": false,
+    "optimized": true
+  }
+}
