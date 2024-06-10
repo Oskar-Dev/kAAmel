@@ -40,7 +40,7 @@ int main() {
 
 	cJSON* data = ADV_get_json("resources/templates/1.20.6/advancements.json");
 	if (data == NULL) {
-		printf("[ERROR] Couldn't get data from a template.");
+		printf("[ERROR] Couldn't get data from a template.\n");
 		cJSON_Delete(data);
 		exit(1);
 	}
@@ -48,10 +48,20 @@ int main() {
 	ADV_advancement** advancements = ADV_object_from_template(data, ADVANCEMENTS);
 	cJSON_Delete(data);
 	if (advancements == NULL) {
-		printf("[ERROR] Couldn't load a template into an object.");
+		printf("[ERROR] Couldn't load a template into an object.\n");
 		exit(1);
 	}
 
+	for (int i = 0; i < ADVANCEMENTS; ++i) {
+		int n = advancements[i]->criteria_n;
+
+		if (n > 0) {
+			printf("--- %s ---\n", advancements[i]->name);
+			for (int j = 0; j < n; ++j) {
+				printf("%s\n", advancements[i]->criteria[j]->name);
+			}
+		}
+	}
 
 	// char* camel = "resources/sprites/animals/camel.png";
 	// SDL_Texture* camel_texture = check_sdl_ptr(IMG_LoadTexture(renderer, camel));
@@ -115,6 +125,8 @@ int main() {
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
 		ADV_delete_advancement(advancements[i]);
 	}
+
+	free(advancements);
 
 	// SDL_DestroyTexture(camel_texture);
 	SDL_Quit();

@@ -7,7 +7,10 @@
 
 typedef struct {
 	char* name;
-} ADV_criteria;
+	char* icon;
+	char* root_name;
+	int done;
+} ADV_criterion;
 
 typedef struct { 
 	char* name;
@@ -15,10 +18,14 @@ typedef struct {
 	char* icon;
 	char* root_name;
 	int done;
-	// ADV_criteria* criteria;
+	int criteria_n;
+	ADV_criterion** criteria;
 } ADV_advancement;
 
-ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon, char* root_name, int done);
+ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done);
+void ADV_delete_criterion(ADV_criterion* criterion);
+
+ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon, char* root_name, ADV_criterion** criteria, int criteria_n, int done);
 void ADV_delete_advancement(ADV_advancement* advancement);
 
 cJSON* ADV_get_json(char* file_path);

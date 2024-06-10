@@ -4,7 +4,51 @@
 
 #include "adv.h"
 
-ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon, char* root_name, int done) {
+ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done) {
+	ADV_criterion* criterion = malloc(sizeof(criterion));
+	if (criterion == NULL) {
+		return NULL;
+	}
+
+	criterion->name = malloc(sizeof(char) * (1+strlen(name)));
+	if (name == NULL) {
+		free(criterion);
+		return NULL;
+	}
+
+	criterion->icon = malloc(sizeof(char) * (1 + strlen(icon)));
+	if (name == NULL) {
+		free(criterion->name);
+		free(criterion);
+		return NULL;
+	}
+
+	criterion->root_name = malloc(sizeof(char) * (1 + strlen(root_name)));
+	if (name == NULL) {
+		free(criterion->name);
+		free(criterion->icon);
+		free(criterion);
+		return NULL;
+	}
+
+	criterion->name = name;
+	criterion->icon = icon;
+	criterion->root_name = root_name;
+	criterion->done = done;
+
+	return criterion;
+}
+
+void ADV_delete_criterion(ADV_criterion* criterion) {
+	if (criterion != NULL) {
+		free(criterion->name);
+		free(criterion->icon);
+		free(criterion->root_name);
+		free(criterion);
+	}
+}
+
+ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon, char* root_name, ADV_criterion** criteria, int criteria_n, int done) {
 	ADV_advancement* advancement = malloc(sizeof(ADV_advancement));
 	if (advancement == NULL) {
 		return NULL;
@@ -40,6 +84,18 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 		return NULL;
 	}
 
+	if (criteria_n > 0) {
+		advancement->criteria = malloc(sizeof(ADV_criterion) * criteria_n);
+		if (advancement->icon == NULL) {
+			free(advancement->name);
+			free(advancement->display_name);
+			free(advancement->icon);
+			free(advancement->root_name);
+			free(advancement);
+			return NULL;
+		}
+	}
+
 	//strcpy_s(advancement->name, name, sizeof(advancement->name));
 	//strcpy_s(advancement->display_name, display_name, sizeof(advancement->display_name));
 	//strcpy_s(advancement->icon, icon, sizeof(advancement->icon));
@@ -47,6 +103,12 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 	advancement->display_name = display_name;
 	advancement->icon = icon;
 	advancement->root_name = root_name;
+	advancement->criteria_n = criteria_n;
+	
+	if (criteria_n > 0) {
+		advancement->criteria = criteria;
+	}
+
 	advancement->done = 0;
 
 	return advancement;
@@ -58,6 +120,11 @@ void ADV_delete_advancement(ADV_advancement* advancement) {
 		free(advancement->display_name);
 		free(advancement->icon);
 		free(advancement->root_name);
+
+		for (int i = 0; i < advancement->criteria_n; ++i) {
+			ADV_delete_criterion(advancement->criteria[i]);
+		}
+
 		free(advancement);
 	}
 }
@@ -123,29 +190,59 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 	
 	ADV_advancement** advancements = malloc(sizeof(ADV_advancement)*n); 
 
+	if (advancements == NULL) {
+		goto memory_error;
+	}
+
 	for (int i = 0; entry; ++i) {
 		cJSON* done = cJSON_GetObjectItemCaseSensitive(entry, "done");
 		cJSON* name = cJSON_GetObjectItemCaseSensitive(entry, "name");
 		cJSON* display_name = cJSON_GetObjectItemCaseSensitive(entry, "displayName");
 		cJSON* icon = cJSON_GetObjectItemCaseSensitive(entry, "icon");
 		cJSON* root_name = cJSON_GetObjectItemCaseSensitive(entry, "rootName");
+		cJSON* criteria = cJSON_GetObjectItemCaseSensitive(entry, "criteria");
+		cJSON* criteria_number = cJSON_GetObjectItemCaseSensitive(entry, "criteriaNumber");
 		
-		if (!done || !name || !display_name || !icon || !root_name || !root_name->valuestring || !name->valuestring || !display_name->valuestring || !icon->valuestring) {
-			printf("[TEMPLATE ERROR]: Inavlid template file.");
-			
-			for (int j = 0; j < i; ++j) {
-				ADV_delete_advancement(advancements[j]);
-			}
-
-			free(advancements);
-
-			return NULL;
+		if (!done || !name || !display_name || !icon || !root_name || !criteria || !criteria_number || !root_name->valuestring || !name->valuestring || !display_name->valuestring || !icon->valuestring) {
+			goto error;
 		}
 		
 		int done_ = 0;
-
 		if (done && cJSON_IsTrue(done)) {
 			done_ = 1;
+		}
+
+		int criteria_n = 0;
+		ADV_criterion** criteria_a = NULL;
+		cJSON* criteria_entry = criteria->child;
+
+		if (criteria_entry) {
+			criteria_a = malloc(criteria_number->valueint * sizeof(ADV_criterion));
+
+			if (criteria_a == NULL) {
+				goto memory_error;
+			}
+			
+			while (criteria_entry) {
+				cJSON* criterion_done = cJSON_GetObjectItemCaseSensitive(criteria_entry, "done");
+				cJSON* criterion_name = cJSON_GetObjectItemCaseSensitive(criteria_entry, "name");
+				cJSON* criterion_icon = cJSON_GetObjectItemCaseSensitive(criteria_entry, "icon");
+				cJSON* criterion_root_name = cJSON_GetObjectItemCaseSensitive(criteria_entry, "rootName");
+
+				if (!done || !name || !icon || !root_name || !criterion_root_name || !root_name->valuestring || !name->valuestring || !icon->valuestring || !criterion_root_name->valuestring) {
+					goto error;
+				}
+
+				criteria_a[criteria_n] = ADV_new_criterion(
+					_strdup(criterion_name->valuestring),
+					_strdup(criterion_icon->valuestring),
+					_strdup(root_name->valuestring),
+					criterion_done
+				);
+
+				++criteria_n;
+				criteria_entry = criteria_entry->next;
+			}
 		}
 
 		advancements[i] = ADV_new_advancement(
@@ -153,13 +250,31 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 			_strdup(display_name->valuestring),
 			_strdup(icon->valuestring),
 			_strdup(root_name->valuestring),
+			criteria_a,
+			criteria_n,
 			done_
 		);
 
 		entry = entry->next;
+		continue;
+
+	error:
+		printf("[TEMPLATE ERROR]: Inavlid template file.\n");
+
+		for (int j = 0; j < i; ++j) {
+			ADV_delete_advancement(advancements[j]);
+		}
+
+		free(advancements);
+
+		return NULL;
 	}
 
 	return advancements;
+
+memory_error:
+	printf("[MEMORY ERROR]: Couldn't allocate enough space for the advancements array.\n");
+	return NULL;
 }
 
 void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) {
