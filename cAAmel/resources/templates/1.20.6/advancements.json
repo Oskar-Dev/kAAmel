@@ -5,7 +5,8 @@
     "icon": "items/grass_block.png",
     "rootName": "minecraft:story/root",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/mine_stone": {
     "name": "Stone Age",
@@ -13,7 +14,8 @@
     "icon": "items/wooden_pickaxe.png",
     "rootName": "minecraft:story/mine_stone",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/upgrade_tools": {
     "name": "Getting an Upgrade",
@@ -21,7 +23,8 @@
     "icon": "items/stone_pickaxe.png",
     "rootName": "minecraft:story/upgrade_tools",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/smelt_iron": {
     "name": "Acquire Hardware",
@@ -29,7 +32,8 @@
     "icon": "items/iron_ingot.png",
     "rootName": "minecraft:story/smelt_iron",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/obtain_armor": {
     "name": "Suit Up",
@@ -37,7 +41,8 @@
     "icon": "items/iron_chestplate.png",
     "rootName": "minecraft:story/obtain_armor",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/lava_bucket": {
     "name": "Hot Stuff",
@@ -45,7 +50,8 @@
     "icon": "items/lava_bucket.png",
     "rootName": "minecraft:story/lava_bucket",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/iron_tools": {
     "name": "Isn't it Iron Pick",
@@ -53,7 +59,8 @@
     "icon": "items/iron_pickaxe.png",
     "rootName": "minecraft:story/iron_tools",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/deflect_arrow": {
     "name": "Not Today, Thank You",
@@ -61,7 +68,8 @@
     "icon": "items/shield.png",
     "rootName": "minecraft:story/deflect_arrow",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/form_obsidian": {
     "name": "Ice Bucket Challenge",
@@ -69,7 +77,8 @@
     "icon": "items/obsidian.png",
     "rootName": "minecraft:story/form_obsidian",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/mine_diamond": {
     "name": "Diamonds!",
@@ -77,7 +86,8 @@
     "icon": "items/diamond.png",
     "rootName": "minecraft:story/mine_diamond",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/enter_the_nether": {
     "name": "We Need to Go Deeper",
@@ -85,7 +95,8 @@
     "icon": "items/flint_and_steel.png",
     "rootName": "minecraft:story/enter_the_nether",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/shiny_gear": {
     "name": "Cover Me with Diamonds",
@@ -93,7 +104,8 @@
     "icon": "items/diamond_chestplate.png",
     "rootName": "minecraft:story/shiny_gear",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/enchant_item": {
     "name": "Enchanter",
@@ -101,7 +113,8 @@
     "icon": "items/enchanted_book.gif",
     "rootName": "minecraft:story/enchant_item",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/cure_zombie_villager": {
     "name": "Zombie Doctor",
@@ -109,7 +122,8 @@
     "icon": "items/golden_apple.png",
     "rootName": "minecraft:story/cure_zombie_villager",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/follow_ender_eye": {
     "name": "Eye Spy",
@@ -117,7 +131,8 @@
     "icon": "items/eye_of_ender.png",
     "rootName": "minecraft:story/follow_ender_eye",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:story/enter_the_end": {
     "name": "The End?",
@@ -125,7 +140,8 @@
     "icon": "items/end_stone.png",
     "rootName": "minecraft:story/enter_the_end",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/root": {
     "name": "Nether",
@@ -133,7 +149,8 @@
     "icon": "items/red_nether_brick.png",
     "rootName": "minecraft:nether/root",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/return_to_sender": {
     "name": "Return to Sender",
@@ -141,7 +158,8 @@
     "icon": "items/fire_charge.png",
     "rootName": "minecraft:nether/return_to_sender",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/find_bastion": {
     "name": "Those Were the Days",
@@ -149,7 +167,8 @@
     "icon": "items/polished_blackstone_bricks.png",
     "rootName": "minecraft:nether/find_bastion",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/obtain_ancient_debris": {
     "name": "Hidden in the Depths",
@@ -157,7 +176,8 @@
     "icon": "items/ancient_debris.png",
     "rootName": "minecraft:nether/obtain_ancient_debris",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/fast_travel": {
     "name": "Subspace Bubble",
@@ -165,7 +185,8 @@
     "icon": "items/empty_map.png",
     "rootName": "minecraft:nether/fast_travel",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/find_fortress": {
     "name": "A Terrible Fortress",
@@ -173,7 +194,8 @@
     "icon": "items/nether_brick.png",
     "rootName": "minecraft:nether/find_fortress",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/obtain_crying_obsidian": {
     "name": "Who is Cutting Onions?",
@@ -181,7 +203,8 @@
     "icon": "items/crying_obsidian.png",
     "rootName": "minecraft:nether/obtain_crying_obsidian",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/distract_piglin": {
     "name": "Oh Shiny",
@@ -189,7 +212,8 @@
     "icon": "items/gold_ingot.png",
     "rootName": "minecraft:nether/distract_piglin",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/ride_strider": {
     "name": "This Boat Has Legs",
@@ -197,7 +221,8 @@
     "icon": "items/warped_fungus_on_a_stick.png",
     "rootName": "minecraft:nether/ride_strider",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/uneasy_alliance": {
     "name": "Uneasy Alliance",
@@ -205,7 +230,8 @@
     "icon": "items/ghast_tear.png",
     "rootName": "minecraft:nether/uneasy_alliance",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/loot_bastion": {
     "name": "War Pigs",
@@ -213,7 +239,8 @@
     "icon": "items/chest.png",
     "rootName": "minecraft:nether/loot_bastion",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/use_lodestone": {
     "name": "Country Lode, Take Me Home",
@@ -221,7 +248,8 @@
     "icon": "items/lodestone.png",
     "rootName": "minecraft:nether/use_lodestone",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/netherite_armor": {
     "name": "Cover Me in Debris",
@@ -229,7 +257,8 @@
     "icon": "items/netherite_chestplate.png",
     "rootName": "minecraft:nether/netherite_armor",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/get_wither_skull": {
     "name": "Spooky Scary Skeleton",
@@ -237,7 +266,8 @@
     "icon": "items/wither_skeleton_skull.png",
     "rootName": "minecraft:nether/get_wither_skull",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/obtain_blaze_rod": {
     "name": "Into Fire",
@@ -245,7 +275,8 @@
     "icon": "items/blaze_rod.png",
     "rootName": "minecraft:nether/obtain_blaze_rod",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/charge_respawn_anchor": {
     "name": "Not Quite \"Nine\" Lives",
@@ -253,7 +284,8 @@
     "icon": "items/respawn_anchor.png",
     "rootName": "minecraft:nether/charge_respawn_anchor",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/ride_strider_in_overworld_lava": {
     "name": "Feels Like Home",
@@ -261,7 +293,8 @@
     "icon": "items/warped_fungus_on_a_stick.png",
     "rootName": "minecraft:nether/ride_strider_in_overworld_lava",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/explore_nether": {
     "name": "Hot Tourist Destinations",
@@ -269,7 +302,39 @@
     "icon": "items/netherite_boots.png",
     "rootName": "minecraft:nether/explore_nether",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 5,
+    "criteria": {
+      "minecraft:crimson_forest": {
+        "name": "Crimson Forest",
+        "icon": "netherBiomes/crimson_forest.png",
+        "done": false,
+        "rootName": "minecraft:crimson_forest"
+      },
+      "minecraft:nether_wastes": {
+        "name": "Nether Wastes",
+        "icon": "netherBiomes/nether_wastes.png",
+        "done": false,
+        "rootName": "minecraft:nether_wastes"
+      },
+      "minecraft:soul_sand_valley": {
+        "name": "Soul Sand Valley",
+        "icon": "netherBiomes/soul_sand_valley.png",
+        "done": false,
+        "rootName": "minecraft:soul_sand_valley"
+      },
+      "minecraft:basalt_deltas": {
+        "name": "Basalt Deltas",
+        "icon": "netherBiomes/basalt_deltas.png",
+        "done": false,
+        "rootName": "minecraft:basalt_deltas"
+      },
+      "minecraft:warped_forest": {
+        "name": "Warped Forest",
+        "icon": "netherBiomes/warped_forest.png",
+        "done": false,
+        "rootName": "minecraft:warped_forest"
+      }
+    }
   },
   "minecraft:nether/summon_wither": {
     "name": "Withering Heights",
@@ -277,7 +342,8 @@
     "icon": "items/nether_star.gif",
     "rootName": "minecraft:nether/summon_wither",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/brew_potion": {
     "name": "Local Brewery",
@@ -285,7 +351,8 @@
     "icon": "items/potion.png",
     "rootName": "minecraft:nether/brew_potion",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/create_beacon": {
     "name": "Bring Home the Beacon",
@@ -293,7 +360,8 @@
     "icon": "items/beacon.png",
     "rootName": "minecraft:nether/create_beacon",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/all_potions": {
     "name": "A Furious Cocktail",
@@ -301,7 +369,8 @@
     "icon": "items/milk_bucket.png",
     "rootName": "minecraft:nether/all_potions",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/create_full_beacon": {
     "name": "Beaconator",
@@ -309,7 +378,8 @@
     "icon": "items/beacon.png",
     "rootName": "minecraft:nether/create_full_beacon",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:nether/all_effects": {
     "name": "How Did We Get Here?",
@@ -317,7 +387,8 @@
     "icon": "items/bucket.png",
     "rootName": "minecraft:nether/all_effects",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/root": {
     "name": "The End",
@@ -325,7 +396,8 @@
     "icon": "items/end_stone.png",
     "rootName": "minecraft:end/root",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/kill_dragon": {
     "name": "Free the End",
@@ -333,7 +405,8 @@
     "icon": "items/dragon_head.png",
     "rootName": "minecraft:end/kill_dragon",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/dragon_egg": {
     "name": "The Next Generation",
@@ -341,7 +414,8 @@
     "icon": "items/dragon_egg.png",
     "rootName": "minecraft:end/dragon_egg",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/enter_end_gateway": {
     "name": "Remote Gateway",
@@ -349,7 +423,8 @@
     "icon": "items/ender_pearl.png",
     "rootName": "minecraft:end/enter_end_gateway",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/respawn_dragon": {
     "name": "The End... Again...",
@@ -357,7 +432,8 @@
     "icon": "items/end_crystal.gif",
     "rootName": "minecraft:end/respawn_dragon",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/dragon_breath": {
     "name": "You Need a Mint",
@@ -365,7 +441,8 @@
     "icon": "items/breath.png",
     "rootName": "minecraft:end/dragon_breath",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/find_end_city": {
     "name": "The City at the End of the Game",
@@ -373,7 +450,8 @@
     "icon": "items/purpur_block.png",
     "rootName": "minecraft:end/find_end_city",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/elytra": {
     "name": "Sky's the Limit",
@@ -381,7 +459,8 @@
     "icon": "items/elytra.png",
     "rootName": "minecraft:end/elytra",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:end/levitate": {
     "name": "Great View From Up Here",
@@ -389,7 +468,8 @@
     "icon": "items/shulker_shell.png",
     "rootName": "minecraft:end/levitate",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/root": {
     "name": "Adventure",
@@ -397,7 +477,8 @@
     "icon": "items/empty_map.png",
     "rootName": "minecraft:adventure/root",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/voluntary_exile": {
     "name": "Voluntary Exile",
@@ -405,7 +486,8 @@
     "icon": "items/ominous_banner.png",
     "rootName": "minecraft:adventure/voluntary_exile",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/spyglass_at_parrot": {
     "name": "Is It a Bird?",
@@ -413,7 +495,8 @@
     "icon": "items/spyglass.png",
     "rootName": "minecraft:adventure/spyglass_at_parrot",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/kill_a_mob": {
     "name": "Monster Hunter",
@@ -421,7 +504,8 @@
     "icon": "items/iron_sword.png",
     "rootName": "minecraft:adventure/kill_a_mob",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/read_power_of_chiseled_bookshelf": {
     "name": "The Power of Books",
@@ -429,7 +513,8 @@
     "icon": "items/chiseled_bookshelf.png",
     "rootName": "minecraft:adventure/read_power_of_chiseled_bookshelf",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/trade": {
     "name": "What a Deal!",
@@ -437,7 +522,8 @@
     "icon": "items/emerald.png",
     "rootName": "minecraft:adventure/trade",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/trim_with_any_armor_pattern": {
     "name": "Crafting a New Look",
@@ -445,7 +531,8 @@
     "icon": "items/dune_trim.png",
     "rootName": "minecraft:adventure/trim_with_any_armor_pattern",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/honey_block_slide": {
     "name": "Sticky Situation",
@@ -453,7 +540,8 @@
     "icon": "items/honey_block.png",
     "rootName": "minecraft:adventure/honey_block_slide",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/ol_betsy": {
     "name": "Ol' Betsy",
@@ -461,7 +549,8 @@
     "icon": "items/crossbow.png",
     "rootName": "minecraft:adventure/ol_betsy",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/lightning_rod_with_villager_no_fire": {
     "name": "Surge Protector",
@@ -469,7 +558,8 @@
     "icon": "items/lightning_rod.png",
     "rootName": "minecraft:adventure/lightning_rod_with_villager_no_fire",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/fall_from_world_height": {
     "name": "Caves & Cliffs",
@@ -477,7 +567,8 @@
     "icon": "items/water_bucket.png",
     "rootName": "minecraft:adventure/fall_from_world_height",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/salvage_sherd": {
     "name": "Respecting the Remmants",
@@ -485,7 +576,8 @@
     "icon": "items/brush.png",
     "rootName": "minecraft:adventure/salvage_sherd",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/avoid_vibration": {
     "name": "Sneak 100",
@@ -493,7 +585,8 @@
     "icon": "items/sculk_sensor.gif",
     "rootName": "minecraft:adventure/avoid_vibration",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/sleep_in_bed": {
     "name": "Sweet Dreams",
@@ -501,7 +594,8 @@
     "icon": "items/red_bed.png",
     "rootName": "minecraft:adventure/sleep_in_bed",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/hero_of_the_village": {
     "name": "Hero of the Village",
@@ -509,7 +603,8 @@
     "icon": "items/ominous_banner.png",
     "rootName": "minecraft:adventure/hero_of_the_village",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/spyglass_at_ghast": {
     "name": "Is It a Balloon?",
@@ -517,7 +612,8 @@
     "icon": "items/spyglass.png",
     "rootName": "minecraft:adventure/spyglass_at_ghast",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/throw_trident": {
     "name": "A Throwaway Joke",
@@ -525,7 +621,8 @@
     "icon": "items/trident.png",
     "rootName": "minecraft:adventure/throw_trident",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/kill_mob_near_sculk_catalyst": {
     "name": "It Spreads",
@@ -533,7 +630,8 @@
     "icon": "items/sculk_catalyst.png",
     "rootName": "minecraft:adventure/kill_mob_near_sculk_catalyst",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/shoot_arrow": {
     "name": "Take Aim",
@@ -541,7 +639,8 @@
     "icon": "items/bow.png",
     "rootName": "minecraft:adventure/shoot_arrow",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/kill_all_mobs": {
     "name": "Monsters Hunted",
@@ -549,7 +648,213 @@
     "icon": "items/diamond_sword.png",
     "rootName": "minecraft:adventure/kill_all_mobs",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 34,
+    "criteria": {
+      "minecraft:pillager": {
+        "name": "Pillager",
+        "icon": "monsters/pillager.png",
+        "done": false,
+        "rootName": "minecraft:pillager"
+      },
+      "minecraft:blaze": {
+        "name": "Blaze",
+        "icon": "monsters/blaze.png",
+        "done": false,
+        "rootName": "minecraft:blaze"
+      },
+      "minecraft:skeleton": {
+        "name": "Skeleton",
+        "icon": "monsters/skeleton.png",
+        "done": false,
+        "rootName": "minecraft:skeleton"
+      },
+      "minecraft:zoglin": {
+        "name": "Zoglin",
+        "icon": "monsters/zoglin.png",
+        "done": false,
+        "rootName": "minecraft:zoglin"
+      },
+      "minecraft:elder_guardian": {
+        "name": "Elder Guardian",
+        "icon": "monsters/elder_guardian.png",
+        "done": false,
+        "rootName": "minecraft:elder_guardian"
+      },
+      "minecraft:ravager": {
+        "name": "Ravager",
+        "icon": "monsters/ravager.png",
+        "done": false,
+        "rootName": "minecraft:ravager"
+      },
+      "minecraft:ghast": {
+        "name": "Ghast",
+        "icon": "monsters/ghast.png",
+        "done": false,
+        "rootName": "minecraft:ghast"
+      },
+      "minecraft:hoglin": {
+        "name": "Hoglin",
+        "icon": "monsters/hoglin.png",
+        "done": false,
+        "rootName": "minecraft:hoglin"
+      },
+      "minecraft:guardian": {
+        "name": "Guardian",
+        "icon": "monsters/guardian.png",
+        "done": false,
+        "rootName": "minecraft:guardian"
+      },
+      "minecraft:vindicator": {
+        "name": "Vindicator",
+        "icon": "monsters/vindicator.png",
+        "done": false,
+        "rootName": "minecraft:vindicator"
+      },
+      "minecraft:magma_cube": {
+        "name": "Magma Cube",
+        "icon": "monsters/magma_cube.png",
+        "done": false,
+        "rootName": "minecraft:magma_cube"
+      },
+      "minecraft:piglin_brute": {
+        "name": "Piglin Brute",
+        "icon": "monsters/piglin_brute.png",
+        "done": false,
+        "rootName": "minecraft:piglin_brute"
+      },
+      "minecraft:spider": {
+        "name": "Spider",
+        "icon": "monsters/spider.png",
+        "done": false,
+        "rootName": "minecraft:spider"
+      },
+      "minecraft:creeper": {
+        "name": "Creeper",
+        "icon": "monsters/creeper.png",
+        "done": false,
+        "rootName": "minecraft:creeper"
+      },
+      "minecraft:wither": {
+        "name": "Wither",
+        "icon": "monsters/wither.png",
+        "done": false,
+        "rootName": "minecraft:wither"
+      },
+      "minecraft:slime": {
+        "name": "Slime",
+        "icon": "monsters/slime.png",
+        "done": false,
+        "rootName": "minecraft:slime"
+      },
+      "minecraft:evoker": {
+        "name": "Evoker",
+        "icon": "monsters/evoker.png",
+        "done": false,
+        "rootName": "minecraft:evoker"
+      },
+      "minecraft:phantom": {
+        "name": "Phantom",
+        "icon": "monsters/phantom.png",
+        "done": false,
+        "rootName": "minecraft:phantom"
+      },
+      "minecraft:zombified_piglin": {
+        "name": "Zombified Piglin",
+        "icon": "monsters/zombified_piglin.png",
+        "done": false,
+        "rootName": "minecraft:zombified_piglin"
+      },
+      "minecraft:witch": {
+        "name": "Witch",
+        "icon": "monsters/witch.png",
+        "done": false,
+        "rootName": "minecraft:witch"
+      },
+      "minecraft:wither_skeleton": {
+        "name": "Wither Skeleton",
+        "icon": "monsters/wither_skeleton.png",
+        "done": false,
+        "rootName": "minecraft:wither_skeleton"
+      },
+      "minecraft:husk": {
+        "name": "Husk",
+        "icon": "monsters/husk.png",
+        "done": false,
+        "rootName": "minecraft:husk"
+      },
+      "minecraft:ender_dragon": {
+        "name": "Ender Dragon",
+        "icon": "monsters/ender_dragon.png",
+        "done": false,
+        "rootName": "minecraft:ender_dragon"
+      },
+      "minecraft:shulker": {
+        "name": "Shulker",
+        "icon": "monsters/shulker.png",
+        "done": false,
+        "rootName": "minecraft:shulker"
+      },
+      "minecraft:cave_spider": {
+        "name": "Cave Spider",
+        "icon": "monsters/cave_spider.png",
+        "done": false,
+        "rootName": "minecraft:cave_spider"
+      },
+      "minecraft:piglin": {
+        "name": "Piglin",
+        "icon": "monsters/piglin.png",
+        "done": false,
+        "rootName": "minecraft:piglin"
+      },
+      "minecraft:enderman": {
+        "name": "Enderman",
+        "icon": "monsters/enderman.png",
+        "done": false,
+        "rootName": "minecraft:enderman"
+      },
+      "minecraft:silverfish": {
+        "name": "Silverfish",
+        "icon": "monsters/silverfish.png",
+        "done": false,
+        "rootName": "minecraft:silverfish"
+      },
+      "minecraft:stray": {
+        "name": "Stray",
+        "icon": "monsters/stray.png",
+        "done": false,
+        "rootName": "minecraft:stray"
+      },
+      "minecraft:endermite": {
+        "name": "Endermite",
+        "icon": "monsters/endermite.png",
+        "done": false,
+        "rootName": "minecraft:endermite"
+      },
+      "minecraft:vex": {
+        "name": "Vex",
+        "icon": "monsters/vex.png",
+        "done": false,
+        "rootName": "minecraft:vex"
+      },
+      "minecraft:zombie": {
+        "name": "Zombie",
+        "icon": "monsters/zombie.png",
+        "done": false,
+        "rootName": "minecraft:zombie"
+      },
+      "minecraft:drowned": {
+        "name": "Drowned",
+        "icon": "monsters/drowned.png",
+        "done": false,
+        "rootName": "minecraft:drowned"
+      },
+      "minecraft:zombie_villager": {
+        "name": "Zombie Villager",
+        "icon": "monsters/zombie_villager.png",
+        "done": false,
+        "rootName": "minecraft:zombie_villager"
+      }
+    }
   },
   "minecraft:adventure/totem_of_undying": {
     "name": "Postmortal",
@@ -557,7 +862,8 @@
     "icon": "items/totem_of_undying.png",
     "rootName": "minecraft:adventure/totem_of_undying",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/summon_iron_golem": {
     "name": "Hired Help",
@@ -565,7 +871,8 @@
     "icon": "items/carved_pumpkin.png",
     "rootName": "minecraft:adventure/summon_iron_golem",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/trade_at_world_height": {
     "name": "Star Trader",
@@ -573,7 +880,8 @@
     "icon": "items/emerald.png",
     "rootName": "minecraft:adventure/trade_at_world_height",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
     "name": "Smithing with Style",
@@ -581,7 +889,57 @@
     "icon": "items/silence_trim.png",
     "rootName": "minecraft:adventure/trim_with_all_exclusive_armor_patterns",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 8,
+    "criteria": {
+      "armor_trimmed_minecraft:silence_armor_trim_smithing_template_smithing_trim": {
+        "name": "Silence",
+        "icon": "trims/silence.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:silence_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:wayfinder_armor_trim_smithing_template_smithing_trim": {
+        "name": "Wayfinder",
+        "icon": "trims/wayfinder.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:wayfinder_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:tide_armor_trim_smithing_template_smithing_trim": {
+        "name": "Tide",
+        "icon": "trims/tide.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:tide_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:spire_armor_trim_smithing_template_smithing_trim": {
+        "name": "Spire",
+        "icon": "trims/spire.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:spire_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim": {
+        "name": "Vex",
+        "icon": "trims/vex.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim": {
+        "name": "Ward",
+        "icon": "trims/ward.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:snout_armor_trim_smithing_template_smithing_trim": {
+        "name": "Snout",
+        "icon": "trims/snout.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:snout_armor_trim_smithing_template_smithing_trim"
+      },
+      "armor_trimmed_minecraft:rib_armor_trim_smithing_template_smithing_trim": {
+        "name": "Rib",
+        "icon": "trims/rib.png",
+        "done": false,
+        "rootName": "armor_trimmed_minecraft:rib_armor_trim_smithing_template_smithing_trim"
+      }
+    }
   },
   "minecraft:adventure/two_birds_one_arrow": {
     "name": "Two Birds, One Arrow",
@@ -589,7 +947,8 @@
     "icon": "items/crossbow.png",
     "rootName": "minecraft:adventure/two_birds_one_arrow",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/whos_the_pillager_now": {
     "name": "Who's the Pillager Now?",
@@ -597,7 +956,8 @@
     "icon": "items/crossbow.png",
     "rootName": "minecraft:adventure/whos_the_pillager_now",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/arbalistic": {
     "name": "Arbalistic",
@@ -605,7 +965,8 @@
     "icon": "items/crossbow.png",
     "rootName": "minecraft:adventure/arbalistic",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/craft_decorated_pot_using_only_sherds": {
     "name": "Careful Restoration",
@@ -613,7 +974,8 @@
     "icon": "items/decorated_pot.png",
     "rootName": "minecraft:adventure/craft_decorated_pot_using_only_sherds",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/adventuring_time": {
     "name": "Adventuring Time",
@@ -621,7 +983,327 @@
     "icon": "items/diamond_boots.png",
     "rootName": "minecraft:adventure/adventuring_time",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 53,
+    "criteria": {
+      "minecraft:snowy_slopes": {
+        "name": "Snowy Slopes",
+        "icon": "biomes/snowy_slopes.png",
+        "done": false,
+        "rootName": "minecraft:snowy_slopes"
+      },
+      "minecraft:old_growth_pine_taiga": {
+        "name": "Old Growth Pine Taiga",
+        "icon": "biomes/old_growth_pine_taiga.png",
+        "done": false,
+        "rootName": "minecraft:old_growth_pine_taiga"
+      },
+      "minecraft:mushroom_fields": {
+        "name": "Mushroom Fields",
+        "icon": "biomes/mushroom_fields.png",
+        "done": false,
+        "rootName": "minecraft:mushroom_fields"
+      },
+      "minecraft:taiga": {
+        "name": "Taiga",
+        "icon": "biomes/taiga.png",
+        "done": false,
+        "rootName": "minecraft:taiga"
+      },
+      "minecraft:deep_ocean": {
+        "name": "Deep Ocean",
+        "icon": "biomes/deep_ocean.png",
+        "done": false,
+        "rootName": "minecraft:deep_ocean"
+      },
+      "minecraft:eroded_badlands": {
+        "name": "Eroded Badlands",
+        "icon": "biomes/eroded_badlands.png",
+        "done": false,
+        "rootName": "minecraft:eroded_badlands"
+      },
+      "minecraft:frozen_river": {
+        "name": "Frozen River",
+        "icon": "biomes/frozen_river.png",
+        "done": false,
+        "rootName": "minecraft:frozen_river"
+      },
+      "minecraft:cherry_grove": {
+        "name": "Cherry Grove",
+        "icon": "biomes/cherry_grove.png",
+        "done": false,
+        "rootName": "minecraft:cherry_grove"
+      },
+      "minecraft:sunflower_plains": {
+        "name": "Sunflower Plains",
+        "icon": "biomes/sunflower_plains.png",
+        "done": false,
+        "rootName": "minecraft:sunflower_plains"
+      },
+      "minecraft:birch_forest": {
+        "name": "Birch Forest",
+        "icon": "biomes/birch_forest.png",
+        "done": false,
+        "rootName": "minecraft:birch_forest"
+      },
+      "minecraft:windswept_hills": {
+        "name": "Windswept Hills",
+        "icon": "biomes/windswept_hills.png",
+        "done": false,
+        "rootName": "minecraft:windswept_hills"
+      },
+      "minecraft:wooded_badlands": {
+        "name": "Wooded Badlands",
+        "icon": "biomes/wooded_badlands.png",
+        "done": false,
+        "rootName": "minecraft:wooded_badlands"
+      },
+      "minecraft:bamboo_jungle": {
+        "name": "Bamboo Jungle",
+        "icon": "biomes/bamboo_jungle.png",
+        "done": false,
+        "rootName": "minecraft:bamboo_jungle"
+      },
+      "minecraft:badlands": {
+        "name": "Badlands",
+        "icon": "biomes/badlands.png",
+        "done": false,
+        "rootName": "minecraft:badlands"
+      },
+      "minecraft:savanna_plateau": {
+        "name": "Savanna Plateau",
+        "icon": "biomes/savanna_plateau.png",
+        "done": false,
+        "rootName": "minecraft:savanna_plateau"
+      },
+      "minecraft:beach": {
+        "name": "Beach",
+        "icon": "biomes/beach.png",
+        "done": false,
+        "rootName": "minecraft:beach"
+      },
+      "minecraft:dark_forest": {
+        "name": "Dark Forest",
+        "icon": "biomes/dark_forest.png",
+        "done": false,
+        "rootName": "minecraft:dark_forest"
+      },
+      "minecraft:stony_peaks": {
+        "name": "Stony Peaks",
+        "icon": "biomes/stony_peaks.png",
+        "done": false,
+        "rootName": "minecraft:stony_peaks"
+      },
+      "minecraft:mangrove_swamp": {
+        "name": "Mangrove Swamp",
+        "icon": "biomes/mangrove_swamp.png",
+        "done": false,
+        "rootName": "minecraft:mangrove_swamp"
+      },
+      "minecraft:sparse_jungle": {
+        "name": "Sparse Jungle",
+        "icon": "biomes/sparse_jungle.png",
+        "done": false,
+        "rootName": "minecraft:sparse_jungle"
+      },
+      "minecraft:river": {
+        "name": "River",
+        "icon": "biomes/river.png",
+        "done": false,
+        "rootName": "minecraft:river"
+      },
+      "minecraft:lukewarm_ocean": {
+        "name": "Lukewarm Ocean",
+        "icon": "biomes/lukewarm_ocean.png",
+        "done": false,
+        "rootName": "minecraft:lukewarm_ocean"
+      },
+      "minecraft:stony_shore": {
+        "name": "Stony Shore",
+        "icon": "biomes/stony_shore.png",
+        "done": false,
+        "rootName": "minecraft:stony_shore"
+      },
+      "minecraft:snowy_plains": {
+        "name": "Snowy Plains",
+        "icon": "biomes/snowy_plains.png",
+        "done": false,
+        "rootName": "minecraft:snowy_plains"
+      },
+      "minecraft:dripstone_caves": {
+        "name": "Dripstone Caves",
+        "icon": "biomes/dripstone_caves.png",
+        "done": false,
+        "rootName": "minecraft:dripstone_caves"
+      },
+      "minecraft:snowy_taiga": {
+        "name": "Snowy Taiga",
+        "icon": "biomes/snowy_taiga.png",
+        "done": false,
+        "rootName": "minecraft:snowy_taiga"
+      },
+      "minecraft:grove": {
+        "name": "Grove",
+        "icon": "biomes/grove.png",
+        "done": false,
+        "rootName": "minecraft:grove"
+      },
+      "minecraft:swamp": {
+        "name": "Swamp",
+        "icon": "biomes/swamp.png",
+        "done": false,
+        "rootName": "minecraft:swamp"
+      },
+      "minecraft:jagged_peaks": {
+        "name": "Jagged Peaks",
+        "icon": "biomes/jagged_peaks.png",
+        "done": false,
+        "rootName": "minecraft:jagged_peaks"
+      },
+      "minecraft:cold_ocean": {
+        "name": "Cold Ocean",
+        "icon": "biomes/cold_ocean.png",
+        "done": false,
+        "rootName": "minecraft:cold_ocean"
+      },
+      "minecraft:forest": {
+        "name": "Forest",
+        "icon": "biomes/forest.png",
+        "done": false,
+        "rootName": "minecraft:forest"
+      },
+      "minecraft:lush_caves": {
+        "name": "Lush Caves",
+        "icon": "biomes/lush_caves.png",
+        "done": false,
+        "rootName": "minecraft:lush_caves"
+      },
+      "minecraft:deep_cold_ocean": {
+        "name": "Deep Cold Ocean",
+        "icon": "biomes/deep_cold_ocean.png",
+        "done": false,
+        "rootName": "minecraft:deep_cold_ocean"
+      },
+      "minecraft:ice_spikes": {
+        "name": "Ice Spikes",
+        "icon": "biomes/ice_spikes.png",
+        "done": false,
+        "rootName": "minecraft:ice_spikes"
+      },
+      "minecraft:frozen_ocean": {
+        "name": "Frozen Ocean",
+        "icon": "biomes/frozen_ocean.png",
+        "done": false,
+        "rootName": "minecraft:frozen_ocean"
+      },
+      "minecraft:desert": {
+        "name": "Desert",
+        "icon": "biomes/desert.png",
+        "done": false,
+        "rootName": "minecraft:desert"
+      },
+      "minecraft:deep_frozen_ocean": {
+        "name": "Deep Frozen Ocean",
+        "icon": "biomes/deep_frozen_ocean.png",
+        "done": false,
+        "rootName": "minecraft:deep_frozen_ocean"
+      },
+      "minecraft:windswept_forest": {
+        "name": "Windswept Forest",
+        "icon": "biomes/windswept_forest.png",
+        "done": false,
+        "rootName": "minecraft:windswept_forest"
+      },
+      "minecraft:ocean": {
+        "name": "Ocean",
+        "icon": "biomes/ocean.png",
+        "done": false,
+        "rootName": "minecraft:ocean"
+      },
+      "minecraft:jungle": {
+        "name": "Jungle",
+        "icon": "biomes/jungle.png",
+        "done": false,
+        "rootName": "minecraft:jungle"
+      },
+      "minecraft:old_growth_spruce_taiga": {
+        "name": "Old Growth Spruce Taiga",
+        "icon": "biomes/old_growth_spruce_taiga.png",
+        "done": false,
+        "rootName": "minecraft:old_growth_spruce_taiga"
+      },
+      "minecraft:snowy_beach": {
+        "name": "Snowy Beach",
+        "icon": "biomes/snowy_beach.png",
+        "done": false,
+        "rootName": "minecraft:snowy_beach"
+      },
+      "minecraft:windswept_savanna": {
+        "name": "Windswept Savanna",
+        "icon": "biomes/windswept_savanna.png",
+        "done": false,
+        "rootName": "minecraft:windswept_savanna"
+      },
+      "minecraft:warm_ocean": {
+        "name": "Warm Ocean",
+        "icon": "biomes/warm_ocean.png",
+        "done": false,
+        "rootName": "minecraft:warm_ocean"
+      },
+      "minecraft:deep_lukewarm_ocean": {
+        "name": "Deep Lukewarm Ocean",
+        "icon": "biomes/deep_lukewarm_ocean.png",
+        "done": false,
+        "rootName": "minecraft:deep_lukewarm_ocean"
+      },
+      "minecraft:flower_forest": {
+        "name": "Flower Forest",
+        "icon": "biomes/flower_forest.png",
+        "done": false,
+        "rootName": "minecraft:flower_forest"
+      },
+      "minecraft:frozen_peaks": {
+        "name": "Frozen Peaks",
+        "icon": "biomes/frozen_peaks.png",
+        "done": false,
+        "rootName": "minecraft:frozen_peaks"
+      },
+      "minecraft:old_growth_birch_forest": {
+        "name": "Old Growth Birch Forest",
+        "icon": "biomes/old_growth_birch_forest.png",
+        "done": false,
+        "rootName": "minecraft:old_growth_birch_forest"
+      },
+      "minecraft:deep_dark": {
+        "name": "Deep Dark",
+        "icon": "biomes/deep_dark.png",
+        "done": false,
+        "rootName": "minecraft:deep_dark"
+      },
+      "minecraft:meadow": {
+        "name": "Meadow",
+        "icon": "biomes/meadow.png",
+        "done": false,
+        "rootName": "minecraft:meadow"
+      },
+      "minecraft:windswept_gravelly_hills": {
+        "name": "Windswept Gravelly Hills",
+        "icon": "biomes/windswept_gravelly_hills.png",
+        "done": false,
+        "rootName": "minecraft:windswept_gravelly_hills"
+      },
+      "minecraft:savanna": {
+        "name": "Savanna",
+        "icon": "biomes/savanna.png",
+        "done": false,
+        "rootName": "minecraft:savanna"
+      },
+      "minecraft:plains": {
+        "name": "Plains",
+        "icon": "biomes/plains.png",
+        "done": false,
+        "rootName": "minecraft:plains"
+      }
+    }
   },
   "minecraft:adventure/play_jukebox_in_meadows": {
     "name": "Sound of Music",
@@ -629,7 +1311,8 @@
     "icon": "items/jukebox.png",
     "rootName": "minecraft:adventure/play_jukebox_in_meadows",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/walk_on_powder_snow_with_leather_boots": {
     "name": "Light as a Rabbit",
@@ -637,7 +1320,8 @@
     "icon": "items/leather_boots.png",
     "rootName": "minecraft:adventure/walk_on_powder_snow_with_leather_boots",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/spyglass_at_dragon": {
     "name": "Is It a Plane?",
@@ -645,7 +1329,8 @@
     "icon": "items/spyglass.png",
     "rootName": "minecraft:adventure/spyglass_at_dragon",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/very_very_frightening": {
     "name": "Very Very Frightening",
@@ -653,7 +1338,8 @@
     "icon": "items/trident.png",
     "rootName": "minecraft:adventure/very_very_frightening",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/sniper_duel": {
     "name": "Sniper Duel",
@@ -661,7 +1347,8 @@
     "icon": "items/arrow.png",
     "rootName": "minecraft:adventure/sniper_duel",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/bullseye": {
     "name": "Bullseye",
@@ -669,7 +1356,8 @@
     "icon": "items/target_block.png",
     "rootName": "minecraft:adventure/bullseye",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/root": {
     "name": "Husbandry",
@@ -677,7 +1365,8 @@
     "icon": "items/hay_bale.png",
     "rootName": "minecraft:husbandry/root",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/safely_harvest_honey": {
     "name": "Bee Our Guest",
@@ -685,7 +1374,8 @@
     "icon": "items/honey_bottle.png",
     "rootName": "minecraft:husbandry/safely_harvest_honey",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/breed_an_animal": {
     "name": "The Parrots and the Bats",
@@ -693,7 +1383,8 @@
     "icon": "items/wheat.png",
     "rootName": "minecraft:husbandry/breed_an_animal",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/allay_deliver_item_to_player": {
     "name": "You've Got a Friend in Me",
@@ -701,7 +1392,8 @@
     "icon": "items/cookie.png",
     "rootName": "minecraft:husbandry/allay_deliver_item_to_player",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/ride_a_boat_with_a_goat": {
     "name": "Whatever Floats Your Goat!",
@@ -709,7 +1401,8 @@
     "icon": "items/boat.png",
     "rootName": "minecraft:husbandry/ride_a_boat_with_a_goat",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/tame_an_animal": {
     "name": "Best Friends Forever",
@@ -717,7 +1410,8 @@
     "icon": "items/lead.png",
     "rootName": "minecraft:husbandry/tame_an_animal",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/make_a_sign_glow": {
     "name": "Glow and Behold!",
@@ -725,7 +1419,8 @@
     "icon": "items/glow_ink_sac.png",
     "rootName": "minecraft:husbandry/make_a_sign_glow",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/fishy_business": {
     "name": "Fishy Business",
@@ -733,7 +1428,8 @@
     "icon": "items/fishing_rod.png",
     "rootName": "minecraft:husbandry/fishy_business",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/silk_touch_nest": {
     "name": "Total Beelocation",
@@ -741,7 +1437,8 @@
     "icon": "items/bee_nest.png",
     "rootName": "minecraft:husbandry/silk_touch_nest",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/tadpole_in_a_bucket": {
     "name": "Bukkit Bukkit",
@@ -749,7 +1446,8 @@
     "icon": "items/bucket_of_tadpole.png",
     "rootName": "minecraft:husbandry/tadpole_in_a_bucket",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/obtain_sniffer_egg": {
     "name": "Smells Interesting",
@@ -757,7 +1455,8 @@
     "icon": "items/sniffer_egg.png",
     "rootName": "minecraft:husbandry/obtain_sniffer_egg",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/plant_seed": {
     "name": "A Seedy Place",
@@ -765,7 +1464,8 @@
     "icon": "items/wheat.png",
     "rootName": "minecraft:husbandry/plant_seed",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/wax_on": {
     "name": "Wax On",
@@ -773,7 +1473,8 @@
     "icon": "items/honeycomb.png",
     "rootName": "minecraft:husbandry/wax_on",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/bred_all_animals": {
     "name": "Two by Two",
@@ -781,7 +1482,159 @@
     "icon": "items/golden_carrot.png",
     "rootName": "minecraft:husbandry/bred_all_animals",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 25,
+    "criteria": {
+      "minecraft:donkey": {
+        "name": "Donkey",
+        "icon": "animals/donkey.png",
+        "done": false,
+        "rootName": "minecraft:donkey"
+      },
+      "minecraft:mule": {
+        "name": "Mule",
+        "icon": "animals/mule.png",
+        "done": false,
+        "rootName": "minecraft:mule"
+      },
+      "minecraft:hoglin": {
+        "name": "Hoglin",
+        "icon": "animals/hoglin.png",
+        "done": false,
+        "rootName": "minecraft:hoglin"
+      },
+      "minecraft:sniffer": {
+        "name": "Sniffer",
+        "icon": "animals/sniffer.png",
+        "done": false,
+        "rootName": "minecraft:sniffer"
+      },
+      "minecraft:strider": {
+        "name": "Strider",
+        "icon": "animals/strider.png",
+        "done": false,
+        "rootName": "minecraft:strider"
+      },
+      "minecraft:cow": {
+        "name": "Cow",
+        "icon": "animals/cow.png",
+        "done": false,
+        "rootName": "minecraft:cow"
+      },
+      "minecraft:camel": {
+        "name": "Camel",
+        "icon": "animals/camel.png",
+        "done": false,
+        "rootName": "minecraft:camel"
+      },
+      "minecraft:horse": {
+        "name": "Horse",
+        "icon": "animals/horse.png",
+        "done": false,
+        "rootName": "minecraft:horse"
+      },
+      "minecraft:bee": {
+        "name": "Bee",
+        "icon": "animals/bee.png",
+        "done": false,
+        "rootName": "minecraft:bee"
+      },
+      "minecraft:cat": {
+        "name": "Cat",
+        "icon": "animals/cat.png",
+        "done": false,
+        "rootName": "minecraft:cat"
+      },
+      "minecraft:fox": {
+        "name": "Fox",
+        "icon": "animals/fox.png",
+        "done": false,
+        "rootName": "minecraft:fox"
+      },
+      "minecraft:pig": {
+        "name": "Pig",
+        "icon": "animals/pig.png",
+        "done": false,
+        "rootName": "minecraft:pig"
+      },
+      "minecraft:llama": {
+        "name": "Llama",
+        "icon": "animals/llama.png",
+        "done": false,
+        "rootName": "minecraft:llama"
+      },
+      "minecraft:turtle": {
+        "name": "Turtle",
+        "icon": "animals/turtle.png",
+        "done": false,
+        "rootName": "minecraft:turtle"
+      },
+      "minecraft:frog": {
+        "name": "Frog",
+        "icon": "animals/frog.png",
+        "done": false,
+        "rootName": "minecraft:frog"
+      },
+      "minecraft:sheep": {
+        "name": "Sheep",
+        "icon": "animals/sheep.png",
+        "done": false,
+        "rootName": "minecraft:sheep"
+      },
+      "minecraft:mooshroom": {
+        "name": "Mooshroom",
+        "icon": "animals/mooshroom.png",
+        "done": false,
+        "rootName": "minecraft:mooshroom"
+      },
+      "minecraft:ocelot": {
+        "name": "Ocelot",
+        "icon": "animals/ocelot.png",
+        "done": false,
+        "rootName": "minecraft:ocelot"
+      },
+      "minecraft:goat": {
+        "name": "Goat",
+        "icon": "animals/goat.png",
+        "done": false,
+        "rootName": "minecraft:goat"
+      },
+      "minecraft:chicken": {
+        "name": "Chicken",
+        "icon": "animals/chicken.png",
+        "done": false,
+        "rootName": "minecraft:chicken"
+      },
+      "minecraft:armadillo": {
+        "name": "Armadillo",
+        "icon": "animals/armadillo.png",
+        "done": false,
+        "rootName": "minecraft:armadillo"
+      },
+      "minecraft:wolf": {
+        "name": "Wolf",
+        "icon": "animals/wolf.png",
+        "done": false,
+        "rootName": "minecraft:wolf"
+      },
+      "minecraft:panda": {
+        "name": "Panda",
+        "icon": "animals/panda.png",
+        "done": false,
+        "rootName": "minecraft:panda"
+      },
+      "minecraft:rabbit": {
+        "name": "Rabbit",
+        "icon": "animals/rabbit.png",
+        "done": false,
+        "rootName": "minecraft:rabbit"
+      },
+      "minecraft:axolotl": {
+        "name": "Axolotl",
+        "icon": "animals/axolotl.png",
+        "done": false,
+        "rootName": "minecraft:axolotl"
+      }
+    }
   },
   "minecraft:husbandry/allay_deliver_cake_to_note_block": {
     "name": "Birthday Song",
@@ -789,7 +1642,8 @@
     "icon": "items/note_block.png",
     "rootName": "minecraft:husbandry/allay_deliver_cake_to_note_block",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/complete_catalogue": {
     "name": "A Complete Catalogue",
@@ -797,7 +1651,75 @@
     "icon": "items/raw_cod.png",
     "rootName": "minecraft:husbandry/complete_catalogue",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 11,
+    "criteria": {
+      "minecraft:white": {
+        "name": "White",
+        "icon": "cats/white.png",
+        "done": false,
+        "rootName": "minecraft:white"
+      },
+      "minecraft:tabby": {
+        "name": "Tabby",
+        "icon": "cats/tabby.png",
+        "done": false,
+        "rootName": "minecraft:tabby"
+      },
+      "minecraft:calico": {
+        "name": "Calico",
+        "icon": "cats/calico.png",
+        "done": false,
+        "rootName": "minecraft:calico"
+      },
+      "minecraft:siamese": {
+        "name": "Siamese",
+        "icon": "cats/siamese.png",
+        "done": false,
+        "rootName": "minecraft:siamese"
+      },
+      "minecraft:persian": {
+        "name": "Persian",
+        "icon": "cats/persian.png",
+        "done": false,
+        "rootName": "minecraft:persian"
+      },
+      "minecraft:jellie": {
+        "name": "Jellie",
+        "icon": "cats/jellie.png",
+        "done": false,
+        "rootName": "minecraft:jellie"
+      },
+      "minecraft:black": {
+        "name": "Tuxedo",
+        "icon": "cats/tuxedo.png",
+        "done": false,
+        "rootName": "minecraft:black"
+      },
+      "minecraft:all_black": {
+        "name": "Black",
+        "icon": "cats/black.png",
+        "done": false,
+        "rootName": "minecraft:all_black"
+      },
+      "minecraft:ragdoll": {
+        "name": "Ragdoll",
+        "icon": "cats/ragdoll.png",
+        "done": false,
+        "rootName": "minecraft:ragdoll"
+      },
+      "minecraft:british_shorthair": {
+        "name": "British",
+        "icon": "cats/british_shorthair.png",
+        "done": false,
+        "rootName": "minecraft:british_shorthair"
+      },
+      "minecraft:red": {
+        "name": "Red",
+        "icon": "cats/red.png",
+        "done": false,
+        "rootName": "minecraft:red"
+      }
+    }
   },
   "minecraft:husbandry/tactical_fishing": {
     "name": "Tactical Fishing",
@@ -805,7 +1727,8 @@
     "icon": "items/bucket_of_pufferfish.png",
     "rootName": "minecraft:husbandry/tactical_fishing",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/leash_all_frog_variants": {
     "name": "When the Squad Hops into Town",
@@ -813,7 +1736,8 @@
     "icon": "items/lead.png",
     "rootName": "minecraft:husbandry/leash_all_frog_variants",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/feed_snifflet": {
     "name": "Little Sniffs",
@@ -821,7 +1745,8 @@
     "icon": "items/torchflower_seed.png",
     "rootName": "minecraft:husbandry/feed_snifflet",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/balanced_diet": {
     "name": "A Balanced Diet",
@@ -829,7 +1754,249 @@
     "icon": "items/apple.png",
     "rootName": "minecraft:husbandry/balanced_diet",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 40,
+    "criteria": {
+      "cooked_porkchop": {
+        "name": "Cooked Porkchop",
+        "icon": "food/cooked_porkchop.png",
+        "done": false,
+        "rootName": "cooked_porkchop"
+      },
+      "chicken": {
+        "name": "Chicken",
+        "icon": "food/raw_chicken.png",
+        "done": false,
+        "rootName": "chicken"
+      },
+      "honey_bottle": {
+        "name": "Honey Bottle",
+        "icon": "food/honey_bottle.png",
+        "done": false,
+        "rootName": "honey_bottle"
+      },
+      "cooked_mutton": {
+        "name": "Cooked Mutton",
+        "icon": "food/cooked_mutton.png",
+        "done": false,
+        "rootName": "cooked_mutton"
+      },
+      "sweet_berries": {
+        "name": "Sweet Berries",
+        "icon": "food/sweet_berries.png",
+        "done": false,
+        "rootName": "sweet_berries"
+      },
+      "cooked_beef": {
+        "name": "Cooked Beef",
+        "icon": "food/cooked_beef.png",
+        "done": false,
+        "rootName": "cooked_beef"
+      },
+      "chorus_fruit": {
+        "name": "Chorus Fruit",
+        "icon": "food/chorus_fruit.png",
+        "done": false,
+        "rootName": "chorus_fruit"
+      },
+      "beef": {
+        "name": "Beef",
+        "icon": "food/beef.png",
+        "done": false,
+        "rootName": "beef"
+      },
+      "baked_potato": {
+        "name": "Baked Potato",
+        "icon": "food/baked_potato.png",
+        "done": false,
+        "rootName": "baked_potato"
+      },
+      "porkchop": {
+        "name": "Porkchop",
+        "icon": "food/porkchop.png",
+        "done": false,
+        "rootName": "porkchop"
+      },
+      "tropical_fish": {
+        "name": "Tropical Fish",
+        "icon": "food/tropical_fish.png",
+        "done": false,
+        "rootName": "tropical_fish"
+      },
+      "beetroot_soup": {
+        "name": "Beetroot Soup",
+        "icon": "food/beetroot_soup.png",
+        "done": false,
+        "rootName": "beetroot_soup"
+      },
+      "apple": {
+        "name": "Apple",
+        "icon": "food/apple.png",
+        "done": false,
+        "rootName": "apple"
+      },
+      "spider_eye": {
+        "name": "Spider Eye",
+        "icon": "food/spider_eye.png",
+        "done": false,
+        "rootName": "spider_eye"
+      },
+      "potato": {
+        "name": "Potato",
+        "icon": "food/potato.png",
+        "done": false,
+        "rootName": "potato"
+      },
+      "rabbit": {
+        "name": "Rabbit",
+        "icon": "food/raw_rabbit.png",
+        "done": false,
+        "rootName": "rabbit"
+      },
+      "cooked_cod": {
+        "name": "Cooked Cod",
+        "icon": "food/cooked_cod.png",
+        "done": false,
+        "rootName": "cooked_cod"
+      },
+      "poisonous_potato": {
+        "name": "Poisonous Potato",
+        "icon": "food/poisonous_potato.png",
+        "done": false,
+        "rootName": "poisonous_potato"
+      },
+      "pumpkin_pie": {
+        "name": "Pumpkin Pie",
+        "icon": "food/pumpkin_pie.png",
+        "done": false,
+        "rootName": "pumpkin_pie"
+      },
+      "mutton": {
+        "name": "Mutton",
+        "icon": "food/mutton.png",
+        "done": false,
+        "rootName": "mutton"
+      },
+      "pufferfish": {
+        "name": "Pufferfish",
+        "icon": "food/pufferfish.png",
+        "done": false,
+        "rootName": "pufferfish"
+      },
+      "golden_apple": {
+        "name": "Golden Apple",
+        "icon": "food/golden_apple.png",
+        "done": false,
+        "rootName": "golden_apple"
+      },
+      "bread": {
+        "name": "Bread",
+        "icon": "food/bread.png",
+        "done": false,
+        "rootName": "bread"
+      },
+      "rotten_flesh": {
+        "name": "Rotten Flesh",
+        "icon": "food/rotten_flesh.png",
+        "done": false,
+        "rootName": "rotten_flesh"
+      },
+      "cookie": {
+        "name": "Cookie",
+        "icon": "food/cookie.png",
+        "done": false,
+        "rootName": "cookie"
+      },
+      "suspicious_stew": {
+        "name": "Suspicious Stew",
+        "icon": "food/suspicious_stew.png",
+        "done": false,
+        "rootName": "suspicious_stew"
+      },
+      "glow_berries": {
+        "name": "Glow Berries",
+        "icon": "food/glow_berries.png",
+        "done": false,
+        "rootName": "glow_berries"
+      },
+      "salmon": {
+        "name": "Salmon",
+        "icon": "food/salmon.png",
+        "done": false,
+        "rootName": "salmon"
+      },
+      "dried_kelp": {
+        "name": "Dried Kelp",
+        "icon": "food/dried_kelp.png",
+        "done": false,
+        "rootName": "dried_kelp"
+      },
+      "melon_slice": {
+        "name": "Melon Slice",
+        "icon": "food/melon_slice.png",
+        "done": false,
+        "rootName": "melon_slice"
+      },
+      "golden_carrot": {
+        "name": "Golden Carrot",
+        "icon": "food/golden_carrot.png",
+        "done": false,
+        "rootName": "golden_carrot"
+      },
+      "beetroot": {
+        "name": "Beetroot",
+        "icon": "food/beetroot.png",
+        "done": false,
+        "rootName": "beetroot"
+      },
+      "cooked_rabbit": {
+        "name": "Cooked Rabbit",
+        "icon": "food/cooked_rabbit.png",
+        "done": false,
+        "rootName": "cooked_rabbit"
+      },
+      "cooked_chicken": {
+        "name": "Cooked Chicken",
+        "icon": "food/cooked_chicken.png",
+        "done": false,
+        "rootName": "cooked_chicken"
+      },
+      "enchanted_golden_apple": {
+        "name": "Enchanted Golden Apple",
+        "icon": "food/enchanted_golden_apple.gif",
+        "done": false,
+        "rootName": "enchanted_golden_apple"
+      },
+      "mushroom_stew": {
+        "name": "Mushroom Stew",
+        "icon": "food/mushroom_stew.png",
+        "done": false,
+        "rootName": "mushroom_stew"
+      },
+      "cod": {
+        "name": "Cod",
+        "icon": "food/cod.png",
+        "done": false,
+        "rootName": "cod"
+      },
+      "rabbit_stew": {
+        "name": "Rabbit Stew",
+        "icon": "food/rabbit_stew.png",
+        "done": false,
+        "rootName": "rabbit_stew"
+      },
+      "cooked_salmon": {
+        "name": "Cooked Salmon",
+        "icon": "food/cooked_salmon.png",
+        "done": false,
+        "rootName": "cooked_salmon"
+      },
+      "carrot": {
+        "name": "Carrot",
+        "icon": "food/carrot.png",
+        "done": false,
+        "rootName": "carrot"
+      }
+    }
   },
   "minecraft:husbandry/obtain_netherite_hoe": {
     "name": "Serious Dedication",
@@ -837,7 +2004,8 @@
     "icon": "items/netherite_hoe.png",
     "rootName": "minecraft:husbandry/obtain_netherite_hoe",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/wax_off": {
     "name": "Wax Off",
@@ -845,7 +2013,8 @@
     "icon": "items/stone_axe.png",
     "rootName": "minecraft:husbandry/wax_off",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/axolotl_in_a_bucket": {
     "name": "The Cutest Predator",
@@ -853,7 +2022,8 @@
     "icon": "items/bucket_of_axolotl.png",
     "rootName": "minecraft:husbandry/axolotl_in_a_bucket",
     "done": false,
-    "optimized": false
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/froglights": {
     "name": "With Our Powers Combined",
@@ -861,7 +2031,8 @@
     "icon": "items/verdant_froglight.png",
     "rootName": "minecraft:husbandry/froglights",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/plant_any_sniffer_seed": {
     "name": "Planting the Past",
@@ -869,7 +2040,8 @@
     "icon": "items/pitcher_pod.png",
     "rootName": "minecraft:husbandry/plant_any_sniffer_seed",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/kill_axolotl_target": {
     "name": "The Healing Power of Friendship",
@@ -877,7 +2049,8 @@
     "icon": "items/bucket_of_tropical_fish.png",
     "rootName": "minecraft:husbandry/kill_axolotl_target",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/repair_wolf_armor": {
     "name": "Good as New",
@@ -885,7 +2058,8 @@
     "icon": "items/wolf_armour.png",
     "rootName": "minecraft:husbandry/repair_wolf_armor",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:husbandry/whole_pack": {
     "name": "The Whole Pack",
@@ -893,7 +2067,63 @@
     "icon": "items/bone.png",
     "rootName": "minecraft:husbandry/whole_pack",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 9,
+    "criteria": {
+      "minecraft:spotted": {
+        "name": "Spotted",
+        "icon": "wolves/wolf_spotted.png",
+        "done": false,
+        "rootName": "minecraft:spotted"
+      },
+      "minecraft:rusty": {
+        "name": "Rusty",
+        "icon": "wolves/wolf_rusty.png",
+        "done": false,
+        "rootName": "minecraft:rusty"
+      },
+      "minecraft:chestnut": {
+        "name": "Chestnut",
+        "icon": "wolves/wolf_chestnut.png",
+        "done": false,
+        "rootName": "minecraft:chestnut"
+      },
+      "minecraft:striped": {
+        "name": "Striped",
+        "icon": "wolves/wolf_striped.png",
+        "done": false,
+        "rootName": "minecraft:striped"
+      },
+      "minecraft:woods": {
+        "name": "Woods",
+        "icon": "wolves/wolf_woods.png",
+        "done": false,
+        "rootName": "minecraft:woods"
+      },
+      "minecraft:pale": {
+        "name": "Pale",
+        "icon": "wolves/wolf_pale.png",
+        "done": false,
+        "rootName": "minecraft:pale"
+      },
+      "minecraft:black": {
+        "name": "Black",
+        "icon": "wolves/wolf_black.png",
+        "done": false,
+        "rootName": "minecraft:black"
+      },
+      "minecraft:ashen": {
+        "name": "Ashen",
+        "icon": "wolves/wolf_ashen.png",
+        "done": false,
+        "rootName": "minecraft:ashen"
+      },
+      "minecraft:snowy": {
+        "name": "Snowy",
+        "icon": "wolves/wolf_snowy.png",
+        "done": false,
+        "rootName": "minecraft:snowy"
+      }
+    }
   },
   "minecraft:husbandry/remove_wolf_armor": {
     "name": "Shear Brillance",
@@ -901,7 +2131,8 @@
     "icon": "items/shears.png",
     "rootName": "minecraft:husbandry/remove_wolf_armor",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   },
   "minecraft:adventure/brush_armadillo": {
     "name": "Isn't It Scute?",
@@ -909,6 +2140,7 @@
     "icon": "items/scute.png",
     "rootName": "minecraft:adventure/brush_armadillo",
     "done": false,
-    "optimized": true
+    "criteriaNumber": 0,
+    "criteria": {}
   }
 }
