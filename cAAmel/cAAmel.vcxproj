@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\SDL\SDL2-2.30.3\include;C:\SDL\SDL2_image-2.8.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDL\SDL2-2.30.3\lib\x64;C:\SDL\SDL2_image-2.8.2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL\SDL2-2.30.3\include;C:\SDL\SDL2_image-2.8.2\include;C:\SDL\SDL2_ttf-2.22.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL\SDL2-2.30.3\lib\x64;C:\SDL\SDL2_image-2.8.2\lib\x64;C:\SDL\SDL2_ttf-2.22.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,14 +106,14 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,10 +139,18 @@
     <ClCompile Include="source\ADV.c" />
     <ClCompile Include="source\cJSON.c" />
     <ClCompile Include="source\main.c" />
+    <ClCompile Include="source\SDL_FontCache.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ADV.h" />
     <ClInclude Include="source\cJSON.h" />
+    <ClInclude Include="source\SDL_FontCache.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\templates\1.20.6\advancements.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\Minecraft.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

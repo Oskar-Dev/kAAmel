@@ -29,6 +29,9 @@
     <ClCompile Include="source\ADV.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="source\SDL_FontCache.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\cJSON.h">
@@ -37,5 +40,18 @@
     <ClInclude Include="source\ADV.h">
       <Filter>Pliki źródłowe</Filter>
     </ClInclude>
+    <ClInclude Include="source\SDL_FontCache.h">
+      <Filter>Pliki źródłowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\templates\1.20.6\advancements.json">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\Minecraft.ttf">
+      <Filter>Pliki zasobów</Filter>
+    </Font>
   </ItemGroup>
 </Project>
