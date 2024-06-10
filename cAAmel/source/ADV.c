@@ -4,8 +4,64 @@
 
 #include "adv.h"
 
+cJSON* ADV_get_json(char* file_path) {
+	char* buffer = NULL;
+	FILE* f;
+
+	if (fopen_s(&f, file_path, "r") != 0) {
+		goto error;
+	}
+
+	if (fseek(f, 0, SEEK_END) < 0) {
+		goto error;
+	}
+
+	long m = ftell(f);
+	if (m < 0) {
+		goto error;
+	}
+
+	buffer = malloc(sizeof(char) * m);
+	if (buffer == NULL) {
+		goto error;
+	}
+
+	if (fseek(f, 0, SEEK_SET) < 0) {
+		goto error;
+	}
+
+	size_t n = fread(buffer, 1, m, f);
+
+	if (ferror(f)) {
+		goto error;
+	}
+
+	fclose(f);
+
+	cJSON* json = cJSON_Parse(buffer);
+	if (json == NULL) {
+		cJSON_Delete(json);
+		goto error;
+	}
+
+	free(buffer);
+
+	return json;
+error:
+	if (f) {
+		fclose(f);
+	}
+
+	if (buffer) {
+		free(buffer);
+	}
+
+	printf("[FILE ERROR] Couldn't open the file: %s\n", file_path);
+	return NULL;
+}
+
 ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done) {
-	ADV_criterion* criterion = malloc(sizeof(criterion));
+	ADV_criterion* criterion = malloc(sizeof *criterion);
 	if (criterion == NULL) {
 		return NULL;
 	}
@@ -49,7 +105,7 @@ void ADV_delete_criterion(ADV_criterion* criterion) {
 }
 
 ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon, char* root_name, ADV_criterion** criteria, int criteria_n, int done) {
-	ADV_advancement* advancement = malloc(sizeof(ADV_advancement));
+	ADV_advancement* advancement = malloc(sizeof *advancement);
 	if (advancement == NULL) {
 		return NULL;
 	};
@@ -85,8 +141,8 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 	}
 
 	if (criteria_n > 0) {
-		advancement->criteria = malloc(sizeof(ADV_criterion) * criteria_n);
-		if (advancement->icon == NULL) {
+		advancement->criteria = malloc(criteria_n * sizeof *advancement->criteria);
+		if (advancement->criteria == NULL) {
 			free(advancement->name);
 			free(advancement->display_name);
 			free(advancement->icon);
@@ -129,67 +185,10 @@ void ADV_delete_advancement(ADV_advancement* advancement) {
 	}
 }
 
-cJSON* ADV_get_json(char* file_path) {
-	char* buffer = NULL;
-	FILE* f;
-
-	if (fopen_s(&f, file_path, "r") != 0) {
-		goto error;
-	}
-
-	if (fseek(f, 0, SEEK_END) < 0) {
-		goto error;
-	}
-
-	long m = ftell(f);
-	if (m < 0) {
-		goto error;
-	}
-
-	buffer = malloc(sizeof(char) * m);
-	if (buffer == NULL) {
-		goto error;
-	}
-
-	if (fseek(f, 0, SEEK_SET) < 0) {
-		goto error;
-	}
-
-	size_t n = fread(buffer, 1, m, f);
-	
-	if (ferror(f)) {
-		goto error;
-	}
-
-	fclose(f);
-
-	cJSON* json = cJSON_Parse(buffer);
-	if (json == NULL) {
-		cJSON_Delete(json);
-		goto error;
-	}
-
-	free(buffer);
-
-	return json;
-error:
-	if (f) {
-		fclose(f);
-	}
-
-	if (buffer) {
-		free(buffer);
-	}
-
-	printf("[FILE ERROR] Couldn't open the file: %s\n", file_path);
-	return NULL;
-}
-
 ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 	cJSON* entry = template->child;
 	
-	ADV_advancement** advancements = malloc(sizeof(ADV_advancement)*n); 
-
+	ADV_advancement** advancements = malloc(n * sizeof *advancements); 
 	if (advancements == NULL) {
 		goto memory_error;
 	}
@@ -217,8 +216,7 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 		cJSON* criteria_entry = criteria->child;
 
 		if (criteria_entry) {
-			criteria_a = malloc(criteria_number->valueint * sizeof(ADV_criterion));
-
+			criteria_a = malloc(criteria_number->valueint * sizeof *criteria_a);
 			if (criteria_a == NULL) {
 				goto memory_error;
 			}
