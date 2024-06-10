@@ -195,7 +195,7 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 	}
 
 	for (int i = 0; entry; ++i) {
-		cJSON* done = cJSON_GetObjectItemCaseSensitive(entry, "done");
+		// cJSON* done = cJSON_GetObjectItemCaseSensitive(entry, "done");
 		cJSON* name = cJSON_GetObjectItemCaseSensitive(entry, "name");
 		cJSON* display_name = cJSON_GetObjectItemCaseSensitive(entry, "displayName");
 		cJSON* icon = cJSON_GetObjectItemCaseSensitive(entry, "icon");
@@ -203,14 +203,14 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 		cJSON* criteria = cJSON_GetObjectItemCaseSensitive(entry, "criteria");
 		cJSON* criteria_number = cJSON_GetObjectItemCaseSensitive(entry, "criteriaNumber");
 		
-		if (!done || !name || !display_name || !icon || !root_name || !criteria || !criteria_number || !root_name->valuestring || !name->valuestring || !display_name->valuestring || !icon->valuestring) {
+		if (!name || !display_name || !icon || !root_name || !criteria || !criteria_number || !root_name->valuestring || !name->valuestring || !display_name->valuestring || !icon->valuestring) {
 			goto error;
 		}
 		
-		int done_ = 0;
-		if (done && cJSON_IsTrue(done)) {
-			done_ = 1;
-		}
+		// int done_ = 0;
+		// if (done && cJSON_IsTrue(done)) {
+		// 	done_ = 1;
+		// }
 
 		int criteria_n = 0;
 		ADV_criterion** criteria_a = NULL;
@@ -224,20 +224,22 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 			}
 			
 			while (criteria_entry) {
-				cJSON* criterion_done = cJSON_GetObjectItemCaseSensitive(criteria_entry, "done");
+				// cJSON* criterion_done = cJSON_GetObjectItemCaseSensitive(criteria_entry, "done");
 				cJSON* criterion_name = cJSON_GetObjectItemCaseSensitive(criteria_entry, "name");
 				cJSON* criterion_icon = cJSON_GetObjectItemCaseSensitive(criteria_entry, "icon");
 				cJSON* criterion_root_name = cJSON_GetObjectItemCaseSensitive(criteria_entry, "rootName");
 
-				if (!done || !name || !icon || !root_name || !criterion_root_name || !root_name->valuestring || !name->valuestring || !icon->valuestring || !criterion_root_name->valuestring) {
+				if (!criterion_name || !criterion_icon || !criterion_root_name || 
+					!criterion_name->valuestring || !criterion_icon->valuestring || !criterion_root_name->valuestring
+				) {
 					goto error;
 				}
 
 				criteria_a[criteria_n] = ADV_new_criterion(
 					_strdup(criterion_name->valuestring),
 					_strdup(criterion_icon->valuestring),
-					_strdup(root_name->valuestring),
-					criterion_done
+					_strdup(criterion_root_name->valuestring),
+					0
 				);
 
 				++criteria_n;
@@ -252,7 +254,7 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 			_strdup(root_name->valuestring),
 			criteria_a,
 			criteria_n,
-			done_
+			0
 		);
 
 		entry = entry->next;
@@ -285,17 +287,31 @@ void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) 
 
 	for (int i = 0; i < n; ++i) {
 		char* root_name = advancements[i]->root_name;
+		int criteria_number = advancements[i]->criteria_n;
+		ADV_criterion** criteria_to_update = advancements[i]->criteria;
 
 		cJSON* entry = cJSON_GetObjectItemCaseSensitive(data, root_name);
 		if (entry) {
 			cJSON* done = cJSON_GetObjectItemCaseSensitive(entry, "done");
+			cJSON* criteria = cJSON_GetObjectItemCaseSensitive(entry, "criteria");
 
-			if (!done) {
-				goto error;
-			}
+			if (!done || !criteria) goto error;
 
 			if (cJSON_IsTrue(done)) {
 				advancements[i]->done = 1;
+			}
+
+			if (criteria_number > 0) {
+				for (int j = 0; j < criteria_number; ++j) {
+					char* criterion_root_name = criteria_to_update[j]->root_name;
+					cJSON* criterion_entry = cJSON_GetObjectItemCaseSensitive(criteria, criterion_root_name);
+
+					if (criterion_entry) {
+						criteria_to_update[j]->done = 1;
+					} else {
+						criteria_to_update[j] ->done = 0;
+					}
+				}
 			}
 		} else {
 			advancements[i]->done = 0;
@@ -306,5 +322,6 @@ void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) 
 	return;
 
 error:
+	printf("[ERROR] Couldn't update the advancement data.\n");
 	cJSON_Delete(data);
 }
