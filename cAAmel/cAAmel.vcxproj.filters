@@ -62,5 +62,1094 @@
     <Image Include="resources\sprites\items\beacon.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="resources\sprites\items\ancient_debris.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\arrow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bee_nest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\blaze_rod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\boat.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bone.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\breath.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\brush.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bucket.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bucket_of_axolotl.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bucket_of_pufferfish.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bucket_of_tadpole.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\bucket_of_tropical_fish.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\carved_pumpkin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\chest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\chiseled_bookshelf.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\cookie.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\crossbow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\crying_obsidian.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\decorated_pot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\diamond.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\diamond_boots.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\diamond_chestplate.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\diamond_sword.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\dragon_egg.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\dragon_head.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\dune_trim.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\elytra.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\emerald.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\empty_map.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\enchanted_book.gif">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\enchanted_book.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\end_crystal.gif">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\end_crystal.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\end_stone.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\ender_pearl.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\eye_of_ender.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\fire_charge.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\fishing_rod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\flint_and_steel.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\ghast_tear.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\glow_ink_sac.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\gold_ingot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\golden_apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\golden_carrot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\grass_block.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\hay_bale.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\honey_bottle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\honeycomb.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\iron_chestplate.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\iron_ingot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\iron_pickaxe.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\iron_sword.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\jukebox.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\lava_bucket.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\lead.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\leather_boots.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\lightning_rod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\lodestone.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\milk_bucket.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\nether_brick.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\nether_star.gif">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\nether_star.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\netherite_boots.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\netherite_chestplate.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\netherite_hoe.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\note_block.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\obsidian.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\ominous_banner.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\pitcher_pod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\polished_blackstone_bricks.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\potion.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\purpur_block.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\raw_cod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\red_bed.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\red_nether_brick.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\respawn_anchor.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\sculk_catalyst.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\sculk_sensor.gif">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\sculk_sensor.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\scute.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\shears.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\shield.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\shulker_shell.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\silence_trim.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\sniffer_egg.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\spyglass.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\stone_axe.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\stone_pickaxe.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\target_block.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\torchflower_seed.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\totem_of_undying.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\trident.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\verdant_froglight.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\warped_fungus_on_a_stick.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\water_bucket.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\wheat.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\wither_skeleton_skull.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\wolf_armour.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\wooden_pickaxe.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\armadillo.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\axolotl.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\bee.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\camel.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\cat.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\chicken.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\chicken_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\cow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\cow_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\donkey.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\fox.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\frog.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\goat.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\hoglin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\horse.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\horse_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\llama.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\llama_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\mooshroom.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\mooshroom_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\mule.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\ocelot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\ocelot_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\panda.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\pig.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\pig_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\polar_bear.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\rabbit.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\rabbit_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\sheep.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\sheep_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\sniffer.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\strider.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\turtle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\animals\wolf.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\badlands.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\badlands_plateau.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\bamboo_jungle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\bamboo_jungle_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\beach.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\birch_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\birch_forest_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\cherry_grove.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\cold_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\dark_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\deep_cold_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\deep_dark.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\deep_frozen_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\deep_lukewarm_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\deep_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\desert.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\desert_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\desert_lakes.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\dripstone_caves.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\eroded_badlands.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\flower_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\forest_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\frozen_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\frozen_peaks.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\frozen_river.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\giant_tree_taiga.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\giant_tree_taiga_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\grove.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\ice_spikes.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\jagged_peaks.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\jungle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\jungle_edge.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\jungle_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\lukewarm_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\lush_caves.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\mangrove_swamp.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\meadow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\mountains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\mushroom_field_shore.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\mushroom_fields.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\old_growth_birch_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\old_growth_pine_taiga.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\old_growth_spruce_taiga.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\plains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\river.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\savanna.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\savanna_plateau.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_beach.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_mountains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_plains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_slopes.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_taiga.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_taiga_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\snowy_tundra.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\sparse_jungle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\stone_shore.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\stony_peaks.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\stony_shore.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\sunflower_plains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\swamp.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\taiga.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\taiga_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\warm_ocean.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\windswept_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\windswept_gravelly_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\windswept_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\windswept_savanna.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\wooded_badlands.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\wooded_badlands_plateau.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\wooded_hills.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\biomes\wooded_mountains.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\black.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\british_shorthair.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\calico.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\jellie.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\persian.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\ragdoll.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\red.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\siamese.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\tabby.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\tuxedo.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\cats\white.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\apple_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\baked_potato.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\baked_potato_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beef.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beef_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beetroot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beetroot_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beetroot_soup.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\beetroot_soup_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\bread.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\bread_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\carrot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\carrot_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\chorus_fruit.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\chorus_fruit_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cod_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_beef.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_beef_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_chicken.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_chicken_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_cod.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_cod_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_mutton.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_mutton_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_porkchop.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_porkchop_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_rabbit.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_rabbit_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_salmon.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cooked_salmon_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cookie.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\cookie_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\dried_kelp.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\enchanted_golden_apple.gif">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\enchanted_golden_apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\glow_berries.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\golden_apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\golden_apple_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\golden_carrot.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\golden_carrot_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\honey_bottle.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\melon_slice.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\mushroom_stew.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\mushroom_stew_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\mutton.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\mutton_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\poisonous_potato.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\poisonous_potato_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\porkchop.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\porkchop_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\potato.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\potato_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\pufferfish.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\pumpkin_pie.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\pumpkin_pie_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\rabbit_stew.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\rabbit_stew_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\raw_chicken.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\raw_chicken_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\raw_rabbit.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\raw_rabbit_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\rotten_flesh.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\rotten_flesh_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\salmon.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\salmon_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\spider_eye.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\spider_eye_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\suspicious_stew.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\sweet_berries.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\tropical_fish.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\food\tropical_fish_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\blaze.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\blaze_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\cave_spider.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\cave_spider_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\creeper.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\drowned.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\elder_guardian.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\ender_dragon.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\enderman.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\endermite.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\evoker.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\evoker_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\ghast.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\ghast_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\guardian.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\hoglin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\husk.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\magma_cube.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\phantom.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\piglin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\piglin_brute.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\pillager.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\ravager.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\shulker.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\silverfish.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\skeleton.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\skeleton_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\slime.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\spider.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\spider_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\stray.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\stray_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\vex.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\vex_old.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\vindicator.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\vindicator_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\witch.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\witch_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\wither.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\wither_skeleton.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\wither_skeleton_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zoglin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zombie.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zombie_pigman.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zombie_villager.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zombie_villager_1.12.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\zombified_piglin.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\netherBiomes\basalt_deltas.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\netherBiomes\crimson_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\netherBiomes\nether_wastes.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\netherBiomes\soul_sand_valley.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\netherBiomes\warped_forest.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\rib.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\silence.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\snout.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\spire.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\tide.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\vex.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\ward.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\trims\wayfinder.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_ashen.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_black.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_chestnut.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_pale.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_rusty.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_snowy.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_spotted.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_striped.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\wolves\wolf_woods.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>
