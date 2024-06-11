@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\camel.png">
-      <Filter>Pliki zasobów</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="source\main.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
@@ -43,6 +38,9 @@
     <ClInclude Include="source\SDL_FontCache.h">
       <Filter>Pliki źródłowe</Filter>
     </ClInclude>
+    <ClInclude Include="source\dirent.h">
+      <Filter>Pliki źródłowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\templates\1.20.6\advancements.json">
@@ -53,5 +51,13 @@
     <Font Include="resources\fonts\Minecraft.ttf">
       <Filter>Pliki zasobów</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\sprites\items\honey_block.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\beacon.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>

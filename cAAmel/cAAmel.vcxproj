@@ -133,9 +133,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Image Include="resources\camel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="source\ADV.c" />
     <ClCompile Include="source\cJSON.c" />
     <ClCompile Include="source\main.c" />
@@ -144,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="source\ADV.h" />
     <ClInclude Include="source\cJSON.h" />
+    <ClInclude Include="source\dirent.h" />
     <ClInclude Include="source\SDL_FontCache.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +149,10 @@
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\Minecraft.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\sprites\items\beacon.png" />
+    <Image Include="resources\sprites\items\honey_block.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -91,6 +91,8 @@ ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int do
 	criterion->icon = icon;
 	criterion->root_name = root_name;
 	criterion->done = done;
+	criterion->texture = NULL;
+	criterion->overlay_texture = NULL;
 
 	return criterion;
 }
@@ -100,6 +102,15 @@ void ADV_delete_criterion(ADV_criterion* criterion) {
 		free(criterion->name);
 		free(criterion->icon);
 		free(criterion->root_name);
+
+		if (criterion->texture != NULL) {
+			SDL_DestroyTexture(criterion->texture);
+		}
+
+		if (criterion->overlay_texture != NULL) {
+			SDL_DestroyTexture(criterion->overlay_texture);
+		}
+
 		free(criterion);
 	}
 }
@@ -160,6 +171,8 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 	advancement->icon = icon;
 	advancement->root_name = root_name;
 	advancement->criteria_n = criteria_n;
+	advancement->texture = NULL;
+	advancement->overlay_texture = NULL;
 	
 	if (criteria_n > 0) {
 		advancement->criteria = criteria;
@@ -176,6 +189,14 @@ void ADV_delete_advancement(ADV_advancement* advancement) {
 		free(advancement->display_name);
 		free(advancement->icon);
 		free(advancement->root_name);
+		
+		if (advancement->texture != NULL) {
+			SDL_DestroyTexture(advancement->texture);
+		}
+
+		if (advancement->overlay_texture != NULL) {
+			SDL_DestroyTexture(advancement->texture);
+		}
 
 		for (int i = 0; i < advancement->criteria_n; ++i) {
 			ADV_delete_criterion(advancement->criteria[i]);
@@ -307,12 +328,18 @@ void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) 
 					if (criterion_entry) {
 						criteria_to_update[j]->done = 1;
 					} else {
-						criteria_to_update[j] ->done = 0;
+						criteria_to_update[j]->done = 0;
 					}
 				}
 			}
 		} else {
 			advancements[i]->done = 0;
+
+			if (criteria_number > 0) {
+				for (int j = 0; j < criteria_number; ++j) {
+					criteria_to_update[j]->done = 0;
+				}
+			}
 		}
 	}
 
