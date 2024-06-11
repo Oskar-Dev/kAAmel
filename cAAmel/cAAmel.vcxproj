@@ -142,6 +142,7 @@
     <ClInclude Include="source\ADV.h" />
     <ClInclude Include="source\cJSON.h" />
     <ClInclude Include="source\dirent.h" />
+    <ClInclude Include="source\dmon.h" />
     <ClInclude Include="source\SDL_FontCache.h" />
   </ItemGroup>
   <ItemGroup>

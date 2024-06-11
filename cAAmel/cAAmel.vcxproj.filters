@@ -41,6 +41,9 @@
     <ClInclude Include="source\dirent.h">
       <Filter>Pliki źródłowe</Filter>
     </ClInclude>
+    <ClInclude Include="source\dmon.h">
+      <Filter>Pliki źródłowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\templates\1.20.6\advancements.json">
