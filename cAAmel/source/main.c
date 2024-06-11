@@ -1,3 +1,5 @@
+#define DMON_IMPL
+
 #include <stdio.h>
 #include <SDL.h>
 #include <SDL_image.h>
@@ -7,6 +9,7 @@
 #include "cJSON.h"
 #include "SDL_FontCache.h"
 #include "dirent.h"
+#include "dmon.h"
 
 #define MAIN_WINDOW_WIDTH 1600
 #define MAIN_WINDOW_HEIGHT 768
@@ -22,6 +25,10 @@
 #define CRITERIA 185
 
 #define MAX_LEN 200
+
+char final_path[MAX_LEN];
+char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
+int update = 1;
 
 void recentByModification(const char* path, char* recent) {
 	char buffer[MAX_LEN];
@@ -73,14 +80,11 @@ void render_advancement_box(SDL_Renderer* renderer, int x, int y, int size, int 
 	check_sdl_code(SDL_RenderFillRect(renderer, &rect));
 }
 
-void update_advancements_path(char* final_path) {
-	char file[MAX_LEN];
-	char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
-
-	recentByModification(saves_path, file);
-	snprintf(final_path, sizeof(final_path), "%s/%s%s\n", saves_path, file, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json");
+static void watch_callback(dmon_watch_id watch_id, dmon_action action, const char* rootdir, const char* filepath, const char* oldfilepath, void* user) {
+	snprintf(final_path, sizeof(final_path), "%s/%s%s\n", saves_path, filepath, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json");
 	final_path[strcspn(final_path, "\n")] = 0;
-	printf("%s\n", final_path);
+
+	update = 1;
 }
 
 int main() {
@@ -92,14 +96,9 @@ int main() {
 	SDL_Renderer* overlay_renderer = check_sdl_ptr(SDL_CreateRenderer(overlay_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_Renderer* main_renderer = check_sdl_ptr(SDL_CreateRenderer(main_window, -1, SDL_RENDERER_ACCELERATED));
 
-	// FILE VARIABLES. //
-	char final_path[MAX_LEN];
-	char file[MAX_LEN];
-	char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
-
-	recentByModification(saves_path, file);
-	snprintf(final_path, sizeof(final_path), "%s/%s%s\n", saves_path, file, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json");
-	final_path[strcspn(final_path, "\n")] = 0;
+	// Dmon.
+	dmon_init();
+	dmon_watch(saves_path, watch_callback, 0, NULL);
 
 	cJSON* data = ADV_get_json("resources/templates/1.20.6/advancements_optimized.json");
 	if (data == NULL) {
@@ -115,7 +114,7 @@ int main() {
 		exit(1);
 	}
 
-	ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
+	// ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
 	ADV_criterion** criteria_ = malloc(CRITERIA * sizeof *criteria_);
 
 	// IMAGES. //
@@ -204,7 +203,6 @@ int main() {
 	int overlay_render_advancements = 1;
 	int quit = 0;
 	float t = 0.0f;
-	int update = 0;
 
 	// MAIN LOOP. //
 	while (!quit) {
@@ -215,16 +213,11 @@ int main() {
 				quit = 1;
 			}
 		}
-
-		if (++update >= 60*60) {
-			update = 0;
-			recentByModification(saves_path, file);
-			snprintf(final_path, sizeof(final_path), "%s/%s%s\n", saves_path, file, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json");
-			final_path[strcspn(final_path, "\n")] = 0;
-		}
-
+		
 		// Update advancements.
-		ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
+		if (update) {
+			ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
+		}
 
 		// Update overlay offsets.
 		if (overlay_render_advancements) {
@@ -323,64 +316,67 @@ int main() {
 		SDL_RenderPresent(overlay_renderer);
 
 		// MAIN WINDOW RENDERING. //
-		check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, 255));
-		check_sdl_code(SDL_RenderClear(main_renderer));
-		
-		// RENDER LAYOUT. //
-		int offset = 0;
-		int criteria_offset = 0;
-		for (int i = 0; i < ADVANCEMENTS; ++i) {
-			int done = advancements[i]->done;
-			int criteria = advancements[i]->criteria_n;
-			
-			if (criteria > 0) { 
-				for (int j = 0; j < criteria; ++j) {
-					int criterion_done = advancements[i]->criteria[j]->done;
-					SDL_Texture* txt = advancements[i]->criteria[j]->texture;
+		if (update) {
+			check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, 255));
+			check_sdl_code(SDL_RenderClear(main_renderer));
 
-					char* criterion_name = advancements[i]->criteria[j]->name;
-					criterion_rect.x = padding + criterion_max_width * offset + criterion_max_width * (criteria_offset + j / ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding) / (criterion_size + criterion_spacing_y)));
-					criterion_rect.y = criteria_start_y + (criterion_size + criterion_spacing_y) * (j % ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding) / (criterion_size + criterion_spacing_y)));
+			// RENDER LAYOUT. //
+			int offset = 0;
+			int criteria_offset = 0;
+			for (int i = 0; i < ADVANCEMENTS; ++i) {
+				int done = advancements[i]->done;
+				int criteria = advancements[i]->criteria_n;
 
-					check_sdl_code(SDL_RenderCopy(main_renderer, txt, NULL, &criterion_rect));
-					FC_Draw(font, main_renderer, criterion_rect.x + criterion_size + criterion_text_margin, criterion_rect.y + criterion_text_fix, criterion_name);
+				if (criteria > 0) {
+					for (int j = 0; j < criteria; ++j) {
+						int criterion_done = advancements[i]->criteria[j]->done;
+						SDL_Texture* txt = advancements[i]->criteria[j]->texture;
 
-					if (criterion_done) {
-						criterion_blend_rect.x = criterion_rect.x;
-						criterion_blend_rect.y = criterion_rect.y;
+						char* criterion_name = advancements[i]->criteria[j]->name;
+						criterion_rect.x = padding + criterion_max_width * offset + criterion_max_width * (criteria_offset + j / ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding) / (criterion_size + criterion_spacing_y)));
+						criterion_rect.y = criteria_start_y + (criterion_size + criterion_spacing_y) * (j % ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding) / (criterion_size + criterion_spacing_y)));
 
-						check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, done_blend_alpha));
-						check_sdl_code(SDL_RenderFillRect(main_renderer, &criterion_blend_rect));
+						check_sdl_code(SDL_RenderCopy(main_renderer, txt, NULL, &criterion_rect));
+						FC_Draw(font, main_renderer, criterion_rect.x + criterion_size + criterion_text_margin, criterion_rect.y + criterion_text_fix, criterion_name);
+
+						if (criterion_done) {
+							criterion_blend_rect.x = criterion_rect.x;
+							criterion_blend_rect.y = criterion_rect.y;
+
+							check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, done_blend_alpha));
+							check_sdl_code(SDL_RenderFillRect(main_renderer, &criterion_blend_rect));
+						}
 					}
+
+					criteria_offset += criteria / ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding - criterion_size) / (criterion_size + criterion_spacing_y));
+					offset += 1;
+					continue;
 				}
 
-				criteria_offset += criteria / ((MAIN_WINDOW_HEIGHT - criteria_start_y - padding - criterion_size) / (criterion_size + criterion_spacing_y));
-				offset += 1;
-				continue;
+				char* advancement_name = advancements[i]->display_name;
+
+				rect.x = ((i - offset) % (MAIN_WINDOW_WIDTH / (size + spacing_x))) * (size + spacing_x) + padding;
+				rect.y = ((i - offset) / (MAIN_WINDOW_WIDTH / (size + spacing_x))) * (size + spacing_y) + padding;
+
+				render_advancement_box(main_renderer, rect.x - main_advancement_box_width, rect.y - main_advancement_box_width, size + 2 * main_advancement_box_width, main_advancement_box_width);
+				check_sdl_code(SDL_RenderCopy(main_renderer, advancements[i]->texture, NULL, &(SDL_Rect){rect.x + 8, rect.y + 8, 32, 32}));
+
+				int x = rect.x + size / 2;
+				int y = rect.y + size + text_margin;
+				FC_DrawAlign(font, main_renderer, x, y, FC_ALIGN_CENTER, advancement_name);
+
+				if (done) {
+					blend_rect.x = rect.x - 4;
+					blend_rect.y = rect.y - 2;
+
+					check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, done_blend_alpha));
+					check_sdl_code(SDL_RenderFillRect(main_renderer, &blend_rect));
+				}
 			}
 
-			char* advancement_name = advancements[i]->display_name;
-
-			rect.x = ((i - offset) % (MAIN_WINDOW_WIDTH / (size + spacing_x))) * (size + spacing_x) + padding;
-			rect.y = ((i - offset) / (MAIN_WINDOW_WIDTH / (size + spacing_x))) * (size + spacing_y) + padding;
-
-			render_advancement_box(main_renderer, rect.x-main_advancement_box_width, rect.y-main_advancement_box_width, size+2*main_advancement_box_width, main_advancement_box_width);
-			check_sdl_code(SDL_RenderCopy(main_renderer, advancements[i]->texture, NULL, &(SDL_Rect){rect.x+8, rect.y+8, 32, 32}));
-
-			int x = rect.x + size / 2;
-			int y = rect.y + size + text_margin;
-			FC_DrawAlign(font, main_renderer, x, y, FC_ALIGN_CENTER, advancement_name);
-
-			if (done) {
-				blend_rect.x = rect.x-4;
-				blend_rect.y = rect.y-2;
-
-				check_sdl_code(SDL_SetRenderDrawColor(main_renderer, 0, 0, 0, done_blend_alpha));
-				check_sdl_code(SDL_RenderFillRect(main_renderer, &blend_rect));
-			}
+			SDL_RenderPresent(main_renderer);
+			update = 0;
 		}
-
-		SDL_RenderPresent(main_renderer);
 
 		// Don't render too often.
 		SDL_Delay(DELTA_TIME_MS);
@@ -391,6 +387,7 @@ int main() {
 		ADV_delete_advancement(advancements[i]);
 	}
 
+	dmon_deinit();
 	FC_FreeFont(font);
 	FC_FreeFont(overlay_font);
 	free(advancements);
