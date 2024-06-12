@@ -49,6 +49,9 @@
     <None Include="resources\templates\1.20.6\advancements.json">
       <Filter>Pliki zasobów</Filter>
     </None>
+    <None Include="resources\templates\1.16.1\advancements_optimised.json" />
+    <None Include="resources\templates\1.20.6\advancements_optimised.json" />
+    <None Include="resources\templates\1.21\advancements_optimised.json" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\Minecraft.ttf">
@@ -1149,6 +1152,24 @@
       <Filter>Pliki zasobów</Filter>
     </Image>
     <Image Include="resources\sprites\wolves\wolf_woods.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\crafter.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\light_bulb.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\mace.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\items\wind_charge.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\bogged.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\sprites\monsters\breeze.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
   </ItemGroup>

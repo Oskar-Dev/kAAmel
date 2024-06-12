@@ -12,6 +12,9 @@
 #include "dmon.h"
 
 #define MAIN_WINDOW_WIDTH 1600
+
+// 1.16.1
+// #define MAIN_WINDOW_WIDTH 1300
 #define MAIN_WINDOW_HEIGHT 768
 
 #define OVERLAY_WINDOW_WIDTH 1600
@@ -21,13 +24,28 @@
 #define DELTA_TIME_S (1.0f / SCREEN_FPS)
 #define DELTA_TIME_MS ((Uint32) floorf(DELTA_TIME_S * 1000.0f))
 
-#define ADVANCEMENTS 72
-#define CRITERIA 185
+#define ADVANCEMENTS 74
+#define CRITERIA 187
+
+// 1.20.6
+// #define ADVANCEMENTS 69
+// #define CRITERIA 185
+
+// 1.16.1
+// #define ADVANCEMENTS 43
+// #define CRITERIA 149
 
 #define MAX_LEN 200
 
 char final_path[MAX_LEN];
-char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
+
+char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21-rc1/.minecraft/saves";
+
+// 1.20.6
+// char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
+
+// 1.16.1
+// char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/Instance 1/.minecraft/saves";
 int update = 1;
 
 void recentByModification(const char* path, char* recent) {
@@ -100,7 +118,8 @@ int main() {
 	dmon_init();
 	dmon_watch(saves_path, watch_callback, 0, NULL);
 
-	cJSON* data = ADV_get_json("resources/templates/1.20.6/advancements_optimized.json");
+	cJSON* data = ADV_get_json("resources/templates/1.21/advancements_optimised.json");
+	// cJSON* data = ADV_get_json("resources/templates/1.16.1/advancements_optimized.json");
 	if (data == NULL) {
 		printf("[ERROR] Couldn't get data from a template.\n");
 		cJSON_Delete(data);

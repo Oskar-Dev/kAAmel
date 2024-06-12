@@ -153,7 +153,10 @@
     <ClInclude Include="source\SDL_FontCache.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\templates\1.16.1\advancements_optimised.json" />
     <None Include="resources\templates\1.20.6\advancements.json" />
+    <None Include="resources\templates\1.20.6\advancements_optimised.json" />
+    <None Include="resources\templates\1.21\advancements_optimised.json" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\Minecraft.ttf" />
@@ -371,6 +374,7 @@
     <Image Include="resources\sprites\items\chest.png" />
     <Image Include="resources\sprites\items\chiseled_bookshelf.png" />
     <Image Include="resources\sprites\items\cookie.png" />
+    <Image Include="resources\sprites\items\crafter.png" />
     <Image Include="resources\sprites\items\crossbow.png" />
     <Image Include="resources\sprites\items\crying_obsidian.png" />
     <Image Include="resources\sprites\items\decorated_pot.png" />
@@ -413,7 +417,9 @@
     <Image Include="resources\sprites\items\lead.png" />
     <Image Include="resources\sprites\items\leather_boots.png" />
     <Image Include="resources\sprites\items\lightning_rod.png" />
+    <Image Include="resources\sprites\items\light_bulb.png" />
     <Image Include="resources\sprites\items\lodestone.png" />
+    <Image Include="resources\sprites\items\mace.png" />
     <Image Include="resources\sprites\items\milk_bucket.png" />
     <Image Include="resources\sprites\items\netherite_boots.png" />
     <Image Include="resources\sprites\items\netherite_chestplate.png" />
@@ -452,11 +458,14 @@
     <Image Include="resources\sprites\items\warped_fungus_on_a_stick.png" />
     <Image Include="resources\sprites\items\water_bucket.png" />
     <Image Include="resources\sprites\items\wheat.png" />
+    <Image Include="resources\sprites\items\wind_charge.png" />
     <Image Include="resources\sprites\items\wither_skeleton_skull.png" />
     <Image Include="resources\sprites\items\wolf_armour.png" />
     <Image Include="resources\sprites\items\wooden_pickaxe.png" />
     <Image Include="resources\sprites\monsters\blaze.png" />
     <Image Include="resources\sprites\monsters\blaze_1.12.png" />
+    <Image Include="resources\sprites\monsters\bogged.png" />
+    <Image Include="resources\sprites\monsters\breeze.png" />
     <Image Include="resources\sprites\monsters\cave_spider.png" />
     <Image Include="resources\sprites\monsters\cave_spider_1.12.png" />
     <Image Include="resources\sprites\monsters\creeper.png" />
