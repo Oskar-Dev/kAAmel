@@ -143,15 +143,6 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:nether/ride_strider_in_overworld_lava": {
-    "name": "Feels Like Home",
-    "displayName": "Home",
-    "icon": "items/warped_fungus_on_a_stick.png",
-    "rootName": "minecraft:nether/ride_strider_in_overworld_lava",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
   "minecraft:nether/explore_nether": {
     "name": "Hot Tourist Destinations",
     "displayName": "Tourist",
@@ -191,15 +182,6 @@
         "rootName": "minecraft:warped_forest"
       }
     }
-  },
-  "minecraft:nether/brew_potion": {
-    "name": "Local Brewery",
-    "displayName": "Brewery",
-    "icon": "items/potion.png",
-    "rootName": "minecraft:nether/brew_potion",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
   },
   "minecraft:nether/create_full_beacon": {
     "name": "Beaconator",
@@ -264,24 +246,6 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:adventure/spyglass_at_parrot": {
-    "name": "Is It a Bird?",
-    "displayName": "Bird?",
-    "icon": "items/spyglass.png",
-    "rootName": "minecraft:adventure/spyglass_at_parrot",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/read_power_of_chiseled_bookshelf": {
-    "name": "The Power of Books",
-    "displayName": "Book Power",
-    "icon": "items/chiseled_bookshelf.png",
-    "rootName": "minecraft:adventure/read_power_of_chiseled_bookshelf",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
   "minecraft:adventure/honey_block_slide": {
     "name": "Sticky Situation",
     "displayName": "Sticky",
@@ -291,65 +255,11 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:adventure/lightning_rod_with_villager_no_fire": {
-    "name": "Surge Protector",
-    "displayName": "Protector",
-    "icon": "items/lightning_rod.png",
-    "rootName": "minecraft:adventure/lightning_rod_with_villager_no_fire",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/fall_from_world_height": {
-    "name": "Caves & Cliffs",
-    "displayName": "Cliffs",
-    "icon": "items/water_bucket.png",
-    "rootName": "minecraft:adventure/fall_from_world_height",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
   "minecraft:adventure/sleep_in_bed": {
     "name": "Sweet Dreams",
     "displayName": "Dreams",
     "icon": "items/red_bed.png",
     "rootName": "minecraft:adventure/sleep_in_bed",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/hero_of_the_village": {
-    "name": "Hero of the Village",
-    "displayName": "Raid",
-    "icon": "items/ominous_banner.png",
-    "rootName": "minecraft:adventure/hero_of_the_village",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/spyglass_at_ghast": {
-    "name": "Is It a Balloon?",
-    "displayName": "Balloon?",
-    "icon": "items/spyglass.png",
-    "rootName": "minecraft:adventure/spyglass_at_ghast",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/throw_trident": {
-    "name": "A Throwaway Joke",
-    "displayName": "Throw",
-    "icon": "items/trident.png",
-    "rootName": "minecraft:adventure/throw_trident",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/kill_mob_near_sculk_catalyst": {
-    "name": "It Spreads",
-    "displayName": "It Spreads",
-    "icon": "items/sculk_catalyst.png",
-    "rootName": "minecraft:adventure/kill_mob_near_sculk_catalyst",
     "done": false,
     "criteriaNumber": 0,
     "criteria": {}
@@ -427,12 +337,6 @@
         "icon": "monsters/magma_cube.png",
         "done": false,
         "rootName": "minecraft:magma_cube"
-      },
-      "minecraft:piglin_brute": {
-        "name": "Piglin Brute",
-        "icon": "monsters/piglin_brute.png",
-        "done": false,
-        "rootName": "minecraft:piglin_brute"
       },
       "minecraft:spider": {
         "name": "Spider",
@@ -586,73 +490,6 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:adventure/trade_at_world_height": {
-    "name": "Star Trader",
-    "displayName": "Sky Trade",
-    "icon": "items/emerald.png",
-    "rootName": "minecraft:adventure/trade_at_world_height",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
-    "name": "Smithing with Style",
-    "displayName": "Style",
-    "icon": "items/silence_trim.png",
-    "rootName": "minecraft:adventure/trim_with_all_exclusive_armor_patterns",
-    "done": false,
-    "criteriaNumber": 8,
-    "criteria": {
-      "armor_trimmed_minecraft:spire_armor_trim_smithing_template_smithing_trim": {
-        "name": "Spire",
-        "icon": "trims/spire.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:spire_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:tide_armor_trim_smithing_template_smithing_trim": {
-        "name": "Tide",
-        "icon": "trims/tide.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:tide_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:wayfinder_armor_trim_smithing_template_smithing_trim": {
-        "name": "Wayfinder",
-        "icon": "trims/wayfinder.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:wayfinder_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:snout_armor_trim_smithing_template_smithing_trim": {
-        "name": "Snout",
-        "icon": "trims/snout.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:snout_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:rib_armor_trim_smithing_template_smithing_trim": {
-        "name": "Rib",
-        "icon": "trims/rib.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:rib_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim": {
-        "name": "Vex",
-        "icon": "trims/vex.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim": {
-        "name": "Ward",
-        "icon": "trims/ward.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim"
-      },
-      "armor_trimmed_minecraft:silence_armor_trim_smithing_template_smithing_trim": {
-        "name": "Silence",
-        "icon": "trims/silence.png",
-        "done": false,
-        "rootName": "armor_trimmed_minecraft:silence_armor_trim_smithing_template_smithing_trim"
-      }
-    }
-  },
   "minecraft:adventure/two_birds_one_arrow": {
     "name": "Two Birds, One Arrow",
     "displayName": "Birds",
@@ -680,15 +517,6 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:adventure/craft_decorated_pot_using_only_sherds": {
-    "name": "Careful Restoration",
-    "displayName": "Restoration",
-    "icon": "items/decorated_pot.png",
-    "rootName": "minecraft:adventure/craft_decorated_pot_using_only_sherds",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
   "minecraft:adventure/adventuring_time": {
     "name": "Adventuring Time",
     "displayName": "Biomes",
@@ -697,352 +525,259 @@
     "done": false,
     "criteriaNumber": 53,
     "criteria": {
-      "minecraft:snowy_slopes": {
-        "name": "Snowy Slopes",
-        "icon": "biomes/snowy_slopes.png",
-        "done": false,
-        "rootName": "minecraft:snowy_slopes"
-      },
-      "minecraft:old_growth_pine_taiga": {
-        "name": "Old Growth Pine Taiga",
-        "icon": "biomes/old_growth_pine_taiga.png",
-        "done": false,
-        "rootName": "minecraft:old_growth_pine_taiga"
-      },
-      "minecraft:mushroom_fields": {
-        "name": "Mushroom Fields",
-        "icon": "biomes/mushroom_fields.png",
-        "done": false,
-        "rootName": "minecraft:mushroom_fields"
-      },
-      "minecraft:taiga": {
-        "name": "Taiga",
-        "icon": "biomes/taiga.png",
-        "done": false,
-        "rootName": "minecraft:taiga"
-      },
-      "minecraft:deep_ocean": {
-        "name": "Deep Ocean",
-        "icon": "biomes/deep_ocean.png",
-        "done": false,
-        "rootName": "minecraft:deep_ocean"
-      },
-      "minecraft:eroded_badlands": {
-        "name": "Eroded Badlands",
-        "icon": "biomes/eroded_badlands.png",
-        "done": false,
-        "rootName": "minecraft:eroded_badlands"
-      },
-      "minecraft:frozen_river": {
-        "name": "Frozen River",
-        "icon": "biomes/frozen_river.png",
-        "done": false,
-        "rootName": "minecraft:frozen_river"
-      },
-      "minecraft:cherry_grove": {
-        "name": "Cherry Grove",
-        "icon": "biomes/cherry_grove.png",
-        "done": false,
-        "rootName": "minecraft:cherry_grove"
-      },
-      "minecraft:sunflower_plains": {
-        "name": "Sunflower Plains",
-        "icon": "biomes/sunflower_plains.png",
-        "done": false,
-        "rootName": "minecraft:sunflower_plains"
-      },
-      "minecraft:birch_forest": {
-        "name": "Birch Forest",
-        "icon": "biomes/birch_forest.png",
-        "done": false,
-        "rootName": "minecraft:birch_forest"
-      },
-      "minecraft:windswept_hills": {
-        "name": "Windswept Hills",
-        "icon": "biomes/windswept_hills.png",
-        "done": false,
-        "rootName": "minecraft:windswept_hills"
-      },
-      "minecraft:wooded_badlands": {
-        "name": "Wooded Badlands",
-        "icon": "biomes/wooded_badlands.png",
-        "done": false,
-        "rootName": "minecraft:wooded_badlands"
-      },
-      "minecraft:bamboo_jungle": {
-        "name": "Bamboo Jungle",
-        "icon": "biomes/bamboo_jungle.png",
-        "done": false,
-        "rootName": "minecraft:bamboo_jungle"
-      },
-      "minecraft:badlands": {
-        "name": "Badlands",
-        "icon": "biomes/badlands.png",
-        "done": false,
-        "rootName": "minecraft:badlands"
-      },
-      "minecraft:savanna_plateau": {
-        "name": "Savanna Plateau",
-        "icon": "biomes/savanna_plateau.png",
-        "done": false,
-        "rootName": "minecraft:savanna_plateau"
-      },
-      "minecraft:beach": {
-        "name": "Beach",
-        "icon": "biomes/beach.png",
-        "done": false,
-        "rootName": "minecraft:beach"
-      },
-      "minecraft:dark_forest": {
-        "name": "Dark Forest",
-        "icon": "biomes/dark_forest.png",
-        "done": false,
-        "rootName": "minecraft:dark_forest"
-      },
-      "minecraft:stony_peaks": {
-        "name": "Stony Peaks",
-        "icon": "biomes/stony_peaks.png",
-        "done": false,
-        "rootName": "minecraft:stony_peaks"
-      },
-      "minecraft:mangrove_swamp": {
-        "name": "Mangrove Swamp",
-        "icon": "biomes/mangrove_swamp.png",
-        "done": false,
-        "rootName": "minecraft:mangrove_swamp"
-      },
-      "minecraft:sparse_jungle": {
-        "name": "Sparse Jungle",
-        "icon": "biomes/sparse_jungle.png",
-        "done": false,
-        "rootName": "minecraft:sparse_jungle"
-      },
-      "minecraft:river": {
-        "name": "River",
-        "icon": "biomes/river.png",
-        "done": false,
-        "rootName": "minecraft:river"
-      },
-      "minecraft:lukewarm_ocean": {
-        "name": "Lukewarm Ocean",
-        "icon": "biomes/lukewarm_ocean.png",
-        "done": false,
-        "rootName": "minecraft:lukewarm_ocean"
-      },
-      "minecraft:stony_shore": {
-        "name": "Stony Shore",
-        "icon": "biomes/stony_shore.png",
-        "done": false,
-        "rootName": "minecraft:stony_shore"
-      },
-      "minecraft:snowy_plains": {
-        "name": "Snowy Plains",
-        "icon": "biomes/snowy_plains.png",
-        "done": false,
-        "rootName": "minecraft:snowy_plains"
-      },
-      "minecraft:dripstone_caves": {
-        "name": "Dripstone Caves",
-        "icon": "biomes/dripstone_caves.png",
-        "done": false,
-        "rootName": "minecraft:dripstone_caves"
-      },
-      "minecraft:snowy_taiga": {
-        "name": "Snowy Taiga",
-        "icon": "biomes/snowy_taiga.png",
-        "done": false,
-        "rootName": "minecraft:snowy_taiga"
-      },
-      "minecraft:grove": {
-        "name": "Grove",
-        "icon": "biomes/grove.png",
-        "done": false,
-        "rootName": "minecraft:grove"
-      },
-      "minecraft:swamp": {
-        "name": "Swamp",
-        "icon": "biomes/swamp.png",
-        "done": false,
-        "rootName": "minecraft:swamp"
-      },
-      "minecraft:jagged_peaks": {
-        "name": "Jagged Peaks",
-        "icon": "biomes/jagged_peaks.png",
-        "done": false,
-        "rootName": "minecraft:jagged_peaks"
+      "minecraft:jungle_edge": {
+        "name": "Jungle Edge",
+        "icon": "biomes/jungle_edge.png",
+        "rootName": "minecraft:jungle_edge",
+        "done": false
       },
       "minecraft:cold_ocean": {
         "name": "Cold Ocean",
         "icon": "biomes/cold_ocean.png",
-        "done": false,
-        "rootName": "minecraft:cold_ocean"
+        "rootName": "minecraft:cold_ocean",
+        "done": false
+      },
+      "minecraft:snowy_mountains": {
+        "name": "Snowy Mountains",
+        "icon": "biomes/snowy_mountains.png",
+        "rootName": "minecraft:snowy_mountains",
+        "done": false
       },
       "minecraft:forest": {
         "name": "Forest",
         "icon": "biomes/forest.png",
-        "done": false,
-        "rootName": "minecraft:forest"
+        "rootName": "minecraft:forest",
+        "done": false
       },
-      "minecraft:lush_caves": {
-        "name": "Lush Caves",
-        "icon": "biomes/lush_caves.png",
-        "done": false,
-        "rootName": "minecraft:lush_caves"
+      "minecraft:mountains": {
+        "name": "Mountains",
+        "icon": "biomes/mountains.png",
+        "rootName": "minecraft:mountains",
+        "done": false
+      },
+      "minecraft:badlands_plateau": {
+        "name": "Badlands Plateau",
+        "icon": "biomes/badlands_plateau.png",
+        "rootName": "minecraft:badlands_plateau",
+        "done": false
+      },
+      "minecraft:mushroom_fields": {
+        "name": "Mushroom Fields",
+        "icon": "biomes/mushroom_fields.png",
+        "rootName": "minecraft:mushroom_fields",
+        "done": false
+      },
+      "minecraft:taiga": {
+        "name": "Taiga",
+        "icon": "biomes/taiga.png",
+        "rootName": "minecraft:taiga",
+        "done": false
+      },
+      "minecraft:desert_hills": {
+        "name": "Desert Hills",
+        "icon": "biomes/desert_hills.png",
+        "rootName": "minecraft:desert_hills",
+        "done": false
+      },
+      "minecraft:giant_tree_taiga": {
+        "name": "Giant Tree Taiga",
+        "icon": "biomes/giant_tree_taiga.png",
+        "rootName": "minecraft:giant_tree_taiga",
+        "done": false
       },
       "minecraft:deep_cold_ocean": {
         "name": "Deep Cold Ocean",
         "icon": "biomes/deep_cold_ocean.png",
-        "done": false,
-        "rootName": "minecraft:deep_cold_ocean"
+        "rootName": "minecraft:deep_cold_ocean",
+        "done": false
       },
-      "minecraft:ice_spikes": {
-        "name": "Ice Spikes",
-        "icon": "biomes/ice_spikes.png",
-        "done": false,
-        "rootName": "minecraft:ice_spikes"
+      "minecraft:snowy_tundra": {
+        "name": "Snowy Tundra",
+        "icon": "biomes/snowy_tundra.png",
+        "rootName": "minecraft:snowy_tundra",
+        "done": false
       },
-      "minecraft:frozen_ocean": {
-        "name": "Frozen Ocean",
-        "icon": "biomes/frozen_ocean.png",
-        "done": false,
-        "rootName": "minecraft:frozen_ocean"
+      "minecraft:taiga_hills": {
+        "name": "Taiga Hills",
+        "icon": "biomes/taiga_hills.png",
+        "rootName": "minecraft:taiga_hills",
+        "done": false
       },
       "minecraft:desert": {
         "name": "Desert",
         "icon": "biomes/desert.png",
-        "done": false,
-        "rootName": "minecraft:desert"
+        "rootName": "minecraft:desert",
+        "done": false
+      },
+      "minecraft:frozen_river": {
+        "name": "Frozen River",
+        "icon": "biomes/frozen_river.png",
+        "rootName": "minecraft:frozen_river",
+        "done": false
       },
       "minecraft:deep_frozen_ocean": {
         "name": "Deep Frozen Ocean",
         "icon": "biomes/deep_frozen_ocean.png",
-        "done": false,
-        "rootName": "minecraft:deep_frozen_ocean"
-      },
-      "minecraft:windswept_forest": {
-        "name": "Windswept Forest",
-        "icon": "biomes/windswept_forest.png",
-        "done": false,
-        "rootName": "minecraft:windswept_forest"
-      },
-      "minecraft:ocean": {
-        "name": "Ocean",
-        "icon": "biomes/ocean.png",
-        "done": false,
-        "rootName": "minecraft:ocean"
+        "rootName": "minecraft:deep_frozen_ocean",
+        "done": false
       },
       "minecraft:jungle": {
         "name": "Jungle",
         "icon": "biomes/jungle.png",
-        "done": false,
-        "rootName": "minecraft:jungle"
+        "rootName": "minecraft:jungle",
+        "done": false
       },
-      "minecraft:old_growth_spruce_taiga": {
-        "name": "Old Growth Spruce Taiga",
-        "icon": "biomes/old_growth_spruce_taiga.png",
-        "done": false,
-        "rootName": "minecraft:old_growth_spruce_taiga"
+      "minecraft:birch_forest": {
+        "name": "Birch Forest",
+        "icon": "biomes/birch_forest.png",
+        "rootName": "minecraft:birch_forest",
+        "done": false
+      },
+      "minecraft:jungle_hills": {
+        "name": "Jungle Hills",
+        "icon": "biomes/jungle_hills.png",
+        "rootName": "minecraft:jungle_hills",
+        "done": false
       },
       "minecraft:snowy_beach": {
         "name": "Snowy Beach",
         "icon": "biomes/snowy_beach.png",
-        "done": false,
-        "rootName": "minecraft:snowy_beach"
+        "rootName": "minecraft:snowy_beach",
+        "done": false
       },
-      "minecraft:windswept_savanna": {
-        "name": "Windswept Savanna",
-        "icon": "biomes/windswept_savanna.png",
-        "done": false,
-        "rootName": "minecraft:windswept_savanna"
+      "minecraft:bamboo_jungle": {
+        "name": "Bamboo Jungle",
+        "icon": "biomes/bamboo_jungle.png",
+        "rootName": "minecraft:bamboo_jungle",
+        "done": false
       },
       "minecraft:warm_ocean": {
         "name": "Warm Ocean",
         "icon": "biomes/warm_ocean.png",
-        "done": false,
-        "rootName": "minecraft:warm_ocean"
+        "rootName": "minecraft:warm_ocean",
+        "done": false
       },
       "minecraft:deep_lukewarm_ocean": {
         "name": "Deep Lukewarm Ocean",
         "icon": "biomes/deep_lukewarm_ocean.png",
-        "done": false,
-        "rootName": "minecraft:deep_lukewarm_ocean"
+        "rootName": "minecraft:deep_lukewarm_ocean",
+        "done": false
       },
-      "minecraft:flower_forest": {
-        "name": "Flower Forest",
-        "icon": "biomes/flower_forest.png",
-        "done": false,
-        "rootName": "minecraft:flower_forest"
+      "minecraft:badlands": {
+        "name": "Badlands",
+        "icon": "biomes/badlands.png",
+        "rootName": "minecraft:badlands",
+        "done": false
       },
-      "minecraft:frozen_peaks": {
-        "name": "Frozen Peaks",
-        "icon": "biomes/frozen_peaks.png",
-        "done": false,
-        "rootName": "minecraft:frozen_peaks"
+      "minecraft:savanna_plateau": {
+        "name": "Savanna Plateau",
+        "icon": "biomes/savanna_plateau.png",
+        "rootName": "minecraft:savanna_plateau",
+        "done": false
       },
-      "minecraft:old_growth_birch_forest": {
-        "name": "Old Growth Birch Forest",
-        "icon": "biomes/old_growth_birch_forest.png",
-        "done": false,
-        "rootName": "minecraft:old_growth_birch_forest"
+      "minecraft:beach": {
+        "name": "Beach",
+        "icon": "biomes/beach.png",
+        "rootName": "minecraft:beach",
+        "done": false
       },
-      "minecraft:deep_dark": {
-        "name": "Deep Dark",
-        "icon": "biomes/deep_dark.png",
-        "done": false,
-        "rootName": "minecraft:deep_dark"
+      "minecraft:dark_forest": {
+        "name": "Dark Forest",
+        "icon": "biomes/dark_forest.png",
+        "rootName": "minecraft:dark_forest",
+        "done": false
       },
-      "minecraft:meadow": {
-        "name": "Meadow",
-        "icon": "biomes/meadow.png",
-        "done": false,
-        "rootName": "minecraft:meadow"
+      "minecraft:river": {
+        "name": "River",
+        "icon": "biomes/river.png",
+        "rootName": "minecraft:river",
+        "done": false
       },
-      "minecraft:windswept_gravelly_hills": {
-        "name": "Windswept Gravelly Hills",
-        "icon": "biomes/windswept_gravelly_hills.png",
-        "done": false,
-        "rootName": "minecraft:windswept_gravelly_hills"
+      "minecraft:lukewarm_ocean": {
+        "name": "Lukewarm Ocean",
+        "icon": "biomes/lukewarm_ocean.png",
+        "rootName": "minecraft:lukewarm_ocean",
+        "done": false
+      },
+      "minecraft:snowy_taiga": {
+        "name": "Snowy Taiga",
+        "icon": "biomes/snowy_taiga.png",
+        "rootName": "minecraft:snowy_taiga",
+        "done": false
+      },
+      "minecraft:birch_forest_hills": {
+        "name": "Birch Forest Hills",
+        "icon": "biomes/birch_forest_hills.png",
+        "rootName": "minecraft:birch_forest_hills",
+        "done": false
+      },
+      "minecraft:wooded_mountains": {
+        "name": "Wooded Mountains",
+        "icon": "biomes/wooded_mountains.png",
+        "rootName": "minecraft:wooded_mountains",
+        "done": false
+      },
+      "minecraft:bamboo_jungle_hills": {
+        "name": "Bamboo Jungle Hills",
+        "icon": "biomes/bamboo_jungle_hills.png",
+        "rootName": "minecraft:bamboo_jungle_hills",
+        "done": false
+      },
+      "minecraft:wooded_hills": {
+        "name": "Wooded Hills",
+        "icon": "biomes/wooded_hills.png",
+        "rootName": "minecraft:wooded_hills",
+        "done": false
+      },
+      "minecraft:giant_tree_taiga_hills": {
+        "name": "Giant Tree Taiga Hills",
+        "icon": "biomes/giant_tree_taiga_hills.png",
+        "rootName": "minecraft:giant_tree_taiga_hills",
+        "done": false
+      },
+      "minecraft:stone_shore": {
+        "name": "Stone Shore",
+        "icon": "biomes/stone_shore.png",
+        "rootName": "minecraft:stone_shore",
+        "done": false
+      },
+      "minecraft:wooded_badlands_plateau": {
+        "name": "Wooded Badlands Plateau",
+        "icon": "biomes/wooded_badlands_plateau.png",
+        "rootName": "minecraft:wooded_badlands_plateau",
+        "done": false
+      },
+      "minecraft:mushroom_field_shore": {
+        "name": "Mushroom Field Shore",
+        "icon": "biomes/mushroom_field_shore.png",
+        "rootName": "minecraft:mushroom_field_shore",
+        "done": false
+      },
+      "minecraft:swamp": {
+        "name": "Swamp",
+        "icon": "biomes/swamp.png",
+        "rootName": "minecraft:swamp",
+        "done": false
+      },
+      "minecraft:snowy_taiga_hills": {
+        "name": "Snowy Taiga Hills",
+        "icon": "biomes/snowy_taiga_hills.png",
+        "rootName": "minecraft:snowy_taiga_hills",
+        "done": false
       },
       "minecraft:savanna": {
         "name": "Savanna",
         "icon": "biomes/savanna.png",
-        "done": false,
-        "rootName": "minecraft:savanna"
+        "rootName": "minecraft:savanna",
+        "done": false
       },
       "minecraft:plains": {
         "name": "Plains",
         "icon": "biomes/plains.png",
-        "done": false,
-        "rootName": "minecraft:plains"
+        "rootName": "minecraft:plains",
+        "done": false
       }
     }
-  },
-  "minecraft:adventure/play_jukebox_in_meadows": {
-    "name": "Sound of Music",
-    "displayName": "Music",
-    "icon": "items/jukebox.png",
-    "rootName": "minecraft:adventure/play_jukebox_in_meadows",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/walk_on_powder_snow_with_leather_boots": {
-    "name": "Light as a Rabbit",
-    "displayName": "Snow",
-    "icon": "items/leather_boots.png",
-    "rootName": "minecraft:adventure/walk_on_powder_snow_with_leather_boots",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:adventure/spyglass_at_dragon": {
-    "name": "Is It a Plane?",
-    "displayName": "Plane?",
-    "icon": "items/spyglass.png",
-    "rootName": "minecraft:adventure/spyglass_at_dragon",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
   },
   "minecraft:adventure/very_very_frightening": {
     "name": "Very Very Frightening",
@@ -1080,24 +815,6 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
-  "minecraft:husbandry/ride_a_boat_with_a_goat": {
-    "name": "Whatever Floats Your Goat!",
-    "displayName": "Goat",
-    "icon": "items/boat.png",
-    "rootName": "minecraft:husbandry/ride_a_boat_with_a_goat",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/make_a_sign_glow": {
-    "name": "Glow and Behold!",
-    "displayName": "Sign",
-    "icon": "items/glow_ink_sac.png",
-    "rootName": "minecraft:husbandry/make_a_sign_glow",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
   "minecraft:husbandry/fishy_business": {
     "name": "Fishy Business",
     "displayName": "Business",
@@ -1112,15 +829,6 @@
     "displayName": "Beelocation",
     "icon": "items/bee_nest.png",
     "rootName": "minecraft:husbandry/silk_touch_nest",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/wax_on": {
-    "name": "Wax On",
-    "displayName": "Wax On",
-    "icon": "items/honeycomb.png",
-    "rootName": "minecraft:husbandry/wax_on",
     "done": false,
     "criteriaNumber": 0,
     "criteria": {}
@@ -1151,12 +859,6 @@
         "done": false,
         "rootName": "minecraft:hoglin"
       },
-      "minecraft:sniffer": {
-        "name": "Sniffer",
-        "icon": "animals/sniffer.png",
-        "done": false,
-        "rootName": "minecraft:sniffer"
-      },
       "minecraft:strider": {
         "name": "Strider",
         "icon": "animals/strider.png",
@@ -1168,12 +870,6 @@
         "icon": "animals/cow.png",
         "done": false,
         "rootName": "minecraft:cow"
-      },
-      "minecraft:camel": {
-        "name": "Camel",
-        "icon": "animals/camel.png",
-        "done": false,
-        "rootName": "minecraft:camel"
       },
       "minecraft:horse": {
         "name": "Horse",
@@ -1217,12 +913,6 @@
         "done": false,
         "rootName": "minecraft:turtle"
       },
-      "minecraft:frog": {
-        "name": "Frog",
-        "icon": "animals/frog.png",
-        "done": false,
-        "rootName": "minecraft:frog"
-      },
       "minecraft:sheep": {
         "name": "Sheep",
         "icon": "animals/sheep.png",
@@ -1241,23 +931,11 @@
         "done": false,
         "rootName": "minecraft:ocelot"
       },
-      "minecraft:goat": {
-        "name": "Goat",
-        "icon": "animals/goat.png",
-        "done": false,
-        "rootName": "minecraft:goat"
-      },
       "minecraft:chicken": {
         "name": "Chicken",
         "icon": "animals/chicken.png",
         "done": false,
         "rootName": "minecraft:chicken"
-      },
-      "minecraft:armadillo": {
-        "name": "Armadillo",
-        "icon": "animals/armadillo.png",
-        "done": false,
-        "rootName": "minecraft:armadillo"
       },
       "minecraft:wolf": {
         "name": "Wolf",
@@ -1276,23 +954,8 @@
         "icon": "animals/rabbit.png",
         "done": false,
         "rootName": "minecraft:rabbit"
-      },
-      "minecraft:axolotl": {
-        "name": "Axolotl",
-        "icon": "animals/axolotl.png",
-        "done": false,
-        "rootName": "minecraft:axolotl"
       }
     }
-  },
-  "minecraft:husbandry/allay_deliver_cake_to_note_block": {
-    "name": "Birthday Song",
-    "displayName": "Birthday",
-    "icon": "items/note_block.png",
-    "rootName": "minecraft:husbandry/allay_deliver_cake_to_note_block",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
   },
   "minecraft:husbandry/complete_catalogue": {
     "name": "A Complete Catalogue",
@@ -1302,91 +965,73 @@
     "done": false,
     "criteriaNumber": 11,
     "criteria": {
-      "minecraft:white": {
+      "textures/entity/cat/white.png": {
         "name": "White",
         "icon": "cats/white.png",
         "done": false,
-        "rootName": "minecraft:white"
+        "rootName": "textures/entity/cat/white.png"
       },
-      "minecraft:tabby": {
+      "textures/entity/cat/tabby.png": {
         "name": "Tabby",
         "icon": "cats/tabby.png",
         "done": false,
-        "rootName": "minecraft:tabby"
+        "rootName": "textures/entity/cat/tabby.png"
       },
-      "minecraft:calico": {
+      "textures/entity/cat/calico.png": {
         "name": "Calico",
         "icon": "cats/calico.png",
         "done": false,
-        "rootName": "minecraft:calico"
+        "rootName": "textures/entity/cat/calico.png"
       },
-      "minecraft:siamese": {
+      "textures/entity/cat/siamese.png": {
         "name": "Siamese",
         "icon": "cats/siamese.png",
         "done": false,
-        "rootName": "minecraft:siamese"
+        "rootName": "textures/entity/cat/siamese.png"
       },
-      "minecraft:persian": {
+      "textures/entity/cat/persian.png": {
         "name": "Persian",
         "icon": "cats/persian.png",
         "done": false,
-        "rootName": "minecraft:persian"
+        "rootName": "textures/entity/cat/persian.png"
       },
-      "minecraft:jellie": {
+      "textures/entity/cat/jellie.png": {
         "name": "Jellie",
         "icon": "cats/jellie.png",
         "done": false,
-        "rootName": "minecraft:jellie"
+        "rootName": "textures/entity/cat/jellie.png"
       },
-      "minecraft:black": {
+      "textures/entity/cat/black.png": {
         "name": "Tuxedo",
         "icon": "cats/tuxedo.png",
         "done": false,
-        "rootName": "minecraft:black"
+        "rootName": "textures/entity/cat/black.png"
       },
-      "minecraft:all_black": {
+      "textures/entity/cat/all_black.png": {
         "name": "Black",
         "icon": "cats/black.png",
         "done": false,
-        "rootName": "minecraft:all_black"
+        "rootName": "textures/entity/cat/all_black.png"
       },
-      "minecraft:ragdoll": {
+      "textures/entity/cat/ragdoll.png": {
         "name": "Ragdoll",
         "icon": "cats/ragdoll.png",
         "done": false,
-        "rootName": "minecraft:ragdoll"
+        "rootName": "textures/entity/cat/ragdoll.png"
       },
-      "minecraft:british_shorthair": {
+      "textures/entity/cat/british_shorthair.png": {
         "name": "British",
         "icon": "cats/british_shorthair.png",
         "done": false,
-        "rootName": "minecraft:british_shorthair"
+        "rootName": "textures/entity/cat/british_shorthair.png"
       },
-      "minecraft:red": {
+      "textures/entity/cat/red.png": {
         "name": "Red",
         "icon": "cats/red.png",
         "done": false,
-        "rootName": "minecraft:red"
+        "rootName": "textures/entity/cat/red.png"
       }
     }
-  },
-  "minecraft:husbandry/leash_all_frog_variants": {
-    "name": "When the Squad Hops into Town",
-    "displayName": "The Squad",
-    "icon": "items/lead.png",
-    "rootName": "minecraft:husbandry/leash_all_frog_variants",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/feed_snifflet": {
-    "name": "Little Sniffs",
-    "displayName": "Sniffs",
-    "icon": "items/torchflower_seed.png",
-    "rootName": "minecraft:husbandry/feed_snifflet",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
   },
   "minecraft:husbandry/balanced_diet": {
     "name": "A Balanced Diet",
@@ -1552,12 +1197,6 @@
         "done": false,
         "rootName": "suspicious_stew"
       },
-      "glow_berries": {
-        "name": "Glow Berries",
-        "icon": "food/glow_berries.png",
-        "done": false,
-        "rootName": "glow_berries"
-      },
       "salmon": {
         "name": "Salmon",
         "icon": "food/salmon.png",
@@ -1643,124 +1282,6 @@
     "displayName": "Dedication",
     "icon": "items/netherite_hoe.png",
     "rootName": "minecraft:husbandry/obtain_netherite_hoe",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/wax_off": {
-    "name": "Wax Off",
-    "displayName": "Wax Off",
-    "icon": "items/stone_axe.png",
-    "rootName": "minecraft:husbandry/wax_off",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/froglights": {
-    "name": "With Our Powers Combined",
-    "displayName": "Froglights",
-    "icon": "items/verdant_froglight.png",
-    "rootName": "minecraft:husbandry/froglights",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/plant_any_sniffer_seed": {
-    "name": "Planting the Past",
-    "displayName": "The Past",
-    "icon": "items/pitcher_pod.png",
-    "rootName": "minecraft:husbandry/plant_any_sniffer_seed",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/kill_axolotl_target": {
-    "name": "The Healing Power of Friendship",
-    "displayName": "Friendship",
-    "icon": "items/bucket_of_tropical_fish.png",
-    "rootName": "minecraft:husbandry/kill_axolotl_target",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/repair_wolf_armor": {
-    "name": "Good as New",
-    "displayName": "Armour",
-    "icon": "items/wolf_armour.png",
-    "rootName": "minecraft:husbandry/repair_wolf_armor",
-    "done": false,
-    "criteriaNumber": 0,
-    "criteria": {}
-  },
-  "minecraft:husbandry/whole_pack": {
-    "name": "The Whole Pack",
-    "displayName": "The Pack",
-    "icon": "items/bone.png",
-    "rootName": "minecraft:husbandry/whole_pack",
-    "done": false,
-    "criteriaNumber": 9,
-    "criteria": {
-      "minecraft:spotted": {
-        "name": "Spotted",
-        "icon": "wolves/wolf_spotted.png",
-        "done": false,
-        "rootName": "minecraft:spotted"
-      },
-      "minecraft:rusty": {
-        "name": "Rusty",
-        "icon": "wolves/wolf_rusty.png",
-        "done": false,
-        "rootName": "minecraft:rusty"
-      },
-      "minecraft:chestnut": {
-        "name": "Chestnut",
-        "icon": "wolves/wolf_chestnut.png",
-        "done": false,
-        "rootName": "minecraft:chestnut"
-      },
-      "minecraft:striped": {
-        "name": "Striped",
-        "icon": "wolves/wolf_striped.png",
-        "done": false,
-        "rootName": "minecraft:striped"
-      },
-      "minecraft:woods": {
-        "name": "Woods",
-        "icon": "wolves/wolf_woods.png",
-        "done": false,
-        "rootName": "minecraft:woods"
-      },
-      "minecraft:pale": {
-        "name": "Pale",
-        "icon": "wolves/wolf_pale.png",
-        "done": false,
-        "rootName": "minecraft:pale"
-      },
-      "minecraft:black": {
-        "name": "Black",
-        "icon": "wolves/wolf_black.png",
-        "done": false,
-        "rootName": "minecraft:black"
-      },
-      "minecraft:ashen": {
-        "name": "Ashen",
-        "icon": "wolves/wolf_ashen.png",
-        "done": false,
-        "rootName": "minecraft:ashen"
-      },
-      "minecraft:snowy": {
-        "name": "Snowy",
-        "icon": "wolves/wolf_snowy.png",
-        "done": false,
-        "rootName": "minecraft:snowy"
-      }
-    }
-  },
-  "minecraft:husbandry/remove_wolf_armor": {
-    "name": "Shear Brillance",
-    "displayName": "Shear",
-    "icon": "items/shears.png",
-    "rootName": "minecraft:husbandry/remove_wolf_armor",
     "done": false,
     "criteriaNumber": 0,
     "criteria": {}
