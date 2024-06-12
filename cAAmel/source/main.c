@@ -24,7 +24,7 @@
 #define DELTA_TIME_S (1.0f / SCREEN_FPS)
 #define DELTA_TIME_MS ((Uint32) floorf(DELTA_TIME_S * 1000.0f))
 
-#define ADVANCEMENTS 74
+#define ADVANCEMENTS 75
 #define CRITERIA 187
 
 // 1.20.6

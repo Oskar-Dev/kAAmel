@@ -1534,6 +1534,15 @@
     "criteriaNumber": 0,
     "criteria": {}
   },
+  "minecraft:adventure/under_lock_and_key": {
+    "name": "Under Lock and Key",
+    "displayName": "Vault",
+    "icon": "items/trial_key.png",
+    "rootName": "minecraft:adventure/under_lock_and_key",
+    "done": false,
+    "criteriaNumber": 0,
+    "criteria": {}
+  },
   "minecraft:adventure/lighten_up": {
     "name": "Lighten Up",
     "displayName": "Bulb",
