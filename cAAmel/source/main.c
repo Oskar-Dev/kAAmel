@@ -92,7 +92,7 @@ static void watch_callback(dmon_watch_id watch_id, dmon_action action, const cha
 int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
 	
-	SDL_Window* overlay_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, OVERLAY_WINDOW_WIDTH, OVERLAY_WINDOW_HEIGHT, 0));
+	SDL_Window* overlay_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, OVERLAY_WINDOW_WIDTH, OVERLAY_WINDOW_HEIGHT, SDL_RENDERER_PRESENTVSYNC));
 	SDL_Window* main_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT, 0));
 	
 	SDL_Renderer* overlay_renderer = check_sdl_ptr(SDL_CreateRenderer(overlay_window, -1, SDL_RENDERER_ACCELERATED));
@@ -125,6 +125,8 @@ int main() {
 
 	// Potrzebne do ukoñczonych celów.
 	SDL_SetRenderDrawBlendMode(main_renderer, SDL_BLENDMODE_BLEND);
+
+	SDL_Texture* advancement_background = check_sdl_ptr(IMG_LoadTexture(overlay_renderer, "resources/gui/advancement_background.png"));
 
 	{
 		int offset = 0;
@@ -177,9 +179,9 @@ int main() {
 	const int overlay_criterion_size = 48;
 	const int overlay_criteria_spacing = 10;
 	const int overlay_advancements_start_y = overlay_padding * 2 + overlay_criterion_size;
-	const int overlay_advancement_box_width = 2;
-	const int overlay_advancement_size = 70 + 2*overlay_advancement_box_width;
-	const int overlay_advancements_spacing = 20;
+	const int overlay_advancement_size = 64;
+	const int ovarlay_advancement_background_size = 80;
+	const int overlay_advancements_spacing = 32;
 
 	const int overlay_max_criteria = OVERLAY_WINDOW_WIDTH / (overlay_criterion_size + overlay_criteria_spacing) + 2;
 	const int overlay_max_advancements = OVERLAY_WINDOW_WIDTH / (overlay_advancement_size + overlay_advancements_spacing) + 2;
@@ -198,7 +200,8 @@ int main() {
 	SDL_Rect criterion_rect = { 0, 0, criterion_size, criterion_size };
 	SDL_Rect criterion_blend_rect = { 0, 0, criterion_max_width, criterion_size };
 
-	SDL_Rect overlay_advancement_rect = { 0, overlay_advancements_start_y, overlay_advancement_size, overlay_advancement_size };
+	SDL_Rect overlay_advancement_rect = { 0, overlay_advancements_start_y + (ovarlay_advancement_background_size - overlay_advancement_size) / 2, overlay_advancement_size, overlay_advancement_size };
+	SDL_Rect ovarlay_advancement_background_rect = { 0, overlay_advancements_start_y, ovarlay_advancement_background_size, ovarlay_advancement_background_size};
 	SDL_Rect overlay_criterion_rect = { 0, overlay_padding, overlay_criterion_size, overlay_criterion_size };
 
 	// CONTROL VARIABLES. //
@@ -304,12 +307,14 @@ int main() {
 				char* advancement_name = advancements[i]->display_name;
 
 				overlay_advancement_rect.x = overlay_rendered_advancements * (overlay_advancement_size + overlay_advancements_spacing) - overlay_advancements_offset;
+				ovarlay_advancement_background_rect.x = overlay_advancement_rect.x + (overlay_advancement_size - ovarlay_advancement_background_size) / 2;
 
-				render_advancement_box(overlay_renderer, overlay_advancement_rect.x, overlay_advancements_start_y, overlay_advancement_size, overlay_advancement_box_width);
-				check_sdl_code(SDL_RenderCopy(overlay_renderer, texture, NULL, &(SDL_Rect){overlay_advancement_rect.x + 5, overlay_advancement_rect.y + 5, overlay_advancement_rect.w - 10, overlay_advancement_rect.h - 10}));
+				// render_advancement_box(overlay_renderer, overlay_advancement_rect.x, overlay_advancements_start_y, overlay_advancement_size, overlay_advancement_box_width);
+				check_sdl_code(SDL_RenderCopy(overlay_renderer, advancement_background, NULL, &ovarlay_advancement_background_rect));
+				check_sdl_code(SDL_RenderCopy(overlay_renderer, texture, NULL, &overlay_advancement_rect));
 
-				int x = overlay_advancement_rect.x + overlay_advancement_size / 2;
-				int y = overlay_advancement_rect.y + overlay_advancement_size + overlay_text_margin;
+				int x = ovarlay_advancement_background_rect.x + ovarlay_advancement_background_size / 2;
+				int y = ovarlay_advancement_background_rect.y + ovarlay_advancement_background_size + overlay_text_margin;
 				FC_DrawAlign(overlay_font, overlay_renderer, x, y, FC_ALIGN_CENTER, advancement_name);
 
 				++overlay_rendered_advancements;
@@ -393,6 +398,7 @@ int main() {
 	dmon_deinit();
 	FC_FreeFont(font);
 	FC_FreeFont(overlay_font);
+	SDL_DestroyTexture(advancement_background);
 	free(advancements);
 	IMG_Quit();
 	SDL_Quit();
