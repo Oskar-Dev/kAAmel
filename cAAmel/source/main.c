@@ -8,10 +8,9 @@
 #include "adv.h"
 #include "cJSON.h"
 #include "SDL_FontCache.h"
-#include "dirent.h"
 #include "dmon.h"
 
-#define MAIN_WINDOW_WIDTH 1600
+#define MAIN_WINDOW_WIDTH 1630
 
 // 1.16.1
 // #define MAIN_WINDOW_WIDTH 1300
@@ -48,22 +47,7 @@ char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21-rc1/.
 // char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/Instance 1/.minecraft/saves";
 int update = 1;
 
-void recentByModification(const char* path, char* recent) {
-	char buffer[MAX_LEN];
-	struct dirent* entry;
-	time_t recenttime = 0;
-	struct stat statbuf;
-	DIR* dir = opendir(path);
-	while (NULL != (entry = readdir(dir))) {
-		sprintf(buffer, "%s/%s", path, entry->d_name);
-		stat(buffer, &statbuf);
-		if (statbuf.st_mtime > recenttime) {
-			strncpy(recent, entry->d_name, MAX_LEN);
-			recenttime = statbuf.st_mtime;
-		}
-	}
-	closedir(dir);
-}
+
 
 int check_sdl_code(int code) {
 	if (code < 0) {
