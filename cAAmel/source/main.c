@@ -38,7 +38,7 @@
 
 char final_path[MAX_LEN];
 
-char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21-rc1/.minecraft/saves";
+char* saves_path = "C:/Users/oski3/AppData/Roaming/.minecraft/saves";
 
 // 1.20.6
 // char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.20.6/.minecraft/saves";
@@ -92,7 +92,7 @@ static void watch_callback(dmon_watch_id watch_id, dmon_action action, const cha
 int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
 	
-	SDL_Window* overlay_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, OVERLAY_WINDOW_WIDTH, OVERLAY_WINDOW_HEIGHT, SDL_RENDERER_PRESENTVSYNC));
+	SDL_Window* overlay_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, OVERLAY_WINDOW_WIDTH, OVERLAY_WINDOW_HEIGHT, 0));
 	SDL_Window* main_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT, 0));
 	
 	SDL_Renderer* overlay_renderer = check_sdl_ptr(SDL_CreateRenderer(overlay_window, -1, SDL_RENDERER_ACCELERATED));
