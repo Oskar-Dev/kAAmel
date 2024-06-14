@@ -162,6 +162,7 @@
     <Font Include="resources\fonts\Minecraft.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\gui\advancement_background.png" />
     <Image Include="resources\sprites\animals\armadillo.png" />
     <Image Include="resources\sprites\animals\axolotl.png" />
     <Image Include="resources\sprites\animals\bee.png" />

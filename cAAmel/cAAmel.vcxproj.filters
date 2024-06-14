@@ -1172,5 +1172,8 @@
     <Image Include="resources\sprites\monsters\breeze.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="resources\gui\advancement_background.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>
