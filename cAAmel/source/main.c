@@ -25,6 +25,7 @@
 
 #define ADVANCEMENTS 75
 #define CRITERIA 187
+#define MULTI_PART_ADV 8
 
 // 1.20.6
 // #define ADVANCEMENTS 69
@@ -92,10 +93,10 @@ static void watch_callback(dmon_watch_id watch_id, dmon_action action, const cha
 
 int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
-	
+
 	SDL_Window* overlay_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, OVERLAY_WINDOW_WIDTH, OVERLAY_WINDOW_HEIGHT, 0));
 	SDL_Window* main_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT, 0));
-	
+
 	SDL_Renderer* overlay_renderer = check_sdl_ptr(SDL_CreateRenderer(overlay_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_Renderer* main_renderer = check_sdl_ptr(SDL_CreateRenderer(main_window, -1, SDL_RENDERER_ACCELERATED));
 
@@ -112,16 +113,13 @@ int main() {
 		cJSON_Delete(data);
 		exit(1);
 	}
-	
+
 	ADV_advancement** advancements = ADV_object_from_template(data, ADVANCEMENTS);
 	cJSON_Delete(data);
 	if (advancements == NULL) {
 		printf("[ERROR] Couldn't load a template into an object.\n");
 		exit(1);
 	}
-
-	// ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
-	ADV_criterion** criteria_ = malloc(CRITERIA * sizeof *criteria_);
 
 	// IMAGES. //
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
@@ -145,9 +143,6 @@ int main() {
 					snprintf(path_buffer, sizeof(path_buffer), "resources/sprites/%s", advancements[i]->criteria[j]->icon);
 					advancements[i]->criteria[j]->texture = check_sdl_ptr(IMG_LoadTexture(main_renderer, path_buffer));
 					advancements[i]->criteria[j]->overlay_texture = check_sdl_ptr(IMG_LoadTexture(overlay_renderer, path_buffer));
-
-					// Add to criteria_ array.
-					criteria_[j + offset] = advancements[i]->criteria[j];
 				}
 				offset += n;
 			}
@@ -195,8 +190,9 @@ int main() {
 	int overlay_advancements_index_offset = 0;
 	int overlay_criteria_offset = 0;
 	int overlay_criteria_index_offset = 0;
+	int overlay_mutlti_part_adv_i = 0;
 
-	int scroll_speed = 7;
+	int scroll_speed = 6;
 
 	SDL_Rect rect = { 0, 0, size, size };
 	SDL_Rect blend_rect = { 0, 0, size + 8, size + text_margin + spacing_y };
@@ -204,7 +200,7 @@ int main() {
 	SDL_Rect criterion_blend_rect = { 0, 0, criterion_max_width, criterion_size };
 
 	SDL_Rect overlay_advancement_rect = { 0, overlay_advancements_start_y + (ovarlay_advancement_background_size - overlay_advancement_size) / 2, overlay_advancement_size, overlay_advancement_size };
-	SDL_Rect ovarlay_advancement_background_rect = { 0, overlay_advancements_start_y, ovarlay_advancement_background_size, ovarlay_advancement_background_size};
+	SDL_Rect ovarlay_advancement_background_rect = { 0, overlay_advancements_start_y, ovarlay_advancement_background_size, ovarlay_advancement_background_size };
 	SDL_Rect overlay_criterion_rect = { 0, overlay_padding, overlay_criterion_size, overlay_criterion_size };
 
 	// CONTROL VARIABLES. //
@@ -219,13 +215,13 @@ int main() {
 		start_time = SDL_GetTicks64();
 
 		SDL_Event event;
-	
+
 		while (SDL_PollEvent(&event)) {
 			if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE) {
 				quit = 1;
 			}
 		}
-		
+
 		// Update advancements.
 		if (update) {
 			ADV_update_advancements(advancements, ADVANCEMENTS, final_path);
@@ -234,7 +230,7 @@ int main() {
 		// Update overlay offsets.
 		if (overlay_render_advancements) {
 			overlay_advancements_offset += scroll_speed;
-			
+
 			if (overlay_advancements_offset >= overlay_advancement_size + overlay_advancements_spacing) {
 				overlay_advancements_offset -= overlay_advancement_size + overlay_advancements_spacing;
 
@@ -243,9 +239,9 @@ int main() {
 				int i = 0;
 				while (advancements[overlay_advancements_index_offset]->done == 1 || advancements[overlay_advancements_index_offset]->criteria_n > 0) {
 					overlay_advancements_index_offset = (overlay_advancements_index_offset + 1) % ADVANCEMENTS;
-					if (++i > ADVANCEMENTS) { 
+					if (++i > ADVANCEMENTS) {
 						overlay_render_advancements = 0;
-						break; 
+						break;
 					}
 				}
 			}
@@ -256,14 +252,21 @@ int main() {
 			if (overlay_criteria_offset >= overlay_criterion_size + overlay_criteria_spacing) {
 				overlay_criteria_offset -= overlay_criterion_size + overlay_criteria_spacing;
 
-				overlay_criteria_index_offset = (overlay_criteria_index_offset + 1) % CRITERIA;
+				if (++overlay_criteria_index_offset >= advancements[overlay_mutlti_part_adv_i]->criteria_n) {
+					overlay_mutlti_part_adv_i = (overlay_mutlti_part_adv_i + 1) % MULTI_PART_ADV;
+					overlay_criteria_index_offset = 0;
+				}
 
 				int i = 0;
-				while (criteria_[overlay_criteria_index_offset]->done == 1) {
-					overlay_criteria_index_offset = (overlay_criteria_index_offset + 1) % CRITERIA;
-					if (++i > CRITERIA) { 
+				while (advancements[overlay_mutlti_part_adv_i]->criteria[overlay_criteria_index_offset]->done == 1) { // <- Do zmiany teraz
+					if (++overlay_criteria_index_offset >= advancements[overlay_mutlti_part_adv_i]->criteria_n) {
+						overlay_criteria_index_offset = 0;
+						overlay_mutlti_part_adv_i = (overlay_mutlti_part_adv_i + 1) % MULTI_PART_ADV;
+					}
+
+					if (++i > CRITERIA) {
 						overlay_render_criteria = 0;
-						break; 
+						break;
 					}
 				}
 			}
@@ -276,18 +279,27 @@ int main() {
 
 		// RENDER THE OVERLAY. //
 		if (overlay_render_criteria) {
+			int multi_part_i = overlay_mutlti_part_adv_i;
 			int overlay_rendered_criteria = 0;
 			int attempts = 0;
-			for (int i = overlay_criteria_index_offset; overlay_rendered_criteria < overlay_max_criteria; i = (i + 1) % CRITERIA) {
-				if (criteria_[i]->done == 1) {
+			for (int i = overlay_criteria_index_offset; overlay_rendered_criteria < overlay_max_criteria;) {
+				ADV_criterion* criterion = advancements[multi_part_i]->criteria[i];
+
+				if (++i >= advancements[multi_part_i]->criteria_n) {
+					multi_part_i = (multi_part_i + 1) % MULTI_PART_ADV;
+					i = 0;
+				}
+
+				if (criterion->done == 1) { // <- Do zmiany teraz.
 					if (++attempts > CRITERIA) { break; }
 
 					continue;
-				} else {
+				}
+				else {
 					attempts = 0;
 				}
 
-				SDL_Texture* texture = criteria_[i]->overlay_texture;
+				SDL_Texture* texture = criterion->overlay_texture; // <- Do zmiany teraz.
 
 				overlay_criterion_rect.x = overlay_rendered_criteria * (overlay_criterion_size + overlay_criteria_spacing) - overlay_criteria_offset;
 				check_sdl_code(SDL_RenderCopy(overlay_renderer, texture, NULL, &overlay_criterion_rect));
