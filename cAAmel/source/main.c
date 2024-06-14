@@ -89,6 +89,7 @@ static void watch_callback(dmon_watch_id watch_id, dmon_action action, const cha
 	update = 1;
 }
 
+
 int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
 	
@@ -97,6 +98,8 @@ int main() {
 	
 	SDL_Renderer* overlay_renderer = check_sdl_ptr(SDL_CreateRenderer(overlay_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_Renderer* main_renderer = check_sdl_ptr(SDL_CreateRenderer(main_window, -1, SDL_RENDERER_ACCELERATED));
+
+	SDL_RenderSetVSync(overlay_renderer, 1);
 
 	// Dmon.
 	dmon_init();
@@ -193,7 +196,7 @@ int main() {
 	int overlay_criteria_offset = 0;
 	int overlay_criteria_index_offset = 0;
 
-	int scroll_speed = 15;
+	int scroll_speed = 7;
 
 	SDL_Rect rect = { 0, 0, size, size };
 	SDL_Rect blend_rect = { 0, 0, size + 8, size + text_margin + spacing_y };
@@ -208,12 +211,15 @@ int main() {
 	int overlay_render_criteria = 1;
 	int overlay_render_advancements = 1;
 	int quit = 0;
-	float t = 0.0f;
+	Uint64 start_time;
+	Uint64 end_time;
 
 	// MAIN LOOP. //
 	while (!quit) {
+		start_time = SDL_GetTicks64();
+
 		SDL_Event event;
-		
+	
 		while (SDL_PollEvent(&event)) {
 			if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE) {
 				quit = 1;
@@ -386,9 +392,10 @@ int main() {
 			update = 0;
 		}
 
-		// Don't render too often.
-		SDL_Delay(DELTA_TIME_MS);
-		t += DELTA_TIME_S;
+		end_time = SDL_GetTicks64() - start_time;
+		if (end_time < DELTA_TIME_MS) {
+			// SDL_Delay(DELTA_TIME_MS - end_time);
+		}
 	}
 
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
