@@ -18,31 +18,28 @@
     <ClCompile Include="source\main.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="source\cJSON.c">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="source\ADV.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="source\SDL_FontCache.c">
+    <ClCompile Include="include\cJSON.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SDL_FontCache.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\cJSON.h">
-      <Filter>Pliki źródłowe</Filter>
-    </ClInclude>
     <ClInclude Include="source\ADV.h">
       <Filter>Pliki źródłowe</Filter>
     </ClInclude>
-    <ClInclude Include="source\SDL_FontCache.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="include\cJSON.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="source\dirent.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="include\dmon.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="source\dmon.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="include\SDL_FontCache.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

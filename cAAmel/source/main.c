@@ -5,10 +5,11 @@
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 
+#include "../include/cJSON.h"
+#include "../include/SDL_FontCache.h"
+#include "../include/dmon.h"
+
 #include "adv.h"
-#include "cJSON.h"
-#include "SDL_FontCache.h"
-#include "dmon.h"
 
 #define MAIN_WINDOW_WIDTH 1630
 
@@ -123,8 +124,6 @@ int main() {
 
 	// IMAGES. //
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
-
-	// Potrzebne do ukoñczonych celów.
 	SDL_SetRenderDrawBlendMode(main_renderer, SDL_BLENDMODE_BLEND);
 
 	SDL_Texture* advancement_background = check_sdl_ptr(IMG_LoadTexture(overlay_renderer, "resources/gui/advancement_background.png"));

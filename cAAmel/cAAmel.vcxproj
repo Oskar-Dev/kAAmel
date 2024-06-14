@@ -140,17 +140,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\cJSON.c" />
+    <ClCompile Include="include\SDL_FontCache.c" />
     <ClCompile Include="source\ADV.c" />
-    <ClCompile Include="source\cJSON.c" />
     <ClCompile Include="source\main.c" />
-    <ClCompile Include="source\SDL_FontCache.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\cJSON.h" />
+    <ClInclude Include="include\dmon.h" />
+    <ClInclude Include="include\SDL_FontCache.h" />
     <ClInclude Include="source\ADV.h" />
-    <ClInclude Include="source\cJSON.h" />
-    <ClInclude Include="source\dirent.h" />
-    <ClInclude Include="source\dmon.h" />
-    <ClInclude Include="source\SDL_FontCache.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\templates\1.16.1\advancements_optimised.json" />

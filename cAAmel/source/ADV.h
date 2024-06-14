@@ -3,7 +3,7 @@
 #ifndef ADV_H
 #define ADV_H
 
-#include "cJSON.h"
+#include "../include/cJSON.h"
 #include <SDL.h>
 
 typedef struct {
