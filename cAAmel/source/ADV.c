@@ -6,7 +6,11 @@
 
 cJSON* ADV_get_json(char* file_path) {
 	char* buffer = NULL;
-	FILE* f;
+	FILE* f = NULL;
+
+	if (file_path == NULL) {
+		goto error;
+	}
 
 	if (fopen_s(&f, file_path, "r") != 0) {
 		goto error;
@@ -296,6 +300,24 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 memory_error:
 	printf("[MEMORY ERROR]: Couldn't allocate enough space for the advancements array.\n");
 	return NULL;
+}
+
+ADV_advancement** ADV_get_advancements(int advancements_n, char* template_path) {
+	cJSON* data = ADV_get_json(template_path);
+	if (data == NULL) {
+		printf("[ERROR] Couldn't get data from a template.\n");
+		cJSON_Delete(data);
+		exit(1);
+	}
+
+	ADV_advancement** advancements = ADV_object_from_template(data, advancements_n);
+	cJSON_Delete(data);
+	if (advancements == NULL) {
+		printf("[ERROR] Couldn't load a template into an object.\n");
+		exit(1);
+	}
+
+	return advancements;
 }
 
 void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) {

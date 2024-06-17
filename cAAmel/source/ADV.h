@@ -4,6 +4,8 @@
 #define ADV_H
 
 #include "../include/cJSON.h"
+#include "utils.h"
+
 #include <SDL.h>
 
 typedef struct {
@@ -36,6 +38,7 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 void ADV_delete_advancement(ADV_advancement* advancement);
 
 ADV_advancement** ADV_object_from_template(cJSON* template, int n);
+ADV_advancement** ADV_get_advancements(int advancements, char* template_path);
 void ADV_update_advancements(ADV_advancement** advancements, int n, char* path);
 
 #endif
