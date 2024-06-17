@@ -4,7 +4,6 @@
 #define ADV_H
 
 #include "../include/cJSON.h"
-#include "utils.h"
 
 #include <SDL.h>
 
@@ -28,8 +27,6 @@ typedef struct {
 	SDL_Texture* texture;
 	SDL_Texture* overlay_texture;
 } ADV_advancement;
-
-cJSON* ADV_get_json(char* file_path);
 
 ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done);
 void ADV_delete_criterion(ADV_criterion* criterion);

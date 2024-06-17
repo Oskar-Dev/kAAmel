@@ -3,66 +3,7 @@
 #include <string.h>
 
 #include "adv.h"
-
-cJSON* ADV_get_json(char* file_path) {
-	char* buffer = NULL;
-	FILE* f = NULL;
-
-	if (file_path == NULL) {
-		goto error;
-	}
-
-	if (fopen_s(&f, file_path, "r") != 0) {
-		goto error;
-	}
-
-	if (fseek(f, 0, SEEK_END) < 0) {
-		goto error;
-	}
-
-	long m = ftell(f);
-	if (m < 0) {
-		goto error;
-	}
-
-	buffer = malloc(sizeof(char) * m);
-	if (buffer == NULL) {
-		goto error;
-	}
-
-	if (fseek(f, 0, SEEK_SET) < 0) {
-		goto error;
-	}
-
-	size_t n = fread(buffer, 1, m, f);
-
-	if (ferror(f)) {
-		goto error;
-	}
-
-	fclose(f);
-
-	cJSON* json = cJSON_Parse(buffer);
-	if (json == NULL) {
-		cJSON_Delete(json);
-		goto error;
-	}
-
-	free(buffer);
-
-	return json;
-error:
-	if (f) {
-		fclose(f);
-	}
-
-	if (buffer) {
-		free(buffer);
-	}
-
-	printf("[FILE ERROR] Couldn't open the file: %s\n", file_path);
-	return NULL;
-}
+#include "utils.h"
 
 ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done) {
 	ADV_criterion* criterion = malloc(sizeof *criterion);
@@ -303,7 +244,7 @@ memory_error:
 }
 
 ADV_advancement** ADV_get_advancements(int advancements_n, char* template_path) {
-	cJSON* data = ADV_get_json(template_path);
+	cJSON* data = cJSON_from_file(template_path);
 	if (data == NULL) {
 		printf("[ERROR] Couldn't get data from a template.\n");
 		cJSON_Delete(data);
@@ -321,7 +262,7 @@ ADV_advancement** ADV_get_advancements(int advancements_n, char* template_path) 
 }
 
 void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) {
-	cJSON* data = ADV_get_json(path);
+	cJSON* data = cJSON_from_file(path);
 	if (data == NULL) {
 		goto error;
 	}

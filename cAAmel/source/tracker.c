@@ -332,6 +332,10 @@ void tracker_render_overlay(
 }
 
 void delete_tracker(Tracker* tracker) {
-	free(tracker->template_path);
-	free(tracker);	
+	if (tracker != NULL) {
+		free(tracker->main_layout);
+		free(tracker->overlay_layout);
+		free(tracker->template_path);
+		free(tracker);
+	}
 }
