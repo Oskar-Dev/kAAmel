@@ -32,9 +32,9 @@ ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int do
 		return NULL;
 	}
 
-	criterion->name = name;
-	criterion->icon = icon;
-	criterion->root_name = root_name;
+	strcpy(criterion->name, name);
+	strcpy(criterion->icon, icon);
+	strcpy(criterion->root_name, root_name);
 	criterion->done = done;
 	criterion->texture = NULL;
 	criterion->overlay_texture = NULL;
@@ -107,14 +107,11 @@ ADV_advancement* ADV_new_advancement(char* name, char* display_name, char* icon,
 			return NULL;
 		}
 	}
-
-	//strcpy_s(advancement->name, name, sizeof(advancement->name));
-	//strcpy_s(advancement->display_name, display_name, sizeof(advancement->display_name));
-	//strcpy_s(advancement->icon, icon, sizeof(advancement->icon));
-	advancement->name = name;
-	advancement->display_name = display_name;
-	advancement->icon = icon;
-	advancement->root_name = root_name;
+	
+	strcpy(advancement->name, name);
+	strcpy(advancement->display_name, display_name);
+	strcpy(advancement->icon, icon);
+	strcpy(advancement->root_name, root_name);
 	advancement->criteria_n = criteria_n;
 	advancement->texture = NULL;
 	advancement->overlay_texture = NULL;
