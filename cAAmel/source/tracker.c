@@ -1,6 +1,6 @@
 #include "tracker.h"
 
-Tracker* create_tracker(Version version) {
+Tracker* create_tracker(Version version, Tracker *tracker) {
 	int advancements;
 	int criteria;
 	int multi_part_advancements;
@@ -9,11 +9,11 @@ Tracker* create_tracker(Version version) {
 	int o_window_width;
 	int o_window_height;
 
-	Tracker* tracker = malloc(sizeof *tracker);
+	/*Tracker* tracker = malloc(sizeof * tracker);
 	if (tracker == NULL) {
 		printf("[ERROR] Couldn't create application data.\n");
 		exit(1);
-	}
+	}*/
 
 	switch (version) {
 	case VERSION_1_16:
@@ -336,6 +336,6 @@ void delete_tracker(Tracker* tracker) {
 		free(tracker->main_layout);
 		free(tracker->overlay_layout);
 		free(tracker->template_path);
-		free(tracker);
+		// free(tracker);
 	}
 }

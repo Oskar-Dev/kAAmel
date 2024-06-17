@@ -40,17 +40,18 @@ int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
 
-	Tracker* tracker = create_tracker(VERSION_1_21);
+	Tracker tracker = { 0 };
+	create_tracker(VERSION_1_21, &tracker);
 
-	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker->o_window_width, tracker->o_window_height, 0));
+	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker.o_window_width, tracker.o_window_height, 0));
 	SDL_Renderer* o_renderer = check_sdl_ptr(SDL_CreateRenderer(o_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_RenderSetVSync(o_renderer, 1);
 
-	SDL_Window* m_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, tracker->m_window_width, tracker->m_window_height, 0));
+	SDL_Window* m_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, tracker.m_window_width, tracker.m_window_height, 0));
 	SDL_Renderer* m_renderer = check_sdl_ptr(SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_SetRenderDrawBlendMode(m_renderer, SDL_BLENDMODE_BLEND);
 
-	ADV_advancement** advancements = ADV_get_advancements(tracker->advancements, tracker->template_path);
+	ADV_advancement** advancements = ADV_get_advancements(tracker.advancements, tracker.template_path);
 
 	// Dmon.
 	dmon_init();
@@ -103,16 +104,16 @@ int main() {
 
 		// Update advancements.
 		if (update) {
-			ADV_update_advancements(advancements, tracker->advancements, final_path);
+			ADV_update_advancements(advancements, tracker.advancements, final_path);
 		}
 
-		tracker_update_overlay(advancements, tracker->advancements, tracker->criteria, tracker->multi_part_advancements, tracker->overlay_layout);
+		tracker_update_overlay(advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.overlay_layout);
 
 		if (update) {
-			tracker_render_main(m_renderer, main_font, advancements, tracker->advancements, tracker->m_window_width, tracker->m_window_height, tracker->main_layout);
+			tracker_render_main(m_renderer, main_font, advancements, tracker.advancements, tracker.m_window_width, tracker.m_window_height, tracker.main_layout);
 			update = 0;
 		}
-		tracker_render_overlay(o_renderer, overlay_font, advancement_background, advancements, tracker->advancements, tracker->criteria, tracker->multi_part_advancements, tracker->o_window_width, tracker->o_window_height, tracker->overlay_layout);
+		tracker_render_overlay(o_renderer, overlay_font, advancement_background, advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.o_window_width, tracker.o_window_height, tracker.overlay_layout);
 	}
 
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
@@ -124,7 +125,7 @@ int main() {
 	FC_FreeFont(overlay_font);
 	SDL_DestroyTexture(advancement_background);
 	free(advancements);
-	delete_tracker(tracker);
+	delete_tracker(&tracker);
 	IMG_Quit();
 	SDL_Quit();
 

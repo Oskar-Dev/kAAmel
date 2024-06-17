@@ -65,7 +65,7 @@ typedef struct {
 	OverlayLayout* overlay_layout;
 } Tracker;
 
-Tracker* create_tracker(Version version);
+Tracker* create_tracker(Version version, Tracker* tracker);
 void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l);
 void tracker_update_overlay(ADV_advancement** advancements, int advancements_n, int criteria_n, int multi_part_adv, OverlayLayout* l);
 void tracker_render_overlay(
