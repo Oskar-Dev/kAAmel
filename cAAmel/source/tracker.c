@@ -1,6 +1,6 @@
 #include "tracker.h"
 
-Tracker* create_tracker(Version version, Tracker *tracker) {
+Tracker* tracker_create(Version version, Tracker* tracker) {
 	int advancements;
 	int criteria;
 	int multi_part_advancements;
@@ -23,7 +23,7 @@ Tracker* create_tracker(Version version, Tracker *tracker) {
 		m_window_width = 1300;
 		m_window_height = 768;
 		o_window_width = 1600;
-		o_window_height = 250;
+		o_window_height = 400;
 
 		tracker->template_path = malloc((strlen("resources/templates/1.16/advancements_optimised.json") + 1) * sizeof(char));
 		if (tracker->template_path == NULL) {
@@ -40,7 +40,7 @@ Tracker* create_tracker(Version version, Tracker *tracker) {
 		m_window_width = 1630;
 		m_window_height = 768;
 		o_window_width = 1600;
-		o_window_height = 250;
+		o_window_height = 400;
 
 		tracker->template_path = malloc((strlen("resources/templates/1.20.6/advancements_optimised.json") + 1) * sizeof(char));
 		if (tracker->template_path == NULL) {
@@ -57,7 +57,7 @@ Tracker* create_tracker(Version version, Tracker *tracker) {
 		m_window_width = 1630;
 		m_window_height = 768;
 		o_window_width = 1600;
-		o_window_height = 250;
+		o_window_height = 400;
 
 		tracker->template_path = malloc((strlen("resources/templates/1.21/advancements_optimised.json") + 1) * sizeof(char));
 		if (tracker->template_path == NULL) {
@@ -81,52 +81,54 @@ Tracker* create_tracker(Version version, Tracker *tracker) {
 	tracker->o_window_height = o_window_height;
 
 	// Create Layout.
-	tracker->main_layout = malloc(sizeof *tracker->main_layout);
+	tracker->main_layout = malloc(sizeof * tracker->main_layout);
 	if (tracker->main_layout == NULL) {
 		printf("[MEMORY ERROR] Couldn't allocate enough memory for the main layout.\n");
 	}
 
-	tracker->main_layout->adv_size				= 48;
-	tracker->main_layout->padding				= 8;
-	tracker->main_layout->spacing_x				= 14;
-	tracker->main_layout->spacing_y				= 20;
-	tracker->main_layout->text_margin			= 4;
-	tracker->main_layout->box_width				= 2;
-	tracker->main_layout->crt_start_y			= 220;
-	tracker->main_layout->crt_size				= 16;
-	tracker->main_layout->crt_spacing_y			= 8;
-	tracker->main_layout->crt_text_margin		= 4;
-	tracker->main_layout->crt_text_fix			= 3;
-	tracker->main_layout->crt_max_width			= 126;
+	tracker->main_layout->adv_size = 48;
+	tracker->main_layout->padding = 8;
+	tracker->main_layout->spacing_x = 14;
+	tracker->main_layout->spacing_y = 20;
+	tracker->main_layout->text_margin = 4;
+	tracker->main_layout->box_width = 2;
+	tracker->main_layout->crt_start_y = 220;
+	tracker->main_layout->crt_size = 16;
+	tracker->main_layout->crt_spacing_y = 8;
+	tracker->main_layout->crt_text_margin = 4;
+	tracker->main_layout->crt_text_fix = 3;
+	tracker->main_layout->crt_max_width = 126;
 
 	tracker->overlay_layout = malloc(sizeof * tracker->overlay_layout);
 	if (tracker->overlay_layout == NULL) {
 		printf("[MEMORY ERROR] Couldn't allocate enough memory for the main layout.\n");
 	}
 
-	tracker->overlay_layout->padding			= 10;
-	tracker->overlay_layout->crt_size			= 48;
-	tracker->overlay_layout->crt_spacing		= 10;
-	tracker->overlay_layout->adv_start_y		= 0;
-	tracker->overlay_layout->adv_size			= 64;
-	tracker->overlay_layout->adv_bg_size		= 80;
-	tracker->overlay_layout->adv_spacing		= 32;
+	tracker->overlay_layout->padding = 10;
+	tracker->overlay_layout->crt_size = 48;
+	tracker->overlay_layout->crt_spacing = 10;
+	tracker->overlay_layout->adv_start_y = 0;
+	tracker->overlay_layout->adv_size = 64;
+	tracker->overlay_layout->adv_bg_size = 80;
+	tracker->overlay_layout->adv_spacing = 32;
 
-	tracker->overlay_layout->text_margin		= 4;
+	tracker->overlay_layout->text_margin = 4;
 
-	tracker->overlay_layout->adv_offset			= 0;
-	tracker->overlay_layout->adv_index_offset	= 0;
-	tracker->overlay_layout->crt_offset			= 0;
-	tracker->overlay_layout->crt_index_offset	= 0;
-	tracker->overlay_layout->mutlti_part_adv_i	= 0;
+	tracker->overlay_layout->adv_offset = 0;
+	tracker->overlay_layout->adv_index_offset = 0;
+	tracker->overlay_layout->crt_offset = 0;
+	tracker->overlay_layout->crt_index_offset = 0;
+	tracker->overlay_layout->mutlti_part_adv_i = 0;
 
-	tracker->overlay_layout->max_crt			= 0;
-	tracker->overlay_layout->max_adv			= 0;
-	tracker->overlay_layout->scroll_speed		= 5;
+	tracker->overlay_layout->max_crt = 0;
+	tracker->overlay_layout->max_adv = 0;
+	tracker->overlay_layout->scroll_speed = 5;
 
-	tracker->overlay_layout->adv_start_y		= (tracker->overlay_layout->padding * 2 + tracker->overlay_layout->crt_size);
-	tracker->overlay_layout->max_crt			= tracker->o_window_width / (tracker->overlay_layout->crt_size + tracker->overlay_layout->crt_spacing) + 2;
-	tracker->overlay_layout->max_adv			= tracker->o_window_width / (tracker->overlay_layout->adv_size + tracker->overlay_layout->adv_spacing) + 2;
+	tracker->overlay_layout->adv_start_y = (tracker->overlay_layout->padding * 2 + tracker->overlay_layout->crt_size);
+	tracker->overlay_layout->max_crt = tracker->o_window_width / (tracker->overlay_layout->crt_size + tracker->overlay_layout->crt_spacing) + 2;
+	tracker->overlay_layout->max_adv = tracker->o_window_width / (tracker->overlay_layout->adv_size + tracker->overlay_layout->adv_spacing) + 2;
+	tracker->overlay_layout->goals_start_y = 200;
+	tracker->overlay_layout->goals_start_x = 30;
 
 	return tracker;
 }
@@ -230,7 +232,7 @@ void tracker_update_overlay(ADV_advancement** advancements, int advancements_n, 
 
 		int i = 0;
 		while (advancements[l->mutlti_part_adv_i]->criteria[l->crt_index_offset]->done == 1) { // <- Do zmiany teraz
-			if (++ l->crt_index_offset >= advancements[l->mutlti_part_adv_i]->criteria_n) {
+			if (++l->crt_index_offset >= advancements[l->mutlti_part_adv_i]->criteria_n) {
 				l->crt_index_offset = 0;
 				l->mutlti_part_adv_i = (l->mutlti_part_adv_i + 1) % multi_part_adv;
 			}
@@ -248,10 +250,13 @@ void tracker_render_overlay(
 	SDL_Renderer* renderer,
 	FC_Font* font,
 	SDL_Texture* background_texture,
+	SDL_Texture* background_texture_done,
 	ADV_advancement** advancements,
 	int advancements_n,
 	int criteria_n,
 	int multi_part_adv,
+	Goal** goals,
+	int goals_n,
 	int window_width,
 	int window_height,
 	OverlayLayout* l
@@ -328,10 +333,52 @@ void tracker_render_overlay(
 	}
 	// }
 
+	// Render goals.
+	Goal* goal = goals[0];
+	int i = 0;
+	int done = 0;
+	for (; i < goal->sub_goals_n; ++i) {
+		SubGoal* g = goal->sub_goals[i];
+		if (g->progress < g->goal) {
+			if (i > 0) --i;
+			break;
+		}
+	}
+	if (i == goal->sub_goals_n) {
+		--i;
+		if (goal->sub_goals[i]->progress >= goal->sub_goals[i]->progress) {
+			done = 1;
+		}
+	}
+
+	SubGoal* sub_goal = goal->sub_goals[i];
+	char name_buffer[30];
+	if (sub_goal->display_count == 1) {
+		snprintf(name_buffer, sizeof name_buffer, "%s\n%d / %d", sub_goal->name, sub_goal->progress, sub_goal->goal);
+	}
+	else {
+		strcpy(name_buffer, sub_goal->name);
+	}
+
+	advancement_background_rect.y = l->goals_start_y;
+	advancement_rect.y = l->goals_start_y + (l->adv_bg_size - l->adv_size) / 2;
+
+	advancement_background_rect.x = l->goals_start_x;
+	advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
+
+	if (done)	check_sdl_code(SDL_RenderCopy(renderer, background_texture_done, NULL, &advancement_background_rect));
+	else		check_sdl_code(SDL_RenderCopy(renderer, background_texture, NULL, &advancement_background_rect));
+	check_sdl_code(SDL_RenderCopy(renderer, goals[0]->icon_texture, NULL, &advancement_rect));
+
+	int x = advancement_background_rect.x + l->adv_bg_size / 2;
+	int y = advancement_background_rect.y + l->adv_bg_size + l->text_margin;
+
+	FC_DrawAlign(font, renderer, x, y, FC_ALIGN_CENTER, name_buffer);
+
 	SDL_RenderPresent(renderer);
 }
 
-void delete_tracker(Tracker* tracker) {
+void tracker_delete(Tracker* tracker) {
 	if (tracker != NULL) {
 		free(tracker->main_layout);
 		free(tracker->overlay_layout);

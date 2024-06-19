@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="include\cJSON.c" />
     <ClCompile Include="include\SDL_FontCache.c" />
+    <ClCompile Include="source\goal.c" />
     <ClCompile Include="source\tracker.c" />
     <ClCompile Include="source\ADV.c" />
     <ClCompile Include="source\main.c" />
@@ -151,6 +152,7 @@
     <ClInclude Include="include\cJSON.h" />
     <ClInclude Include="include\dmon.h" />
     <ClInclude Include="include\SDL_FontCache.h" />
+    <ClInclude Include="source\goal.h" />
     <ClInclude Include="source\tracker.h" />
     <ClInclude Include="source\ADV.h" />
     <ClInclude Include="source\utils.h" />
@@ -166,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\gui\advancement_background.png" />
+    <Image Include="resources\gui\advancement_background_done.png" />
     <Image Include="resources\sprites\animals\armadillo.png" />
     <Image Include="resources\sprites\animals\axolotl.png" />
     <Image Include="resources\sprites\animals\bee.png" />

@@ -6,6 +6,7 @@
 #include <SDL.h>
 
 #include "ADV.h"
+#include "goal.h"
 #include "../include/SDL_FontCache.h"
 
 typedef	enum {
@@ -43,6 +44,8 @@ typedef struct {
 	int crt_offset;
 	int crt_index_offset;
 	int mutlti_part_adv_i;
+	int goals_start_y;
+	int goals_start_x;
 
 	int max_crt;
 	int max_adv;
@@ -65,21 +68,24 @@ typedef struct {
 	OverlayLayout* overlay_layout;
 } Tracker;
 
-Tracker* create_tracker(Version version, Tracker* tracker);
+Tracker* tracker_create(Version version, Tracker* tracker);
 void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l);
 void tracker_update_overlay(ADV_advancement** advancements, int advancements_n, int criteria_n, int multi_part_adv, OverlayLayout* l);
 void tracker_render_overlay(
 	SDL_Renderer* renderer,
 	FC_Font* font,
 	SDL_Texture* background_texture,
+	SDL_Texture* background_texture_done,
 	ADV_advancement** advancements,
 	int advancements_n,
 	int criteria_n,
 	int multi_part_adv,
+	Goal** goals,
+	int goals_n,
 	int window_width,
 	int window_height,
 	OverlayLayout* l
 );
-void delete_tracker(Tracker* tracker);
+void tracker_delete(Tracker* tracker);
 
 #endif

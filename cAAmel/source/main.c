@@ -12,6 +12,7 @@
 #include "adv.h"
 #include "utils.h"
 #include "tracker.h"
+#include "goal.h"
 
 #define ADVANCEMENTS 75
 #define CRITERIA 187
@@ -19,15 +20,19 @@
 
 #define MAX_LEN 200
 
-char final_path[MAX_LEN];
+char adv_path[MAX_LEN];
+char stats_path[MAX_LEN];
 
 char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21/.minecraft/saves";
 
 int update = 1;
 
 static void watch_callback(dmon_watch_id watch_id, dmon_action action, const char* rootdir, const char* filepath, const char* oldfilepath, void* user) {
-	snprintf(final_path, sizeof(final_path), "%s/%s%s\n", saves_path, filepath, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json");
-	final_path[strcspn(final_path, "\n")] = 0;
+	snprintf(adv_path, sizeof(adv_path), "%s/%s%s\n", saves_path, filepath, "/advancements/ac4cd426-a465-48f2-9217-4ed05336f4a2.json"); // Fix the UUid issue, lol.
+	adv_path[strcspn(adv_path, "\n")] = 0;
+
+	snprintf(stats_path, sizeof(adv_path), "%s/%s%s\n", saves_path, filepath, "/stats/ac4cd426-a465-48f2-9217-4ed05336f4a2.json"); // Fix the UUid issue, lol.
+	stats_path[strcspn(stats_path, "\n")] = 0;
 
 	update = 1;
 }
@@ -41,7 +46,7 @@ int main() {
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
 
 	Tracker tracker = { 0 };
-	create_tracker(VERSION_1_21, &tracker);
+	tracker_create(VERSION_1_21, &tracker);
 
 	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker.o_window_width, tracker.o_window_height, 0));
 	SDL_Renderer* o_renderer = check_sdl_ptr(SDL_CreateRenderer(o_window, -1, SDL_RENDERER_ACCELERATED));
@@ -51,6 +56,10 @@ int main() {
 	SDL_Renderer* m_renderer = check_sdl_ptr(SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_SetRenderDrawBlendMode(m_renderer, SDL_BLENDMODE_BLEND);
 
+	int goals_n = 1;
+	Goal** goals = goal_init(goals_n);
+	goals[0] = goal_create(o_renderer, GOALTYPE_nautilus_shells);
+
 	ADV_advancement** advancements = ADV_get_advancements(tracker.advancements, tracker.template_path);
 
 	// Dmon.
@@ -59,6 +68,7 @@ int main() {
 
 	// IMAGES. //
 	SDL_Texture* advancement_background = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background.png"));
+	SDL_Texture* advancement_background_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_done.png"));
 
 	// FONTS. //
 	FC_Font* overlay_font = FC_CreateFont();
@@ -104,7 +114,8 @@ int main() {
 
 		// Update advancements.
 		if (update) {
-			ADV_update_advancements(advancements, tracker.advancements, final_path);
+			ADV_update_advancements(advancements, tracker.advancements, adv_path);
+			goal_update(goals, goals_n, stats_path);
 		}
 
 		tracker_update_overlay(advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.overlay_layout);
@@ -113,7 +124,21 @@ int main() {
 			tracker_render_main(m_renderer, main_font, advancements, tracker.advancements, tracker.m_window_width, tracker.m_window_height, tracker.main_layout);
 			update = 0;
 		}
-		tracker_render_overlay(o_renderer, overlay_font, advancement_background, advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.o_window_width, tracker.o_window_height, tracker.overlay_layout);
+		tracker_render_overlay(
+			o_renderer, 
+			overlay_font, 
+			advancement_background, 
+			advancement_background_done,
+			advancements, 
+			tracker.advancements, 
+			tracker.criteria, 
+			tracker.multi_part_advancements, 
+			goals,
+			goals_n,
+			tracker.o_window_width, 
+			tracker.o_window_height, 
+			tracker.overlay_layout
+		);
 	}
 
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
@@ -125,7 +150,7 @@ int main() {
 	FC_FreeFont(overlay_font);
 	SDL_DestroyTexture(advancement_background);
 	free(advancements);
-	delete_tracker(&tracker);
+	tracker_delete(&tracker);
 	IMG_Quit();
 	SDL_Quit();
 

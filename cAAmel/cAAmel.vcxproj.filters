@@ -33,6 +33,9 @@
     <ClCompile Include="source\utils.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="source\goal.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ADV.h">
@@ -51,6 +54,9 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="source\utils.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="source\goal.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1182,6 +1188,9 @@
       <Filter>Pliki zasobów</Filter>
     </Image>
     <Image Include="resources\gui\advancement_background.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\gui\advancement_background_done.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
   </ItemGroup>
