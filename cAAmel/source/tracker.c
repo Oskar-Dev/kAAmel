@@ -109,7 +109,7 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	tracker->overlay_layout->crt_spacing = 10;
 	tracker->overlay_layout->adv_start_y = 0;
 	tracker->overlay_layout->adv_size = 64;
-	tracker->overlay_layout->adv_bg_size = 80;
+	tracker->overlay_layout->adv_bg_size = 96;
 	tracker->overlay_layout->adv_spacing = 32;
 
 	tracker->overlay_layout->text_margin = 4;
@@ -205,8 +205,8 @@ void tracker_update_overlay(ADV_advancement** advancements, int advancements_n, 
 	// if (overlay_render_advancements) {
 	l->adv_offset += l->scroll_speed;
 
-	if (l->adv_offset >= l->adv_size + l->adv_spacing) {
-		l->adv_offset -= l->adv_size + l->adv_spacing;
+	if (l->adv_offset >= l->adv_bg_size + l->adv_spacing) {
+		l->adv_offset -= l->adv_bg_size + l->adv_spacing;
 
 		l->adv_index_offset = (l->adv_index_offset + 1) % advancements_n;
 
@@ -319,8 +319,11 @@ void tracker_render_overlay(
 		SDL_Texture* texture = advancements[i]->overlay_texture;
 		char* advancement_name = advancements[i]->display_name;
 
-		advancement_rect.x = rendered_advancements * (l->adv_size + l->adv_spacing) - l->adv_offset;
-		advancement_background_rect.x = advancement_rect.x + (l->adv_size - l->adv_bg_size) / 2;
+		// advancement_rect.x = rendered_advancements * (l->adv_bg_size + l->adv_spacing) - l->adv_offset;
+		// advancement_background_rect.x = advancement_rect.x + (l->adv_bg_size - l->adv_bg_size) / 2;
+
+		advancement_background_rect.x = rendered_advancements * (l->adv_bg_size + l->adv_spacing) - l->adv_offset;
+		advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
 
 		// render_advancement_box(overlay_renderer, overlay_advancement_rect.x, overlay_advancements_start_y, overlay_advancement_size, overlay_advancement_box_width);
 		check_sdl_code(SDL_RenderCopy(renderer, background_texture, NULL, &advancement_background_rect));
@@ -366,7 +369,7 @@ void tracker_render_overlay(
 		advancement_background_rect.y = l->goals_start_y;
 		advancement_rect.y = l->goals_start_y + (l->adv_bg_size - l->adv_size) / 2;
 
-		advancement_background_rect.x = l->goals_start_x + k * (l->adv_size + l->goals_spacing);
+		advancement_background_rect.x = l->goals_start_x + k * (l->adv_bg_size + l->goals_spacing);
 		advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
 
 		if (done)	check_sdl_code(SDL_RenderCopy(renderer, background_texture_done, NULL, &advancement_background_rect));

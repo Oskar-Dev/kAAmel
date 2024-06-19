@@ -66,19 +66,17 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 			goto memory_error;
 		}
 
-		// goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Thunder xd", "minecraft:adventure/very_very_frightening", 1);
 		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 1, "Shells", "minecraft:nautilus_shell", 8);
 		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, 0, "Craft Conduit", "minecraft:conduit", 1);
 		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Do HDWGH", "minecraft:nether/all_effects", 1);
 		goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, 0, "Done with HDWGH", "", 0);
-		// goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_item_pick_up, "PICKED UP Conduit", "minecraft:conduit", 2);
 
 		break;
 
 	case GOALTYPE_trident:
 		goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/trident.png"));
 
-		goal->sub_goals_n = 3;
+		goal->sub_goals_n = 4;
 		goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
 		if (goal->sub_goals == NULL) {
 			goto memory_error;
@@ -86,7 +84,8 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 
 		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 0, "Obtain Trident", "minecraft:trident", 1);
 		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Awaiting Thunder", "minecraft:adventure/very_very_frightening", 1);
-		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_final, 0, "Done With Thunder", "", 0);
+		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Awaiting Thunder", "minecraft:adventure/lightning_rod_with_villager_no_fire", 1);
+		goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, 0, "Done With Thunder", "", 0);
 
 		break;
 	
@@ -103,6 +102,7 @@ memory_error:
 
 void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path) {
 	// DO ZROBIENIA: Zrób aby aktualizowa³o siê przy weœciu na nowy œwiat bez tworzenia niczego oraz bez podnodnoszenia ¿adnych przedmiotów.
+	// DO ZROBIENIA: Mo¿e dodaj "display_if_not_done" albo coœ podobnego?
 	cJSON* data = cJSON_from_file(file_path);
 	if (!data) {
 		return;
