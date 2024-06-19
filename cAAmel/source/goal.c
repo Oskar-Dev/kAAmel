@@ -60,15 +60,33 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 	case GOALTYPE_nautilus_shells:
 		goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/nautilus_shell.png"));
 		
-		goal->sub_goals_n = 1;
+		goal->sub_goals_n = 4;
 		goal->sub_goals = malloc(goal->sub_goals_n * sizeof *goal->sub_goals);
 		if (goal->sub_goals == NULL) {
 			goto memory_error;
 		}
 
-		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 0, "Shells", "minecraft:nautilus_shell", 8);
-		// goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Conduit", "minecraft:conduit", 1);
+		// goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Thunder xd", "minecraft:adventure/very_very_frightening", 1);
+		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 1, "Shells", "minecraft:nautilus_shell", 8);
+		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, 0, "Craft Conduit", "minecraft:conduit", 1);
+		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Do HDWGH", "minecraft:nether/all_effects", 1);
+		goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, 0, "Done with HDWGH", "", 0);
 		// goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_item_pick_up, "PICKED UP Conduit", "minecraft:conduit", 2);
+
+		break;
+
+	case GOALTYPE_trident:
+		goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/trident.png"));
+
+		goal->sub_goals_n = 3;
+		goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+		if (goal->sub_goals == NULL) {
+			goto memory_error;
+		}
+
+		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 0, "Obtain Trident", "minecraft:trident", 1);
+		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Awaiting Thunder", "minecraft:adventure/very_very_frightening", 1);
+		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_final, 0, "Done With Thunder", "", 0);
 
 		break;
 	
@@ -83,7 +101,8 @@ memory_error:
 	exit(1);
 }
 
-void goal_update(Goal** goals, const int goals_n, const char* file_path) {
+void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path) {
+	// DO ZROBIENIA: Zrób aby aktualizowa³o siê przy weœciu na nowy œwiat bez tworzenia niczego oraz bez podnodnoszenia ¿adnych przedmiotów.
 	cJSON* data = cJSON_from_file(file_path);
 	if (!data) {
 		return;
@@ -139,6 +158,15 @@ void goal_update(Goal** goals, const int goals_n, const char* file_path) {
 					} else {
 						sub_goal->progress = 0;
 						goal->done = 0;
+					}
+					break;
+				}
+
+				case SUBGOALTYPE_advancement: {
+					for (int i = 0; i < adv_n; ++i) {
+						if (strcmp(adv[i]->root_name, sub_goal->root_name) == 0) {
+							sub_goal->progress = adv[i]->done;
+						}
 					}
 					break;
 				}

@@ -46,6 +46,7 @@ typedef struct {
 	int mutlti_part_adv_i;
 	int goals_start_y;
 	int goals_start_x;
+	int goals_spacing;
 
 	int max_crt;
 	int max_adv;

@@ -129,6 +129,7 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	tracker->overlay_layout->max_adv = tracker->o_window_width / (tracker->overlay_layout->adv_size + tracker->overlay_layout->adv_spacing) + 2;
 	tracker->overlay_layout->goals_start_y = 200;
 	tracker->overlay_layout->goals_start_x = 30;
+	tracker->overlay_layout->goals_spacing = 75;
 
 	return tracker;
 }
@@ -334,46 +335,49 @@ void tracker_render_overlay(
 	// }
 
 	// Render goals.
-	Goal* goal = goals[0];
-	int i = 0;
-	int done = 0;
-	for (; i < goal->sub_goals_n; ++i) {
-		SubGoal* g = goal->sub_goals[i];
-		if (g->progress < g->goal) {
-			if (i > 0) --i;
-			break;
+	for (int k = 0; k < goals_n; ++k) {
+		Goal* goal = goals[k];
+
+		int i = 0;
+		int done = 0;
+		while (i < goal->sub_goals_n) {
+			SubGoal* g = goal->sub_goals[i];
+			if (g->progress < g->goal) {
+				break;
+			}
+			++i;
 		}
-	}
-	if (i == goal->sub_goals_n) {
-		--i;
-		if (goal->sub_goals[i]->progress >= goal->sub_goals[i]->progress) {
-			done = 1;
+		if (i == goal->sub_goals_n) {
+			--i;
+			if (goal->sub_goals[i]->progress >= goal->sub_goals[i]->progress) {
+				done = 1;
+			}
 		}
+
+		SubGoal* sub_goal = goal->sub_goals[i];
+		char name_buffer[30];
+		if (sub_goal->display_count == 1) {
+			snprintf(name_buffer, sizeof name_buffer, "%s\n%d / %d", sub_goal->name, sub_goal->progress, sub_goal->goal);
+		}
+		else {
+			strcpy(name_buffer, sub_goal->name);
+		}
+
+		advancement_background_rect.y = l->goals_start_y;
+		advancement_rect.y = l->goals_start_y + (l->adv_bg_size - l->adv_size) / 2;
+
+		advancement_background_rect.x = l->goals_start_x + k * (l->adv_size + l->goals_spacing);
+		advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
+
+		if (done)	check_sdl_code(SDL_RenderCopy(renderer, background_texture_done, NULL, &advancement_background_rect));
+		else		check_sdl_code(SDL_RenderCopy(renderer, background_texture, NULL, &advancement_background_rect));
+		check_sdl_code(SDL_RenderCopy(renderer, goals[0]->icon_texture, NULL, &advancement_rect));
+
+		int x = advancement_background_rect.x + l->adv_bg_size / 2;
+		int y = advancement_background_rect.y + l->adv_bg_size + l->text_margin;
+
+		FC_DrawAlign(font, renderer, x, y, FC_ALIGN_CENTER, name_buffer);
 	}
-
-	SubGoal* sub_goal = goal->sub_goals[i];
-	char name_buffer[30];
-	if (sub_goal->display_count == 1) {
-		snprintf(name_buffer, sizeof name_buffer, "%s\n%d / %d", sub_goal->name, sub_goal->progress, sub_goal->goal);
-	}
-	else {
-		strcpy(name_buffer, sub_goal->name);
-	}
-
-	advancement_background_rect.y = l->goals_start_y;
-	advancement_rect.y = l->goals_start_y + (l->adv_bg_size - l->adv_size) / 2;
-
-	advancement_background_rect.x = l->goals_start_x;
-	advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
-
-	if (done)	check_sdl_code(SDL_RenderCopy(renderer, background_texture_done, NULL, &advancement_background_rect));
-	else		check_sdl_code(SDL_RenderCopy(renderer, background_texture, NULL, &advancement_background_rect));
-	check_sdl_code(SDL_RenderCopy(renderer, goals[0]->icon_texture, NULL, &advancement_rect));
-
-	int x = advancement_background_rect.x + l->adv_bg_size / 2;
-	int y = advancement_background_rect.y + l->adv_bg_size + l->text_margin;
-
-	FC_DrawAlign(font, renderer, x, y, FC_ALIGN_CENTER, name_buffer);
 
 	SDL_RenderPresent(renderer);
 }

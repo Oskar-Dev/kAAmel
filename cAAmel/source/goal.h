@@ -5,7 +5,10 @@
 
 #include <SDL.h>
 
+#include "ADV.h"
+
 typedef enum {
+	SUBGOALTYPE_final,
 	SUBGOALTYPE_advancement,
 	SUBGOALTYPE_criterion,
 	SUBGOALTYPE_item_pick_up,
@@ -24,6 +27,7 @@ typedef struct {
 
 typedef enum {
 	GOALTYPE_nautilus_shells,
+	GOALTYPE_trident
 } GoalType;
 
 typedef struct {
@@ -34,7 +38,7 @@ typedef struct {
 } Goal;
 
 Goal** goal_init(const int n);
-SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const int goal);
+void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path);
 Goal* goal_create(const SDL_Renderer* renderer, const GoalType type);
 void goal_update(Goal** goals, const char* stats_path);
 
