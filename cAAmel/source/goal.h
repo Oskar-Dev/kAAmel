@@ -20,6 +20,7 @@ typedef struct {
 	char* root_name;
 	SubGoalType type;
 	int display_count;
+	int display_if_not_done;
 	
 	int progress;
 	int goal;
@@ -27,7 +28,9 @@ typedef struct {
 
 typedef enum {
 	GOALTYPE_nautilus_shells,
-	GOALTYPE_trident
+	GOALTYPE_trident,
+	GOALTYPE_wither_skulls,
+	GOALTYPE_heavy_core,
 } GoalType;
 
 typedef struct {
@@ -38,8 +41,8 @@ typedef struct {
 } Goal;
 
 Goal** goal_init(const int n);
-void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path);
+SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const int display_count, const int goal);
 Goal* goal_create(const SDL_Renderer* renderer, const GoalType type);
-void goal_update(Goal** goals, const char* stats_path);
+void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path);
 
 #endif

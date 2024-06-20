@@ -37,10 +37,6 @@ static void watch_callback(dmon_watch_id watch_id, dmon_action action, const cha
 	update = 1;
 }
 
-static void render() {
-
-}
-
 int main() {
 	check_sdl_code(SDL_Init(SDL_INIT_VIDEO));
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
@@ -56,10 +52,12 @@ int main() {
 	SDL_Renderer* m_renderer = check_sdl_ptr(SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_SetRenderDrawBlendMode(m_renderer, SDL_BLENDMODE_BLEND);
 
-	int goals_n = 2;
+	int goals_n = 4;
 	Goal** goals = goal_init(goals_n);
 	goals[0] = goal_create(o_renderer, GOALTYPE_nautilus_shells);
 	goals[1] = goal_create(o_renderer, GOALTYPE_trident);
+	goals[2] = goal_create(o_renderer, GOALTYPE_wither_skulls);
+	goals[3] = goal_create(o_renderer, GOALTYPE_heavy_core);
 
 	ADV_advancement** advancements = ADV_get_advancements(tracker.advancements, tracker.template_path);
 
@@ -68,8 +66,9 @@ int main() {
 	dmon_watch(saves_path, watch_callback, 0, NULL);
 
 	// IMAGES. //
-	SDL_Texture* advancement_background = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background.png"));
-	SDL_Texture* advancement_background_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_done.png"));
+	SDL_Texture* adv_bg = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background.png"));
+	SDL_Texture* adv_bg_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_done.png"));
+	SDL_Texture* adv_bg_half_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_half_done.png"));
 
 	// FONTS. //
 	FC_Font* overlay_font = FC_CreateFont();
@@ -128,8 +127,9 @@ int main() {
 		tracker_render_overlay(
 			o_renderer, 
 			overlay_font, 
-			advancement_background, 
-			advancement_background_done,
+			adv_bg,
+			adv_bg_half_done,
+			adv_bg_done,
 			advancements, 
 			tracker.advancements, 
 			tracker.criteria, 
@@ -149,7 +149,9 @@ int main() {
 	dmon_deinit();
 	FC_FreeFont(main_font);
 	FC_FreeFont(overlay_font);
-	SDL_DestroyTexture(advancement_background);
+	SDL_DestroyTexture(adv_bg);
+	SDL_DestroyTexture(adv_bg_done);
+	SDL_DestroyTexture(adv_bg_half_done);
 	free(advancements);
 	tracker_delete(&tracker);
 	IMG_Quit();

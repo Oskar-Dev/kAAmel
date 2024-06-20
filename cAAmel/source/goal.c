@@ -16,7 +16,7 @@ Goal** goal_init(const int n) {
 	return goals;
 }
 
-SubGoal* goal_sub_create(const SubGoalType type, const int display_count, const char* name, const char* root_name, const int goal) {
+SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const int display_count, const int goal) {
 	SubGoal* sub_goal = malloc(sizeof *sub_goal);
 	if (sub_goal == NULL) {
 		printf("[MEMORY ERROR] Couldn't allocate enough memory for a sub-goal.\n");
@@ -57,40 +57,66 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 	goal->done = 0;
 
 	switch (type) {
-	case GOALTYPE_nautilus_shells:
-		goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/nautilus_shell.png"));
+		case GOALTYPE_nautilus_shells:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/nautilus_shell.png"));
 		
-		goal->sub_goals_n = 4;
-		goal->sub_goals = malloc(goal->sub_goals_n * sizeof *goal->sub_goals);
-		if (goal->sub_goals == NULL) {
-			goto memory_error;
-		}
+			goal->sub_goals_n = 4;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof *goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
 
-		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 1, "Shells", "minecraft:nautilus_shell", 8);
-		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, 0, "Craft Conduit", "minecraft:conduit", 1);
-		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Do HDWGH", "minecraft:nether/all_effects", 1);
-		goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, 0, "Done with HDWGH", "", 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Shells", "minecraft:nautilus_shell", 1, 8);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nConduit", "minecraft:conduit", 0, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Do HDWGH", "minecraft:nether/all_effects", 0, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done with\nHDWGH", "", 0, 0);
+			break;
 
-		break;
+		case GOALTYPE_trident:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/trident.png"));
+			
+			goal->sub_goals_n = 4;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
 
-	case GOALTYPE_trident:
-		goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/trident.png"));
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nTrident", "minecraft:trident", 0, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/very_very_frightening", 0, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/lightning_rod_with_villager_no_fire", 0, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nThunder", "", 0, 0);
+			break;
 
-		goal->sub_goals_n = 4;
-		goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
-		if (goal->sub_goals == NULL) {
-			goto memory_error;
-		}
+		case GOALTYPE_wither_skulls:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/wither_skeleton_skull.png"));
 
-		goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, 0, "Obtain Trident", "minecraft:trident", 1);
-		goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Awaiting Thunder", "minecraft:adventure/very_very_frightening", 1);
-		goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, 0, "Awaiting Thunder", "minecraft:adventure/lightning_rod_with_villager_no_fire", 1);
-		goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, 0, "Done With Thunder", "", 0);
+			goal->sub_goals_n = 2;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
 
-		break;
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Skulls", "minecraft:wither_skeleton_skull", 1, 3);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSkulls", "", 0, 0);
+			break;
+
+		case GOALTYPE_heavy_core:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/mace.png"));
+
+			goal->sub_goals_n = 4;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
+
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nHeavy Core", "minecraft:heavy_core", 0, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nMace", "minecraft:mace", 0, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Do\nOver-Overkill", "minecraft:adventure/overoverkill", 0, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nMace", "", 0, 0);
+			break;
 	
-	default:
-		return NULL;
+		default:
+			return NULL;
 	}
 
 	return goal;
@@ -103,6 +129,7 @@ memory_error:
 void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path) {
 	// DO ZROBIENIA: Zrób aby aktualizowa³o siê przy weœciu na nowy œwiat bez tworzenia niczego oraz bez podnodnoszenia ¿adnych przedmiotów.
 	// DO ZROBIENIA: Mo¿e dodaj "display_if_not_done" albo coœ podobnego?
+	// DO ZROBIENIA: Nie renderuj tego co ka¿d¹ klatkê.
 	cJSON* data = cJSON_from_file(file_path);
 	if (!data) {
 		return;
