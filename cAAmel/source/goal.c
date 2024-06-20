@@ -114,6 +114,21 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Do\nOver-Overkill", "minecraft:adventure/overoverkill", 0, 1);
 			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nMace", "", 0, 0);
 			break;
+
+		case GOALTYPE_sniffers:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/sniffer_egg.png"));
+
+			goal->sub_goals_n = 4;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
+
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Eggs", "minecraft:sniffer_egg", 1, 2);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_use, "Place Eggs", "minecraft:sniffer_egg", 0, 2);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Feed Snifflet", "minecraft:husbandry/feed_snifflet", 0, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSniffers", "", 0, 0);
+			break;
 	
 		default:
 			return NULL;
@@ -146,7 +161,12 @@ void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, c
 	}
 
 	cJSON* crafted = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:crafted");
-	if (!picked_up) {
+	if (!crafted) {
+		return;
+	}
+
+	cJSON* used = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:used");
+	if (!used) {
 		return;
 	}
 
@@ -180,6 +200,17 @@ void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, c
 			
 				case SUBGOALTYPE_item_craft: {
 					cJSON* value = cJSON_GetObjectItemCaseSensitive(crafted, sub_goal->root_name);
+					if (value && value->valueint) {
+						sub_goal->progress = value->valueint;
+					} else {
+						sub_goal->progress = 0;
+						goal->done = 0;
+					}
+					break;
+				}
+
+				case SUBGOALTYPE_item_use: {
+					cJSON* value = cJSON_GetObjectItemCaseSensitive(used, sub_goal->root_name);
 					if (value && value->valueint) {
 						sub_goal->progress = value->valueint;
 					} else {

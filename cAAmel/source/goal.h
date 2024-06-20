@@ -13,6 +13,7 @@ typedef enum {
 	SUBGOALTYPE_criterion,
 	SUBGOALTYPE_item_pick_up,
 	SUBGOALTYPE_item_craft,
+	SUBGOALTYPE_item_use,
 } SubGoalType;
 
 typedef struct {
@@ -31,6 +32,7 @@ typedef enum {
 	GOALTYPE_trident,
 	GOALTYPE_wither_skulls,
 	GOALTYPE_heavy_core,
+	GOALTYPE_sniffers,
 } GoalType;
 
 typedef struct {
