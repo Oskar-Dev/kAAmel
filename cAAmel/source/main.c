@@ -104,6 +104,7 @@ int main() {
 	int overlay_render_criteria = 1;
 	int overlay_render_advancements = 1;
 	int quit = 0;
+	// SDL_SetHintWithPriority(SDL_HINT_THREAD_PRIORITY_POLICY, 1, SDL_HINT_OVERRIDE);
 
 	// MAIN LOOP. //
 	while (!quit) {
@@ -145,8 +146,8 @@ int main() {
 			tracker.o_window_height, 
 			tracker.overlay_layout
 		);
-
-		SDL_Delay(16 - (ticks_start - SDL_GetTicks()));
+		
+		if (SDL_GetTicks() - ticks_start <= 20) SDL_Delay(20 - (SDL_GetTicks() - ticks_start));
 	}
 
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
