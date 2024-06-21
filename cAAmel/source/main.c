@@ -122,6 +122,7 @@ int main() {
 
 		tracker_update_overlay(advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.overlay_layout);
 
+		// Render advancements.
 		if (update) {
 			tracker_render_main(m_renderer, main_font, advancements, tracker.advancements, tracker.m_window_width, tracker.m_window_height, tracker.main_layout);
 			update = 0;

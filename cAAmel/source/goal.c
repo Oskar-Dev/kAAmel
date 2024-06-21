@@ -158,9 +158,6 @@ memory_error:
 }
 
 void goal_update(Goal** goals, const int goals_n, const char* file_path) {
-	// DO ZROBIENIA: Zrób aby aktualizowa³o siê przy weœciu na nowy œwiat bez tworzenia niczego oraz bez podnodnoszenia ¿adnych przedmiotów.
-	// DO ZROBIENIA: Mo¿e dodaj "display_if_not_done" albo coœ podobnego?
-	// DO ZROBIENIA: Nie renderuj tego co ka¿d¹ klatkê.
 	cJSON* data = cJSON_from_file(file_path);
 	if (!data) {
 		return;

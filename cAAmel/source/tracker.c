@@ -270,7 +270,6 @@ void tracker_render_overlay(
 	// OVERLAY WINDOW RENDERING. //
 	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 51, 0, 255));
 	check_sdl_code(SDL_RenderClear(renderer));
-	check_sdl_code(SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255));
 
 	// RENDER THE OVERLAY. //
 	// if (overlay_render_criteria) {
