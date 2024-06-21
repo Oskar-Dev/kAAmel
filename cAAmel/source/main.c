@@ -52,13 +52,14 @@ int main() {
 	SDL_Renderer* m_renderer = check_sdl_ptr(SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED));
 	SDL_SetRenderDrawBlendMode(m_renderer, SDL_BLENDMODE_BLEND);
 
-	int goals_n = 5;
+	int goals_n = 6;
 	Goal** goals = goal_init(goals_n);
 	goals[0] = goal_create(o_renderer, GOALTYPE_nautilus_shells);
 	goals[1] = goal_create(o_renderer, GOALTYPE_trident);
 	goals[2] = goal_create(o_renderer, GOALTYPE_wither_skulls);
 	goals[3] = goal_create(o_renderer, GOALTYPE_sniffers);
 	goals[4] = goal_create(o_renderer, GOALTYPE_heavy_core);
+	goals[5] = goal_create(o_renderer, GOALTYPE_silence);
 
 	ADV_advancement** advancements = ADV_get_advancements(tracker.advancements, tracker.template_path);
 
@@ -115,8 +116,8 @@ int main() {
 
 		// Update advancements.
 		if (update) {
-			ADV_update_advancements(advancements, tracker.advancements, adv_path);
-			goal_update(goals, goals_n, advancements, tracker.advancements, stats_path);
+			ADV_update_advancements(advancements, tracker.advancements, goals, goals_n, adv_path);
+			goal_update(goals, goals_n, stats_path);
 		}
 
 		tracker_update_overlay(advancements, tracker.advancements, tracker.criteria, tracker.multi_part_advancements, tracker.overlay_layout);

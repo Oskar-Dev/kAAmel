@@ -4,6 +4,7 @@
 #define ADV_H
 
 #include "../include/cJSON.h"
+#include "goal.h"
 
 #include <SDL.h>
 
@@ -36,7 +37,7 @@ void ADV_delete_advancement(ADV_advancement* advancement);
 
 ADV_advancement** ADV_object_from_template(cJSON* template, int n);
 ADV_advancement** ADV_get_advancements(int advancements, char* template_path);
-void ADV_update_advancements(ADV_advancement** advancements, int n, char* path);
+void ADV_update_advancements(ADV_advancement** advancements, int adv_n, Goal** goals, int goals_n, char* path);
 
 #endif
 

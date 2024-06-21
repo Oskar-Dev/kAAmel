@@ -60,7 +60,7 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 		case GOALTYPE_nautilus_shells:
 			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/nautilus_shell.png"));
 		
-			goal->sub_goals_n = 4;
+			goal->sub_goals_n = 5;
 			goal->sub_goals = malloc(goal->sub_goals_n * sizeof *goal->sub_goals);
 			if (goal->sub_goals == NULL) {
 				goto memory_error;
@@ -68,8 +68,9 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 
 			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Shells", "minecraft:nautilus_shell", 1, 8);
 			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nConduit", "minecraft:conduit", 0, 1);
-			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Do HDWGH", "minecraft:nether/all_effects", 0, 1);
-			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done with\nHDWGH", "", 0, 0);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_item_use, "Place\nConduit", "minecraft:conduit", 0, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_advancement, "Do HDWGH", "minecraft:nether/all_effects", 0, 1);
+			goal->sub_goals[4] = goal_sub_create(SUBGOALTYPE_final, "Done with\nHDWGH", "", 0, 0);
 			break;
 
 		case GOALTYPE_trident:
@@ -129,10 +130,25 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Feed Snifflet", "minecraft:husbandry/feed_snifflet", 0, 1);
 			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSniffers", "", 0, 0);
 			break;
+
+		case GOALTYPE_silence:
+			goal->icon_texture = check_sdl_ptr(IMG_LoadTexture(renderer, "resources/sprites/items/silence_trim.png"));
+
+			goal->sub_goals_n = 2;
+			goal->sub_goals = malloc(goal->sub_goals_n * sizeof * goal->sub_goals);
+			if (goal->sub_goals == NULL) {
+				goto memory_error;
+			}
+
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_advancement, "Obtain\nSilence", "minecraft:recipes/misc/silence_armor_trim_smithing_template", 0, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_final, "Silence\nObtained", "", 0, 0);
+			break;
 	
 		default:
 			return NULL;
 	}
+
+	// minecraft:recipes/misc/silence_armor_trim_smithing_template
 
 	return goal;
 
@@ -141,7 +157,7 @@ memory_error:
 	exit(1);
 }
 
-void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path) {
+void goal_update(Goal** goals, const int goals_n, const char* file_path) {
 	// DO ZROBIENIA: Zrób aby aktualizowa³o siê przy weœciu na nowy œwiat bez tworzenia niczego oraz bez podnodnoszenia ¿adnych przedmiotów.
 	// DO ZROBIENIA: Mo¿e dodaj "display_if_not_done" albo coœ podobnego?
 	// DO ZROBIENIA: Nie renderuj tego co ka¿d¹ klatkê.
@@ -151,24 +167,24 @@ void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, c
 	}
 
 	cJSON* stats = cJSON_GetObjectItemCaseSensitive(data, "stats");
-	if (!stats) {
-		return;
-	}
+	// if (!stats) {
+	// 	return;
+	// }
 
 	cJSON* picked_up = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:picked_up");
-	if (!picked_up) {
-		return;
-	}
+	// if (!picked_up) {
+	// 	return;
+	// }
 
 	cJSON* crafted = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:crafted");
-	if (!crafted) {
-		return;
-	}
+	// if (!crafted) {
+	// 	return;
+	// }
 
 	cJSON* used = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:used");
-	if (!used) {
-		return;
-	}
+	// if (!used) {
+	// 	return;
+	// }
 
 	for (int i = 0; i < goals_n; ++i) {
 		Goal* goal = goals[i];
@@ -220,14 +236,14 @@ void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, c
 					break;
 				}
 
-				case SUBGOALTYPE_advancement: {
+				/*case SUBGOALTYPE_advancement: { // ADV_update_advancements handles the advancement case.
 					for (int i = 0; i < adv_n; ++i) {
 						if (strcmp(adv[i]->root_name, sub_goal->root_name) == 0) {
 							sub_goal->progress = adv[i]->done;
 						}
 					}
 					break;
-				}
+				}*/
 			
 				default:
 					break;

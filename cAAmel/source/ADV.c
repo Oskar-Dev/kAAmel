@@ -258,13 +258,38 @@ ADV_advancement** ADV_get_advancements(int advancements_n, char* template_path) 
 	return advancements;
 }
 
-void ADV_update_advancements(ADV_advancement** advancements, int n, char* path) {
+void ADV_update_advancements(ADV_advancement** advancements, int adv_n, Goal** goals, int goals_n, char* path) {
 	cJSON* data = cJSON_from_file(path);
 	if (data == NULL) {
 		goto error;
 	}
 
-	for (int i = 0; i < n; ++i) {
+	// Update goals.
+	for (int i = 0; i < goals_n; ++i) {
+		for (int j = 0; j < goals[i]->sub_goals_n; ++j) {
+			SubGoal* sub_goal = goals[i]->sub_goals[j];
+			SubGoalType type = sub_goal->type;
+
+			if (type == SUBGOALTYPE_advancement) {
+				cJSON* entry = cJSON_GetObjectItemCaseSensitive(data, sub_goal->root_name);
+				if (entry) {
+					cJSON* done = cJSON_GetObjectItemCaseSensitive(entry, "done");
+					if (!done) goto error;
+
+					if (cJSON_IsTrue(done)) {
+						sub_goal->progress = 1;
+					} else {
+						sub_goal->progress = 0;
+					}
+				} else {
+					sub_goal->progress = 0;
+				}
+			}
+		}
+	}
+
+	// Update advancements.
+	for (int i = 0; i < adv_n; ++i) {
 		char* root_name = advancements[i]->root_name;
 		int criteria_number = advancements[i]->criteria_n;
 		ADV_criterion** criteria_to_update = advancements[i]->criteria;
