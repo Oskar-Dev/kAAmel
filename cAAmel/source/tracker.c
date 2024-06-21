@@ -272,7 +272,6 @@ void tracker_render_overlay(
 	check_sdl_code(SDL_RenderClear(renderer));
 
 	// RENDER THE OVERLAY. //
-	// if (overlay_render_criteria) {
 	int multi_part_i = l->mutlti_part_adv_i;
 	int rendered_criteria = 0;
 	int attempts = 0;
@@ -284,7 +283,7 @@ void tracker_render_overlay(
 			i = 0;
 		}
 
-		if (criterion->done == 1) { // <- Do zmiany teraz.
+		if (criterion->done == 1) {
 			if (++attempts > criteria_n) { break; }
 
 			continue;
@@ -293,18 +292,15 @@ void tracker_render_overlay(
 			attempts = 0;
 		}
 
-		SDL_Texture* texture = criterion->overlay_texture; // <- Do zmiany teraz.
+		SDL_Texture* texture = criterion->overlay_texture;
 
 		criterion_rect.x = rendered_criteria * (l->crt_size + l->crt_spacing) - l->crt_offset;
 		check_sdl_code(SDL_RenderCopy(renderer, texture, NULL, &criterion_rect));
 
 		++rendered_criteria;
 	}
-	// }
 
-	// if (overlay_render_advancements) {
 	int rendered_advancements = 0;
-	// int attempts = 0;
 	attempts = 0;
 	for (int i = l->adv_index_offset; rendered_advancements < l->max_adv; i = (i + 1) % advancements_n) {
 		if (advancements[i]->done == 1 || advancements[i]->criteria_n > 0) {
@@ -319,13 +315,9 @@ void tracker_render_overlay(
 		SDL_Texture* texture = advancements[i]->overlay_texture;
 		char* advancement_name = advancements[i]->display_name;
 
-		// advancement_rect.x = rendered_advancements * (l->adv_bg_size + l->adv_spacing) - l->adv_offset;
-		// advancement_background_rect.x = advancement_rect.x + (l->adv_bg_size - l->adv_bg_size) / 2;
-
 		advancement_background_rect.x = rendered_advancements * (l->adv_bg_size + l->adv_spacing) - l->adv_offset;
 		advancement_rect.x = advancement_background_rect.x + (l->adv_bg_size - l->adv_size) / 2;
 
-		// render_advancement_box(overlay_renderer, overlay_advancement_rect.x, overlay_advancements_start_y, overlay_advancement_size, overlay_advancement_box_width);
 		check_sdl_code(SDL_RenderCopy(renderer, bg_texture, NULL, &advancement_background_rect));
 		check_sdl_code(SDL_RenderCopy(renderer, texture, NULL, &advancement_rect));
 
@@ -335,7 +327,6 @@ void tracker_render_overlay(
 
 		++rendered_advancements;
 	}
-	// }
 
 	// Render goals.
 	for (int k = 0; k < goals_n; ++k) {
@@ -389,6 +380,5 @@ void tracker_delete(Tracker* tracker) {
 		free(tracker->main_layout);
 		free(tracker->overlay_layout);
 		free(tracker->template_path);
-		// free(tracker);
 	}
 }
