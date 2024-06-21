@@ -16,7 +16,7 @@ Goal** goal_init(const int n) {
 	return goals;
 }
 
-SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const int display_count, const int goal) {
+SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const DisplayType display_type, const int goal) {
 	SubGoal* sub_goal = malloc(sizeof *sub_goal);
 	if (sub_goal == NULL) {
 		printf("[MEMORY ERROR] Couldn't allocate enough memory for a sub-goal.\n");
@@ -43,7 +43,7 @@ SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* r
 	sub_goal->goal = goal;
 	sub_goal->progress = 0;
 	sub_goal->type = type;
-	sub_goal->display_count = display_count;
+	sub_goal->display_type = display_type;
 
 	return sub_goal;
 }
@@ -66,11 +66,11 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Shells", "minecraft:nautilus_shell", 1, 8);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nConduit", "minecraft:conduit", 0, 1);
-			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_item_use, "Place\nConduit", "minecraft:conduit", 0, 1);
-			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_advancement, "Do HDWGH", "minecraft:nether/all_effects", 0, 1);
-			goal->sub_goals[4] = goal_sub_create(SUBGOALTYPE_final, "Done with\nHDWGH", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Shells", "minecraft:nautilus_shell", DISPLAYTYPE_name_progress_goal, 8);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nConduit", "minecraft:conduit", DISPLAYTYPE_name, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_item_use, "Place\nConduit", "minecraft:conduit", DISPLAYTYPE_name, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_advancement, "Do HDWGH", "minecraft:nether/all_effects", DISPLAYTYPE_name, 1);
+			goal->sub_goals[4] = goal_sub_create(SUBGOALTYPE_final, "Done with\nHDWGH", "", DISPLAYTYPE_name, -1);
 			break;
 
 		case GOALTYPE_trident:
@@ -82,10 +82,10 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nTrident", "minecraft:trident", 0, 1);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/very_very_frightening", 0, 1);
-			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/lightning_rod_with_villager_no_fire", 0, 1);
-			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nThunder", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nTrident", "minecraft:trident", DISPLAYTYPE_name, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/very_very_frightening", DISPLAYTYPE_name, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Awaiting\nThunder", "minecraft:adventure/lightning_rod_with_villager_no_fire", DISPLAYTYPE_name, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nThunder", "", DISPLAYTYPE_name, -1);
 			break;
 
 		case GOALTYPE_wither_skulls:
@@ -97,8 +97,8 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Skulls", "minecraft:wither_skeleton_skull", 1, 3);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSkulls", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Skulls", "minecraft:wither_skeleton_skull", DISPLAYTYPE_name_progress_goal, 3);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_kill, "3 / 3\nKilled: ", "minecraft:wither_skeleton", DISPLAYTYPE_name_progress, -1);
 			break;
 
 		case GOALTYPE_heavy_core:
@@ -110,10 +110,10 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nHeavy Core", "minecraft:heavy_core", 0, 1);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft\nMace", "minecraft:mace", 0, 1);
-			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Do\nOver-Overkill", "minecraft:adventure/overoverkill", 0, 1);
-			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nMace", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Obtain\nHeavy Core", "minecraft:heavy_core", DISPLAYTYPE_name, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_craft, "Craft a\nMace", "minecraft:mace", DISPLAYTYPE_name, 1);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Get Overkill", "minecraft:adventure/overoverkill", DISPLAYTYPE_name, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_item_use, "Over-Overkill\nCompleted\nOpened: ", "minecraft:ominous_trial_key", DISPLAYTYPE_name_progress, -1);
 			break;
 
 		case GOALTYPE_sniffers:
@@ -125,10 +125,10 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Eggs", "minecraft:sniffer_egg", 1, 2);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_use, "Place Eggs", "minecraft:sniffer_egg", 0, 2);
-			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Feed Snifflet", "minecraft:husbandry/feed_snifflet", 0, 1);
-			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSniffers", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_item_pick_up, "Eggs", "minecraft:sniffer_egg", DISPLAYTYPE_name_progress_goal, 2);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_item_use, "Place Eggs", "minecraft:sniffer_egg", DISPLAYTYPE_name, 2);
+			goal->sub_goals[2] = goal_sub_create(SUBGOALTYPE_advancement, "Feed Snifflet", "minecraft:husbandry/feed_snifflet", DISPLAYTYPE_name, 1);
+			goal->sub_goals[3] = goal_sub_create(SUBGOALTYPE_final, "Done With\nSniffers", "", DISPLAYTYPE_name, -1);
 			break;
 
 		case GOALTYPE_silence:
@@ -140,8 +140,8 @@ Goal* goal_create(const SDL_Renderer* renderer, const GoalType type) {
 				goto memory_error;
 			}
 
-			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_advancement, "Obtain\nSilence", "minecraft:recipes/misc/silence_armor_trim_smithing_template", 0, 1);
-			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_final, "Silence\nObtained", "", 0, 0);
+			goal->sub_goals[0] = goal_sub_create(SUBGOALTYPE_advancement, "Obtain\nSilence", "minecraft:recipes/misc/silence_armor_trim_smithing_template", DISPLAYTYPE_name, 1);
+			goal->sub_goals[1] = goal_sub_create(SUBGOALTYPE_final, "Silence\nObtained", "", DISPLAYTYPE_name, -1);
 			break;
 	
 		default:
@@ -167,24 +167,14 @@ void goal_update(Goal** goals, const int goals_n, const char* file_path) {
 	}
 
 	cJSON* stats = cJSON_GetObjectItemCaseSensitive(data, "stats");
-	// if (!stats) {
-	// 	return;
-	// }
+	if (!stats) {
+		return;
+	}
 
 	cJSON* picked_up = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:picked_up");
-	// if (!picked_up) {
-	// 	return;
-	// }
-
 	cJSON* crafted = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:crafted");
-	// if (!crafted) {
-	// 	return;
-	// }
-
 	cJSON* used = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:used");
-	// if (!used) {
-	// 	return;
-	// }
+	cJSON* killed = cJSON_GetObjectItemCaseSensitive(stats, "minecraft:killed");
 
 	for (int i = 0; i < goals_n; ++i) {
 		Goal* goal = goals[i];
@@ -244,6 +234,17 @@ void goal_update(Goal** goals, const int goals_n, const char* file_path) {
 					}
 					break;
 				}*/
+
+				case SUBGOALTYPE_kill: {
+					cJSON* value = cJSON_GetObjectItemCaseSensitive(killed, sub_goal->root_name);
+					if (value && value->valueint) {
+						sub_goal->progress = value->valueint;
+					} else {
+						sub_goal->progress = 0;
+						goal->done = 0;
+					}
+					break;
+				}
 			
 				default:
 					break;

@@ -352,11 +352,13 @@ void tracker_render_overlay(
 		}
 
 		SubGoal* sub_goal = goal->sub_goals[i];
-		char name_buffer[30];
-		if (sub_goal->display_count == 1) {
-			snprintf(name_buffer, sizeof name_buffer, "%s\n%d / %d", sub_goal->name, sub_goal->progress, sub_goal->goal);
-		} else {
+		char name_buffer[50];
+		if (sub_goal->display_type == DISPLAYTYPE_name) {
 			strcpy(name_buffer, sub_goal->name);
+		} else if (sub_goal->display_type == DISPLAYTYPE_name_progress_goal) {
+			snprintf(name_buffer, sizeof name_buffer, "%s\n%d / %d", sub_goal->name, sub_goal->progress, sub_goal->goal);
+		} else if (sub_goal->display_type == DISPLAYTYPE_name_progress) {
+			snprintf(name_buffer, sizeof name_buffer, "%s%d", sub_goal->name, sub_goal->progress);
 		}
 
 		advancement_background_rect.y = l->goals_start_y;
