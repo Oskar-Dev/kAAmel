@@ -122,7 +122,7 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 
 	tracker->overlay_layout->max_crt = 0;
 	tracker->overlay_layout->max_adv = 0;
-	tracker->overlay_layout->scroll_speed = 20;
+	tracker->overlay_layout->scroll_speed = 14;
 
 	tracker->overlay_layout->adv_start_y = (tracker->overlay_layout->padding * 2 + tracker->overlay_layout->crt_size);
 	tracker->overlay_layout->max_crt = tracker->o_window_width / (tracker->overlay_layout->crt_size + tracker->overlay_layout->crt_spacing) + 2;
