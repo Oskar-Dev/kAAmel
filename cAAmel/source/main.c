@@ -155,6 +155,7 @@ int main() {
 	SDL_DestroyTexture(adv_bg_half_done);
 	free(advancements);
 	tracker_delete(&tracker);
+	goal_delete(goals, goals_n);
 	IMG_Quit();
 	SDL_Quit();
 

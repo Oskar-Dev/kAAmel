@@ -46,5 +46,6 @@ Goal** goal_init(const int n);
 SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* root_name, const int display_count, const int goal);
 Goal* goal_create(const SDL_Renderer* renderer, const GoalType type);
 void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, const int adv_n, const char* file_path);
+void goal_delete(Goal** goals, const int goals_n);
 
 #endif

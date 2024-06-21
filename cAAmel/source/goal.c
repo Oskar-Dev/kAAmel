@@ -23,14 +23,14 @@ SubGoal* goal_sub_create(const SubGoalType type, const char* name, const char* r
 		exit(1);
 	}
 
-	sub_goal->name = malloc(strlen(name) * sizeof(char));
+	sub_goal->name = malloc((strlen(name) + 1) * sizeof(char));
 	if (sub_goal->name == NULL) {
 		free(sub_goal);
 		printf("[MEMORY ERROR] Couldn't allocate enough memory for sub-goal's name.\n");
 		exit(1);
 	}
 
-	sub_goal->root_name = malloc(strlen(root_name) * sizeof(char));
+	sub_goal->root_name = malloc((strlen(root_name) + 1) * sizeof(char));
 	if (sub_goal->root_name == NULL) {
 		free(sub_goal->name);
 		free(sub_goal);
@@ -236,4 +236,22 @@ void goal_update(Goal** goals, const int goals_n, const ADV_advancement** adv, c
 	}
 
 	cJSON_Delete(data);
+}
+
+void goal_delete(Goal** goals, const int goals_n) {
+	for (int i = 0; i < goals_n; ++i) {
+		Goal* goal = goals[i];
+		SDL_DestroyTexture(goal->icon_texture);
+
+		for (int j = 0; j < goal->sub_goals_n; ++j) {
+			SubGoal* sub_goal = goal->sub_goals[j];
+			free(sub_goal->name);
+			free(sub_goal->root_name);
+		}
+
+		free(goal->sub_goals);
+		free(goal);
+	}
+
+	free(goals);
 }
