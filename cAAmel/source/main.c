@@ -46,7 +46,7 @@ int main() {
 
 	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker.o_window_width, tracker.o_window_height, 0));
 	SDL_Renderer* o_renderer = check_sdl_ptr(SDL_CreateRenderer(o_window, -1, SDL_RENDERER_ACCELERATED));
-	SDL_RenderSetVSync(o_renderer, 1);
+	// SDL_RenderSetVSync(o_renderer, 1);
 
 	SDL_Window* m_window = check_sdl_ptr(SDL_CreateWindow("cAAmel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, tracker.m_window_width, tracker.m_window_height, 0));
 	SDL_Renderer* m_renderer = check_sdl_ptr(SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED));
@@ -100,12 +100,14 @@ int main() {
 	}
 
 	// CONTROL VARIABLES. //
+	Uint32 ticks_start = 0;
 	int overlay_render_criteria = 1;
 	int overlay_render_advancements = 1;
 	int quit = 0;
 
 	// MAIN LOOP. //
 	while (!quit) {
+		ticks_start = SDL_GetTicks();
 		SDL_Event event;
 
 		while (SDL_PollEvent(&event)) {
@@ -143,6 +145,8 @@ int main() {
 			tracker.o_window_height, 
 			tracker.overlay_layout
 		);
+
+		SDL_Delay(16 - (ticks_start - SDL_GetTicks()));
 	}
 
 	for (int i = 0; ADVANCEMENTS < 1; ++i) {
