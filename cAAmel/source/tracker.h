@@ -25,9 +25,10 @@ typedef struct {
 	int crt_start_y;
 	int crt_size;
 	int crt_spacing_y;
+	int crt_spacing_x;
+	int crt_group_spacing_x;
 	int crt_text_margin;
 	int crt_text_fix;
-	int crt_max_width;
 } MainLayout;
 
 typedef struct {

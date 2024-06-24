@@ -1,4 +1,5 @@
 #include "tracker.h"
+#include "utils.h"
 
 Tracker* tracker_create(Version version, Tracker* tracker) {
 	int advancements;
@@ -95,9 +96,10 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	tracker->main_layout->crt_start_y = 220;
 	tracker->main_layout->crt_size = 16;
 	tracker->main_layout->crt_spacing_y = 8;
+	tracker->main_layout->crt_spacing_x = 20;
+	tracker->main_layout->crt_group_spacing_x = 40;
 	tracker->main_layout->crt_text_margin = 4;
 	tracker->main_layout->crt_text_fix = 3;
-	tracker->main_layout->crt_max_width = 126;
 
 	tracker->overlay_layout = malloc(sizeof * tracker->overlay_layout);
 	if (tracker->overlay_layout == NULL) {
@@ -122,7 +124,7 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 
 	tracker->overlay_layout->max_crt = 0;
 	tracker->overlay_layout->max_adv = 0;
-	tracker->overlay_layout->scroll_speed = 14;
+	tracker->overlay_layout->scroll_speed = 15;
 
 	tracker->overlay_layout->adv_start_y = (tracker->overlay_layout->padding * 2 + tracker->overlay_layout->crt_size);
 	tracker->overlay_layout->max_crt = tracker->o_window_width / (tracker->overlay_layout->crt_size + tracker->overlay_layout->crt_spacing) + 2;
@@ -138,31 +140,45 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement*
 	SDL_Rect rect = { 0, 0, l->adv_size, l->adv_size };
 	SDL_Rect blend_rect = { 0, 0, l->adv_size + 8, l->adv_size + l->text_margin + l->spacing_y };
 	SDL_Rect criterion_rect = { 0, 0, l->crt_size, l->crt_size };
-	SDL_Rect criterion_blend_rect = { 0, 0, l->crt_max_width, l->crt_size };
+	SDL_Rect criterion_blend_rect = { 0, 0, 0, l->crt_size };
 
 	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255));
 	check_sdl_code(SDL_RenderClear(renderer));
+	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255));
 
 	// RENDER LAYOUT. //
 	int offset = 0;
-	int criteria_offset = 0;
+	int crt_offset = 0;
 	for (int i = 0; i < advancements_n; ++i) {
 		int done = advancements[i]->done;
 		int criteria = advancements[i]->criteria_n;
 
 		if (criteria > 0) {
+			int max_width = 0;
+			int last_y = 0;
+
 			for (int j = 0; j < criteria; ++j) {
 				int criterion_done = advancements[i]->criteria[j]->done;
 				SDL_Texture* txt = advancements[i]->criteria[j]->texture;
 
 				char* criterion_name = advancements[i]->criteria[j]->name;
-				criterion_rect.x = l->padding + l->crt_max_width * offset + l->crt_max_width * (criteria_offset + j / ((window_height - l->crt_start_y - l->padding) / (l->crt_size + l->crt_spacing_y)));
+
+				max_width = maxi(FC_GetWidth(font, criterion_name) + l->crt_size + l->crt_text_margin, max_width);
 				criterion_rect.y = l->crt_start_y + (l->crt_size + l->crt_spacing_y) * (j % ((window_height - l->crt_start_y - l->padding) / (l->crt_size + l->crt_spacing_y)));
+
+				if (criterion_rect.y < last_y) {
+					crt_offset += max_width + l->crt_spacing_x;
+					max_width = 0;
+				}
+
+				criterion_rect.x = l->padding + crt_offset;
+				last_y = criterion_rect.y;
 
 				check_sdl_code(SDL_RenderCopy(renderer, txt, NULL, &criterion_rect));
 				FC_Draw(font, renderer, criterion_rect.x + l->crt_size + l->crt_text_margin, criterion_rect.y + l->crt_text_fix, criterion_name);
 
 				if (criterion_done) {
+					criterion_blend_rect.w = max_width;
 					criterion_blend_rect.x = criterion_rect.x;
 					criterion_blend_rect.y = criterion_rect.y;
 
@@ -170,8 +186,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement*
 					check_sdl_code(SDL_RenderFillRect(renderer, &criterion_blend_rect));
 				}
 			}
-
-			criteria_offset += criteria / ((window_height - l->crt_start_y - l->padding - l->crt_size) / (l->crt_size + l->crt_spacing_y));
+			crt_offset += max_width + l->crt_group_spacing_x;
 			offset += 1;
 			continue;
 		}
