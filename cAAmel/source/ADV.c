@@ -5,6 +5,10 @@
 #include "adv.h"
 #include "utils.h"
 
+#ifdef _WIN32
+#define strdup _strdup
+#endif
+
 ADV_criterion* ADV_new_criterion(char* name, char* icon, char* root_name, int done) {
 	ADV_criterion* criterion = malloc(sizeof *criterion);
 	if (criterion == NULL) {
@@ -197,9 +201,9 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 				}
 
 				criteria_a[criteria_n] = ADV_new_criterion(
-					_strdup(criterion_name->valuestring),
-					_strdup(criterion_icon->valuestring),
-					_strdup(criterion_root_name->valuestring),
+					strdup(criterion_name->valuestring),
+					strdup(criterion_icon->valuestring),
+					strdup(criterion_root_name->valuestring),
 					0
 				);
 
@@ -209,10 +213,10 @@ ADV_advancement** ADV_object_from_template(cJSON* template, int n) {
 		}
 
 		advancements[i] = ADV_new_advancement(
-			_strdup(name->valuestring), 
-			_strdup(display_name->valuestring),
-			_strdup(icon->valuestring),
-			_strdup(root_name->valuestring),
+			strdup(name->valuestring), 
+			strdup(display_name->valuestring),
+			strdup(icon->valuestring),
+			strdup(root_name->valuestring),
 			criteria_a,
 			criteria_n,
 			0

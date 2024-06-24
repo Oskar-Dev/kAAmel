@@ -6,7 +6,11 @@ cJSON* cJSON_from_file(char* file_path) {
 	char* buffer = NULL;
 	FILE* f;
 
-	if (fopen_s(&f, file_path, "r") != 0) {
+	// if (fopen_s(&f, file_path, "r") != 0) {
+	// 	goto error;
+	// }
+	f = fopen(file_path, "r");
+	if (!f) {
 		goto error;
 	}
 
