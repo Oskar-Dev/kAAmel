@@ -26,12 +26,12 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 		o_window_width = 1600;
 		o_window_height = 400;
 
-		tracker->template_path = malloc((strlen("resources/templates/1.16/advancements_optimised.json") + 1) * sizeof(char));
+		tracker->template_path = malloc((strlen("resources/templates/1.16.1/advancements_optimised.json") + 1) * sizeof(char));
 		if (tracker->template_path == NULL) {
 			printf("[MEMORY ERROR] Couldn't allocate enough space for application's template path.\n");
 		}
 
-		strcpy(tracker->template_path, "resources/templates/1.16/advancements_optimised.json");
+		strcpy(tracker->template_path, "resources/templates/1.16.1/advancements_optimised.json");
 		break;
 
 	case VERSION_1_20_6:
@@ -181,7 +181,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 					criterion_blend_rect.x = criterion_rect.x;
 					criterion_blend_rect.y = criterion_rect.y;
 
-					check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 0, 0, 200));
+					check_sdl_code(SDL_SetRenderDrawColor(renderer, 50, 41, 71, 200));
 					check_sdl_code(SDL_RenderFillRect(renderer, &criterion_blend_rect));
 				}
 			}
@@ -206,7 +206,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 			blend_rect.x = rect.x - 4;
 			blend_rect.y = rect.y - 2;
 
-			check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 0, 0, 200));
+			check_sdl_code(SDL_SetRenderDrawColor(renderer, 50, 41, 71, 200, 200));
 			check_sdl_code(SDL_RenderFillRect(renderer, &blend_rect));
 		}
 	}
