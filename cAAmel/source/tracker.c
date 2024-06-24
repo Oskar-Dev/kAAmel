@@ -136,7 +136,7 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	return tracker;
 }
 
-void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l) {
+void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_texture, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l) {
 	SDL_Rect rect = { 0, 0, l->adv_size, l->adv_size };
 	SDL_Rect blend_rect = { 0, 0, l->adv_size + 8, l->adv_size + l->text_margin + l->spacing_y };
 	SDL_Rect criterion_rect = { 0, 0, l->crt_size, l->crt_size };
@@ -144,7 +144,6 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement*
 
 	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255));
 	check_sdl_code(SDL_RenderClear(renderer));
-	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255));
 
 	// RENDER LAYOUT. //
 	int offset = 0;
@@ -196,7 +195,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, ADV_advancement*
 		rect.x = ((i - offset) % (window_width / (l->adv_size + l->spacing_x))) * (l->adv_size + l->spacing_x) + l->padding;
 		rect.y = ((i - offset) / (window_width / (l->adv_size + l->spacing_x))) * (l->adv_size + l->spacing_y) + l->padding;
 
-		// render_advancement_box(renderer, rect.x - main_advancement_box_width, rect.y - main_advancement_box_width, size + 2 * main_advancement_box_width, main_advancement_box_width);
+		check_sdl_code(SDL_RenderCopy(renderer, bg_texture, NULL, &(SDL_Rect){rect.x, rect.y, l->adv_size, l->adv_size}));
 		check_sdl_code(SDL_RenderCopy(renderer, advancements[i]->texture, NULL, &(SDL_Rect){rect.x + 8, rect.y + 8, 32, 32}));
 
 		int x = rect.x + l->adv_size / 2;

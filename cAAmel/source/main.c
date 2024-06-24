@@ -68,6 +68,7 @@ int main() {
 	dmon_watch(saves_path, watch_callback, 0, NULL);
 
 	// IMAGES. //
+	SDL_Texture* m_adv_bg = check_sdl_ptr(IMG_LoadTexture(m_renderer, "resources/gui/advancement_background.png"));
 	SDL_Texture* adv_bg = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background.png"));
 	SDL_Texture* adv_bg_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_done.png"));
 	SDL_Texture* adv_bg_half_done = check_sdl_ptr(IMG_LoadTexture(o_renderer, "resources/gui/advancement_background_half_done.png"));
@@ -127,7 +128,7 @@ int main() {
 
 		// Render advancements.
 		if (update) {
-			tracker_render_main(m_renderer, main_font, advancements, tracker.advancements, tracker.m_window_width, tracker.m_window_height, tracker.main_layout);
+			tracker_render_main(m_renderer, main_font, m_adv_bg, advancements, tracker.advancements, tracker.m_window_width, tracker.m_window_height, tracker.main_layout);
 			update = 0;
 		}
 		tracker_render_overlay(
