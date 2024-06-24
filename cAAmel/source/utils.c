@@ -76,3 +76,8 @@ void* check_sdl_ptr(void* ptr) {
 
 	return ptr;
 }
+
+int maxi(int a, int b) {
+	if (a > b) return a;
+	return b;
+}
