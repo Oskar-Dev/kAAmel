@@ -142,7 +142,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 	SDL_Rect criterion_rect = { 0, 0, l->crt_size, l->crt_size };
 	SDL_Rect criterion_blend_rect = { 0, 0, 0, l->crt_size };
 
-	check_sdl_code(SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255));
+	check_sdl_code(SDL_SetRenderDrawColor(renderer, 50, 41, 71, 255));
 	check_sdl_code(SDL_RenderClear(renderer));
 
 	// RENDER LAYOUT. //
