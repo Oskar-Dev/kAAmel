@@ -161,8 +161,9 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 				SDL_Texture* txt = advancements[i]->criteria[j]->texture;
 
 				char* criterion_name = advancements[i]->criteria[j]->name;
+				int name_width = FC_GetWidth(font, criterion_name);
 
-				max_width = maxi(FC_GetWidth(font, criterion_name) + l->crt_size + l->crt_text_margin, max_width);
+				max_width = maxi(name_width + l->crt_size + l->crt_text_margin, max_width);
 				criterion_rect.y = l->crt_start_y + (l->crt_size + l->crt_spacing_y) * (j % ((window_height - l->crt_start_y - l->padding) / (l->crt_size + l->crt_spacing_y)));
 
 				if (criterion_rect.y < last_y) {
@@ -177,7 +178,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 				FC_Draw(font, renderer, criterion_rect.x + l->crt_size + l->crt_text_margin, criterion_rect.y + l->crt_text_fix, criterion_name);
 
 				if (criterion_done) {
-					criterion_blend_rect.w = max_width;
+					criterion_blend_rect.w = l->crt_size + l->crt_text_margin + name_width;
 					criterion_blend_rect.x = criterion_rect.x;
 					criterion_blend_rect.y = criterion_rect.y;
 

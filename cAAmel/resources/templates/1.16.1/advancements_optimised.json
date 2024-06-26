@@ -49,11 +49,11 @@
         "done": false,
         "rootName": "minecraft:wooded_mountains"
       },
-      "minecraft:stony_shore": {
-        "name": "Stony Shore",
-        "icon": "biomes/stony_shore.png",
+      "minecraft:stone_shore": {
+        "name": "Stone Shore",
+        "icon": "biomes/stone_shore.png",
         "done": false,
-        "rootName": "minecraft:stony_shore"
+        "rootName": "minecraft:stone_shore"
       },
       "minecraft:swamp": {
         "name": "Swamp",
@@ -176,11 +176,11 @@
         "done": false,
         "rootName": "minecraft:badlands_plateau"
       },
-      "minecraft:wooded_badlands": {
-        "name": "Wooded Badlands",
-        "icon": "biomes/wooded_badlands.png",
+      "minecraft:wooded_badlands_plateau": {
+        "name": "Wooded Badlands Plateau",
+        "icon": "biomes/wooded_badlands_plateau.png",
         "done": false,
-        "rootName": "minecraft:wooded_badlands"
+        "rootName": "minecraft:wooded_badlands_plateau"
       },
       "minecraft:jungle": {
         "name": "Jungle",
@@ -212,11 +212,11 @@
         "done": false,
         "rootName": "minecraft:bamboo_jungle_hills"
       },
-      "minecraft:mushroom_fields_shore": {
+      "minecraft:mushroom_field_shore": {
         "name": "Mushroom Fields Shore",
-        "icon": "biomes/mushroom_fields_shore.png",
+        "icon": "biomes/mushroom_field_shore.png",
         "done": false,
-        "rootName": "minecraft:mushroom_fields_shore"
+        "rootName": "minecraft:mushroom_field_shore"
       },
       "minecraft:mushroom_fields": {
         "name": "Mushroom Fields",
@@ -817,12 +817,6 @@
         "icon": "animals/panda.png",
         "done": false,
         "rootName": "minecraft:panda"
-      },
-      "minecraft:armadillo": {
-        "name": "Armadillo",
-        "icon": "animals/armadillo.png",
-        "done": false,
-        "rootName": "minecraft:armadillo"
       },
       "minecraft:hoglin": {
         "name": "Hoglin",

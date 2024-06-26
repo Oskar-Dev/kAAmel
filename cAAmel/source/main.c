@@ -19,7 +19,7 @@
 char adv_path[MAX_LEN];
 char stats_path[MAX_LEN];
 
-char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21/.minecraft/saves";
+char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.16 rsg/.minecraft/saves";
 
 int update = 1;
 
