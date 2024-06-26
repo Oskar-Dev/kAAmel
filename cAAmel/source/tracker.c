@@ -20,8 +20,8 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	case VERSION_1_16:
 		advancements = 43;
 		criteria = 149;
-		multi_part_advancements = 7;
-		m_window_width = 1300;
+		multi_part_advancements = 6;
+		m_window_width = 1210;
 		m_window_height = 768;
 		o_window_width = 1600;
 		o_window_height = 400;
@@ -206,7 +206,7 @@ void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_
 			blend_rect.x = rect.x - 4;
 			blend_rect.y = rect.y - 2;
 
-			check_sdl_code(SDL_SetRenderDrawColor(renderer, 50, 41, 71, 200, 200));
+			check_sdl_code(SDL_SetRenderDrawColor(renderer, 50, 41, 71, 200));
 			check_sdl_code(SDL_RenderFillRect(renderer, &blend_rect));
 		}
 	}

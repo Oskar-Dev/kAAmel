@@ -14,10 +14,6 @@
 #include "tracker.h"
 #include "goal.h"
 
-#define ADVANCEMENTS 75
-#define CRITERIA 187
-#define MULTI_PART_ADV 8
-
 #define MAX_LEN 200
 
 char adv_path[MAX_LEN];
@@ -42,7 +38,7 @@ int main() {
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
 
 	Tracker tracker = { 0 };
-	tracker_create(VERSION_1_21, &tracker);
+	tracker_create(VERSION_1_16, &tracker);
 
 	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker.o_window_width, tracker.o_window_height, 0));
 	SDL_Renderer* o_renderer = check_sdl_ptr(SDL_CreateRenderer(o_window, -1, SDL_RENDERER_ACCELERATED));
@@ -83,7 +79,7 @@ int main() {
 	{
 		int offset = 0;
 		char path_buffer[256];
-		for (int i = 0; i < ADVANCEMENTS; ++i) {
+		for (int i = 0; i < tracker.advancements; ++i) {
 			snprintf(path_buffer, sizeof(path_buffer), "resources/sprites/%s", advancements[i]->icon);
 			advancements[i]->texture = check_sdl_ptr(IMG_LoadTexture(m_renderer, path_buffer));
 			advancements[i]->overlay_texture = check_sdl_ptr(IMG_LoadTexture(o_renderer, path_buffer));
@@ -151,7 +147,7 @@ int main() {
 		if (SDL_GetTicks() - ticks_start <= 20) SDL_Delay(20 - (SDL_GetTicks() - ticks_start));
 	}
 
-	for (int i = 0; ADVANCEMENTS < 1; ++i) {
+	for (int i = 0; tracker.advancements < 1; ++i) {
 		ADV_delete_advancement(advancements[i]);
 	}
 
