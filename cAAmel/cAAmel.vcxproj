@@ -216,6 +216,7 @@
     <ClInclude Include="source\utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\configuration\settings.json" />
     <None Include="resources\templates\1.16.1\advancements_optimised.json" />
     <None Include="resources\templates\1.20.6\advancements.json" />
     <None Include="resources\templates\1.20.6\advancements_optimised.json" />

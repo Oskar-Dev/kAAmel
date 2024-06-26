@@ -19,7 +19,7 @@
 char adv_path[MAX_LEN];
 char stats_path[MAX_LEN];
 
-char* saves_path = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.16 rsg/.minecraft/saves";
+char saves_path[100];
 
 int update = 1;
 
@@ -38,7 +38,8 @@ int main() {
 	check_sdl_code(IMG_Init(IMG_INIT_PNG));
 
 	Tracker tracker = { 0 };
-	tracker_create(VERSION_1_16, &tracker);
+	tracker_create(&tracker);
+	strcpy(saves_path, tracker.settings->saves_path);
 
 	SDL_Window* o_window = check_sdl_ptr(SDL_CreateWindow("cAAmel - Stream Overlay", 0, 30, tracker.o_window_width, tracker.o_window_height, 0));
 	SDL_Renderer* o_renderer = check_sdl_ptr(SDL_CreateRenderer(o_window, -1, SDL_RENDERER_ACCELERATED));

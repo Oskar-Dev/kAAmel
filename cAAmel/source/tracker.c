@@ -1,7 +1,7 @@
 #include "tracker.h"
 #include "utils.h"
 
-Tracker* tracker_create(Version version, Tracker* tracker) {
+Tracker* tracker_create(Tracker* tracker) {
 	int advancements;
 	int criteria;
 	int multi_part_advancements;
@@ -10,13 +10,21 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	int o_window_width;
 	int o_window_height;
 
-	/*Tracker* tracker = malloc(sizeof * tracker);
-	if (tracker == NULL) {
-		printf("[ERROR] Couldn't create application data.\n");
+	// Load settings.
+	tracker->settings = malloc(sizeof *tracker->settings);
+	if (tracker->settings == NULL) {
+		printf("[MEMORY ERROR] Couldn't allocate enough memory for the settings.\n");
 		exit(1);
-	}*/
+	}
+	
+	if (!tracker_load_settings(tracker->settings)) {
+		tracker_create_default_settings(tracker->settings);
+		printf("[INFORMATION] Loaded the default settings.\n");
+	} else {
+		printf("[INFORMATION] Loaded settings from settings.json.\n");
+	}
 
-	switch (version) {
+	switch (tracker->settings->version) {
 	case VERSION_1_16:
 		advancements = 43;
 		criteria = 149;
@@ -134,6 +142,41 @@ Tracker* tracker_create(Version version, Tracker* tracker) {
 	tracker->overlay_layout->goals_spacing = 30;
 
 	return tracker;
+}
+
+void tracker_create_default_settings(Settings* settings) {
+	char b[] = "C:/Users/oski3/OneDrive/Desktop/MultiMC/instances/1.21/.minecraft/saves";
+	settings->saves_path = malloc((strlen(b) + 1) * sizeof(char));
+	if (settings->saves_path == NULL) {
+		printf("[MEMORY ERROR] Couldn't allocate enough memory for the saves path.\n");
+		exit(1);
+	}
+
+	strcpy(settings->saves_path, b);
+	settings->version = VERSION_1_21;
+}
+
+int tracker_load_settings(Settings* settings) {
+	cJSON* cfg = cJSON_from_file("resources/configuration/settings.json");
+	if (!cfg) return 0;
+	
+	cJSON* version = cJSON_GetObjectItemCaseSensitive(cfg, "version");
+	if (!version) return 0;
+	
+	cJSON* saves_path = cJSON_GetObjectItemCaseSensitive(cfg, "savesPath");
+	if (!saves_path || !saves_path->valuestring) return 0;
+	
+	settings->saves_path = malloc((strlen(saves_path->valuestring) + 1) * sizeof(char));
+	if (settings->saves_path == NULL) {
+		printf("[MEMORY ERROR] Couldn't allocate enough memory for the saves path.\n");
+		exit(1);
+	}
+
+	settings->version = version->valueint;
+	strcpy(settings->saves_path, saves_path->valuestring);
+
+	cJSON_Delete(cfg);
+	return 1;
 }
 
 void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_texture, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l) {
@@ -395,5 +438,8 @@ void tracker_delete(Tracker* tracker) {
 		free(tracker->main_layout);
 		free(tracker->overlay_layout);
 		free(tracker->template_path);
+		
+		free(tracker->settings->saves_path);
+		free(tracker->settings);
 	}
 }

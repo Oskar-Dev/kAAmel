@@ -56,7 +56,10 @@ typedef struct {
 
 typedef struct {
 	Version version;
+	char* saves_path;
+} Settings;
 
+typedef struct {
 	int advancements;
 	int criteria;
 	int multi_part_advancements;
@@ -66,11 +69,14 @@ typedef struct {
 	int o_window_height;
 	char* template_path;
 
+	Settings* settings;
 	MainLayout* main_layout;
 	OverlayLayout* overlay_layout;
 } Tracker;
 
-Tracker* tracker_create(Version version, Tracker* tracker);
+Tracker* tracker_create(Tracker* tracker);
+void tracker_create_default_settings(Settings* settings);
+int tracker_load_settings(Settings* settings);
 void tracker_render_main(SDL_Renderer* renderer, FC_Font* font, SDL_Texture* bg_texture, ADV_advancement** advancements, int advancements_n, int window_width, int window_height, MainLayout* l);
 void tracker_update_overlay(ADV_advancement** advancements, int advancements_n, int criteria_n, int multi_part_adv, OverlayLayout* l);
 void tracker_render_overlay(

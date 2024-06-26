@@ -67,6 +67,7 @@
     <None Include="resources\templates\1.16.1\advancements_optimised.json" />
     <None Include="resources\templates\1.20.6\advancements_optimised.json" />
     <None Include="resources\templates\1.21\advancements_optimised.json" />
+    <None Include="resources\configuration\settings.json" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\Minecraft.ttf">
